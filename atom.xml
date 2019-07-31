@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yzddahaore.github.io</id>
+    <id>http://yzddahaoren.github.io</id>
     <title>yzd-gridea</title>
-    <updated>2019-07-31T13:40:18.775Z</updated>
+    <updated>2019-07-31T13:52:03.193Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://yzddahaore.github.io"/>
-    <link rel="self" href="http://yzddahaore.github.io/atom.xml"/>
+    <link rel="alternate" href="http://yzddahaoren.github.io"/>
+    <link rel="self" href="http://yzddahaoren.github.io/atom.xml"/>
     <subtitle>记录 :  思考 ; 慎言</subtitle>
-    <logo>http://yzddahaore.github.io/images/avatar.png</logo>
-    <icon>http://yzddahaore.github.io/favicon.ico</icon>
+    <logo>http://yzddahaoren.github.io/images/avatar.png</logo>
+    <icon>http://yzddahaoren.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://yzddahaore.github.io/post/hello-gridea</id>
-        <link href="http://yzddahaore.github.io/post/hello-gridea">
+        <id>http://yzddahaoren.github.io/post/hello-gridea</id>
+        <link href="http://yzddahaoren.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
