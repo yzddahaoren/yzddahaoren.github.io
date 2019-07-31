@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>yzd-gridea</title>
+<title>halo搭建 | yzd-gridea</title>
 <meta name="description" content="记录 :  思考 ; 慎言">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -97,56 +97,118 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://yzddahaoren.github.io/post/halo-da-jian">
-                  <h2 class="post-title">halo搭建</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-31
-                </div>
-                <div class="post-abstract">
-                  <p><img src="https://img.hacpai.com/bing/20190422.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
+          <div class="post-detail">
+            <h2 class="post-title">halo搭建</h2>
+            <div class="post-date">2019-07-31</div>
+            
+            <div class="post-content">
+              <p><img src="https://img.hacpai.com/bing/20190422.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
 <p><img src="https://img.hacpai.com/file/2019/07/%E4%B8%8B%E8%BD%BD-90515b11.png" alt="下载.png"></p>
 <blockquote>
 <p>&quot;可能是最好的java博客&quot;</p>
 </blockquote>
 <h1 id="haolo博客">haolo博客</h1>
 <p>halo的意思是光环的意思，博客设计很有现代的风格，简介，并且支持的功能较多，作者更新也很勤快，所以日记本就先用这个halo博客，主题还是用hexo下的next主题</p>
+<!--more-->
+<h2 id="环境">环境</h2>
+<ul>
+<li>Java</li>
+<li>git</li>
+</ul>
+<h2 id="安装">安装</h2>
+<h3 id="安装java">安装java</h3>
+<p>ubuntu/debina/cenots</p>
+<pre><code>#64位系统下载jdk文件
+wget -O jdk.tar.gz https://www.moerats.com/usr/down/JDK/jdk-8u192-linux-x64.tar.gz
+#32位系统下载jdk文件
+wget -O jdk.tar.gz https://www.moerats.com/usr/down/JDK/jdk-8u192-linux-i586.tar.gz
 
-                </div>
+#解压并删除压缩文件
+tar -zxvf jdk.tar.gz &amp;&amp; rm -rf jdk.tar.gz
+</code></pre>
+<p>编辑<code>ect/profile</code>文件</p>
+<pre><code>vi /etc/profile
+</code></pre>
+<p>添加以下代码</p>
+<pre><code>JAVA_HOME=/root/jdk1.8.0_192
+export JRE_HOME=/root/jdk1.8.0_192/jre 
+export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH 
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+</code></pre>
+<p>保存后,使得配置生效</p>
+<pre><code>source /etc/profile
+</code></pre>
+<p>查看java版本<code>java version</code></p>
+<pre><code>#有以下输出就安装成功
+root@Rats:~# java -version
+java version &quot;1.8.0_192&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_192-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.192-b12, mixed mode)
+</code></pre>
+<h3 id="安装git">安装git</h3>
+<pre><code>#CentOS 7系统
+yum install git -y
+
+#Debian、Ubuntu系统
+apt install git -y
+</code></pre>
+<h2 id="快速开始">快速开始</h2>
+<p>下载最新的 Halo 安装包:</p>
+<pre><code>curl -L https://github.com/halo-dev/halo/releases/download/v1.0.3/halo-1.0.3.jar --output halo-latest.jar
+</code></pre>
+<p>或者</p>
+<pre><code>wget https://github.com/halo-dev/halo/releases/download/v1.0.3/halo-1.0.3.jar -O halo-latest.jar
+</code></pre>
+<p>启动 Halo</p>
+<pre><code>nohup java -jar halo-latest.jar &gt;/dev/null 2&gt;&amp;1&amp;
+</code></pre>
+<h2 id="其他">其他</h2>
+<ul>
+<li>管理 APP（halo-app）：https://github.com/halo-dev/halo-app</li>
+<li>主题仓库：https://halo.run/theme</li>
+</ul>
+<h2 id="迁移与备份">迁移与备份</h2>
+<blockquote>
+<p>新的halo并不支持MySQL,所以直接复制<code>~/.halo</code>文件下所有文件即可,迁移到新的主机下的<code>~/.halo</code>即可;</p>
+</blockquote>
+<!-- more -->
+<!-- more -->
+<!-- more -->
+<blockquote>
+<p>基于Java的博客,建议内存<code>&gt;1G</code>;</p>
+</blockquote>
+<blockquote>
+<p>同类型推荐:<a href="https://github.com/b3log/solo">Solo</a></p>
+</blockquote>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yzddahaoren.github.io/tag/vb0BTUhrtH" class="tag">
+                    halo
+                  </a>
+                
+                  <a href="https://yzddahaoren.github.io/tag/pY9qwZ9J9H" class="tag">
+                    blog
+                  </a>
+                
               </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://yzddahaoren.github.io/post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                </div>
               </div>
-              
-                <a class="right" href="https://yzddahaoren.github.io/post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://yzddahaoren.github.io/post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+
+          </div>
 
         </div>
       </div>
