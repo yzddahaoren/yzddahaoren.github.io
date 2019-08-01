@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T01:26:12.746Z</updated>
+    <updated>2019-08-01T01:29:42.670Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -29,7 +29,11 @@
         <link href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
         </link>
         <updated>2019-08-01T01:01:20.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="概念">概念</h2>
+        <summary type="html"><![CDATA[<p>数学3的笔记简洁版</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>数学3的笔记简洁版</p>
+<!--more-->
+<h2 id="概念">概念</h2>
 <h3 id="弹性">弹性</h3>
 <p>(自变量)/(因变量) * 因变量对自变量的求导<br>
 考虑实际上意义添加正负号 &gt;0 添加负号<br>
@@ -43,7 +47,11 @@
         <link href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi">
         </link>
         <updated>2019-08-01T00:13:16.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="添加cname">添加CNAME</h2>
+        <summary type="html"><![CDATA[<p>github的相关的SSL配置以及一些错误</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>github的相关的SSL配置以及一些错误</p>
+<!--more-->
+<h2 id="添加cname">添加CNAME</h2>
 <p>这个不用多说了搭建都知道，就是在下面新建一个CNAME文件，写入域名即可，现在github是支持自定义域名的ssl的，</p>
 <h2 id="错误分析">错误分析</h2>
 <ol>
