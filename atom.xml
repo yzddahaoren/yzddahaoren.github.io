@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T03:05:22.477Z</updated>
+    <updated>2019-08-01T07:24:45.275Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[heroku搭建Oneindex]]></title>
+        <id>https://g.yzddhr.me/post/heroku-da-jian-oneindex</id>
+        <link href="https://g.yzddhr.me/post/heroku-da-jian-oneindex">
+        </link>
+        <updated>2019-08-01T07:23:05.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="利用免费空间安装网盘程序">利用免费空间安装网盘程序</h2>
+<p>妈耶，搞到现在才知道有免费空间这种东西，早知道还买个屁的vps，虽然一个月6元的百度云也算是便宜中的战斗机了，但是还是没有发挥出该有的效用，毕竟配置就在这里，主要也就搞个博客，说道博客，过几天做一个博客的种类总结和主题总结，不会太详细，主要就是记录下自己用的博客和个人感觉不错的主题，所以不会是一个巨细无漏的大辞典，主要是看过就能上手的，话回免费空间，主要可以用now.sh或者heroku来搭建oneindex</p>
+<h2 id="nowsh">now.sh</h2>
+<p>oneindex 是将微软的 onedrive 打造成分享网盘的程序。使用 now.sh 提供的 Docker 部署环境免费搭建个人分享网盘。</p>
+<h3 id="注册账号">注册账号</h3>
+<p>注册 now 账号。注册地址 https://zeit.co/</p>
+<p>注册 onedrive 账号。可以申请 5T 容量的网盘更好。（当然可以某宝购买账号，很便宜，但是注意大空间都很低有管理员管理的，所以，就不要再onedriver存什么私密的文件了，而且外国云盘都是这个套路，基本就算管理员没动作，微软也会拿你的文件给人工智能当训练素材的，所以注意下）</p>
+<p><strong>待更新</strong></p>
+<h2 id="heroku">heroku</h2>
+<h3 id="注册heroku账号">注册heroku账号</h3>
+<p>注册网址：https://signup.heroku.com/</p>
+<p>填写相关的信息，注册即可！</p>
+<p>避免使用国内的邮箱，尤其QQ邮箱！需要挂一个代理有一个Google人机验证！<br>
+主要还是用美国西南大学的教育edu账号（具体自己Google，edu邮箱还有很多其他的功能）或者用Gmail账号，163，126，QQ都是不能用的。</p>
+<h3 id="提前准备">提前准备</h3>
+<p>在自己的vps或者Windows的本地PHP环境里面先下载https://github.com/donwa/oneindex的release ，本地解压后先配置好账号信息，注意在配置账号信息的地方可能会出错几次，多试几次就行了，反正本来onedriver额api就容易炸。然后在文件夹下会生成token.php和base.php两个文件。这两个文件去上传到自己fork的项目里面。<br>
+<img src="https://img.hacpai.com/file/2019/07/7-c1a0d34c.PNG" alt="7.PNG"></p>
+<h3 id="部署安装">部署安装</h3>
+<p>1）使用自己的GITHUB账号，去fork一份大佬的源码！项目地址：https://github.com/donwa/oneindex<br>
+，进行第一步的操作。<br>
+2）注册完账号，打开【控制面板】，点击右上角的【New】。新建一个APP<br>
+<img src="https://img.hacpai.com/file/2019/07/TB1JMmLXtfvK1RjSspoXXbfNpXa640x640-667843ec.jpg" alt="TB1JMmLXtfvK1RjSspoXXbfNpXa640x640.jpg"><br>
+3）部署选项我们选择GITHUB，然后点击【Continue】3）部署选项我们选择GITHUB，然后点击【Continue】<br>
+<img src="https://img.hacpai.com/file/2019/07/2-575d6dfc.jpg" alt="2.jpg"><br>
+4）GITHUB连接成功后，搜索oneindex源码。选择master分支。点击怕【Deploy Branch】就开始部署了！<br>
+<img src="https://img.hacpai.com/file/2019/07/3-c83795b7.jpg" alt="3.jpg"><br>
+5）等上1分钟，即可部署成功！我们打开部署的APP，点击【Settings】。在此页面可将APP的相关信息。包括可访问的域名！！<br>
+<img src="https://img.hacpai.com/file/2019/07/4-12f9e79a.jpg" alt="4.jpg"></p>
+<h3 id="其他配置">其他配置</h3>
+<p>heroku使用是有限制的，每30分钟没人访问则会掉了，所以设置云监控，每20分钟访问一次。<br>
+破解也简单，网上有好多免费的网站监控。随便找一个监控一下就可以了！比如阿里云的云监控！或者什么360监控都可以。<br>
+<img src="https://img.hacpai.com/file/2019/07/5-ce818fca.jpg" alt="5.jpg"><br>
+<img src="https://img.hacpai.com/file/2019/07/6-af4caadf.jpg" alt="6.jpg"></p>
+<h3 id="访问">访问</h3>
+<p>如果不出问题的话应该就能访问了。（以上的图片为了方便，使用的是ruyou的图片。）后续的话为了访问的方便，可以弄个CNAME绑定到自己的域名。</p>
+<h4 id="更新">更新</h4>
+<p>heroku没有信用卡是无法使用自定义域名的。<br>
+如果绑定了信用卡后使用命令<br>
+<code>heroku domains:add one.yzddhr.me -a yzd1-onedriver</code>来绑定。当然前提安装heroku的cil<br>
+使用命令：<br>
+<code>heroku login -i</code>登陆<br>
+64位命令行客户端下载：<a href="https://cli-assets.heroku.com/heroku-x64.exe">heroku</a></p>
+<h2 id="使用体验">使用体验</h2>
+<p>说个改良体验的方法，因为是老式的onedriver上传文件是很不方便的，可以下载一个命令行程序来辅助上传笔记每次用网页上传真的烦。<a href="https://github.com/cnbeining/onedrivecmd">onedrivecmd</a><br>
+不过我是真的佛了，都是在国外的服务器，你就不要想速度能有多快了，很慢，放视频的话还要挂代理，很鸡肋吧，本来onedriver就是这种东西，当服务器的挂载空间都嫌传的慢，不过可能是因为我用额是百度云的服务器，国外的服务器可能会好点。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[喜欢的音乐(最近循环)]]></title>
         <id>https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan</id>
