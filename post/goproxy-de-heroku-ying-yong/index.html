@@ -36,9 +36,9 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%B7%BB%E5%8A%A0cname">添加CNAME</a></li>
-<li><a href="#%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90">错误分析</a></li>
-<li><a href="#github-pages%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">github pages使用体验</a></li>
+<li><a href="#gorpxoy-heroku">gorpxoy-heroku</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E6%B3%95%E4%B8%80%E7%AE%80%E5%8D%95">部署方法一（简单）</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E6%B3%95%E4%BA%8C">部署方法二</a></li>
 </ul>
 </li>
 </ul>
@@ -99,56 +99,121 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">关于github的ssl配置</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">goproxy的heroku应用</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-08-01 / 1 min read
+          2019-08-01 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/guan-yu-github-de-ssl-pei-zhi.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/goproxy-de-heroku-ying-yong.jpg" alt="">
         
         <div class="post-content yue">
-          <p>github的相关的SSL配置以及一些错误</p>
-<!--more-->
-<h2 id="添加cname">添加CNAME</h2>
-<p>这个不用多说了搭建都知道，就是在下面新建一个CNAME文件，写入域名即可，现在github是支持自定义域名的ssl的，</p>
-<h2 id="错误分析">错误分析</h2>
-<ol>
-<li>百度云的报错，一开始用了cloudflare的CDN，一晚上过后，发现在配置gitalk的时候重定向域名是会报错的，所以先关掉CNAME，然后发现域名被阻断，还是什么百度云的鬼东西，真的佛了，cloudflare是和百度云的中国合作，所以应该是这样吗？</li>
-<li>github和cloudflare的问题，cloudflare应该是用了某些很厉害的什么技术吧，但是在用github的时候生成的证书会和cloudflare的证书冲突，所以万般警告，在配置证书什么的时候，配置好了之后再开CDN，<strong>之前一定不要开CDN！</strong></li>
-</ol>
-<h2 id="github-pages使用体验">github pages使用体验</h2>
-<p>用github当博客，不是说不行，但是使用体验就那样吧，首先你的博客啥隐私都别想有了，而且服务器在国外，速度也是堪忧，还是正儿八经的用物理机或者vps的博客吧，不过这个Gridea是真的挺好的，平时记点东西，也不错。话说我应该可以用一个自建的git服务把Gridea部署在自己的vps上哎!</p>
+          <h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
+<p>Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。</p>
+<!-- more -->
+<p>下面的部署方法，前提是你已经拥有一个heroku账号。</p>
+<p>1.注册 Heroku 帐号</p>
+<p>Heroku 提供免费账号，部分介绍如下：</p>
+<p>512 MB RAM per dyno</p>
+<p>Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours</p>
+<p>Free apps wake automatically when a web request is received</p>
+<p>https://devcenter.heroku.com/articles/limits</p>
+<p>https://devcenter.heroku.com/articles/free-dyno-hours#usage</p>
+<p>注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）</p>
+<h2 id="部署方法一简单">部署方法一（简单）</h2>
+<p>本方法为快速部署。</p>
+<p>一、在heroku上的部署</p>
+<p>1、登陆https://dashboard.heroku.com/login</p>
+<p>2、登陆好后，在浏览器地址栏输入https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku</p>
+<p>3、执行以下三个步骤，见下图：</p>
+<p>（1）输入App name.例如<code>test1-goproxy</code></p>
+<p>（2）Choose a region:选择一个.例如United States</p>
+<p>（3）点击：Deploy app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/1-2c554f69.png" alt="1.png"></p>
+<p>4、执行完成以后，这是就完成了部署。</p>
+<p><img src="https://img.hacpai.com/file/2019/07/2-81397b50.png" alt="2.png"></p>
+<p>二、在客户端上执行</p>
+<p>独立goproxy客户端：</p>
+<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
+<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
+<p>安卓客户端：</p>
+<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
+<pre><code class="language-text">主机：test1-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+</code></pre>
+<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
+<p>注意：本次部署中需要调整的就是<code>test1-goproxy</code>改为你自己的名称。</p>
+<h2 id="部署方法二">部署方法二</h2>
+<p>该方法相对方法一步骤多一些，但是可以自己设置加密密码，修改启动参数。</p>
+<p>本方法是fork项目后，可以修改相关的参数，再在heroku上部署。</p>
+<p>一、在github上fork该项目并修改相关参数</p>
+<p>（1）fork项目：https://github.com/snail007/goproxy-heroku</p>
+<p>（2）修改配置参数，具体就是修改bootstrap里的内容，点击该文件</p>
+<p><img src="https://img.hacpai.com/file/2019/07/3-2efbc373.png" alt="3.png"></p>
+<p>修改第7行内容，详细参考：https://snail007.github.io/goproxy/posts/http_cdn_ws/</p>
+<p>二、在heroku上部署</p>
+<p>1、登陆https://dashboard.heroku.com/apps</p>
+<p>2、选择New -&gt; Create new app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/4-75a2c03c.png" alt="4.png"></p>
+<p>3、执行以下三个步骤，见下图：</p>
+<p>（1）输入App name.例如<code>test2-goproxy</code></p>
+<p>（2）Choose a region:选择一个.例如United States</p>
+<p>（3）点击：Create app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/5-2ac7329b.png" alt="5.png"></p>
+<p>选择Deploy-&gt;GitHub Connect to github</p>
+<p><img src="https://img.hacpai.com/file/2019/07/6-196147dd.png" alt="6.png"></p>
+<p>4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect</p>
+<p><img src="https://img.hacpai.com/file/2019/07/7-cce694f3.png" alt="7.png"></p>
+<p>5、手动部署Manual deploy -&gt; Deploy Branch， 部署成功。</p>
+<p><img src="https://img.hacpai.com/file/2019/07/8-e2c8808a.png" alt="8.png"><br>
+<br><br>
+<img src="https://img.hacpai.com/file/2019/07/9-35c0a850.png" alt="9.png"></p>
+<p>三、在客户端上执行（默认不修改代码）</p>
+<p>独立goproxy客户端：</p>
+<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
+<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
+<p>安卓客户端：</p>
+<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
+<pre><code class="language-text">主机：test2-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+</code></pre>
+<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
+<p>注意：本次部署中需要修改test2-goproxy为你自己的名称。</p>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/3GQY31PXb">
-            <span class="flex-auto">ssl</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL">
+            <span class="flex-auto">技术</span>
           </a>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/pY9qwZ9J9H">
-            <span class="flex-auto">blog</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/ymHPLYauhe">
+            <span class="flex-auto">网站搭建</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  经济问题中的导数的应用
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://g.yzddhr.me/post/gridea-shi-yong">
+              <a href="https://g.yzddhr.me/post/heroku-da-jian-oneindex">
                 <h3 class="post-title">
-                  Gridea使用
+                  heroku搭建Oneindex
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>

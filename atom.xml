@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T07:24:45.275Z</updated>
+    <updated>2019-08-01T07:29:15.601Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -11,12 +11,111 @@
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
     <entry>
+        <title type="html"><![CDATA[goproxy的heroku应用]]></title>
+        <id>https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong</id>
+        <link href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong">
+        </link>
+        <updated>2019-08-01T07:27:07.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
+<p>Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
+<p>Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。</p>
+<!-- more -->
+<p>下面的部署方法，前提是你已经拥有一个heroku账号。</p>
+<p>1.注册 Heroku 帐号</p>
+<p>Heroku 提供免费账号，部分介绍如下：</p>
+<p>512 MB RAM per dyno</p>
+<p>Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours</p>
+<p>Free apps wake automatically when a web request is received</p>
+<p>https://devcenter.heroku.com/articles/limits</p>
+<p>https://devcenter.heroku.com/articles/free-dyno-hours#usage</p>
+<p>注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）</p>
+<h2 id="部署方法一简单">部署方法一（简单）</h2>
+<p>本方法为快速部署。</p>
+<p>一、在heroku上的部署</p>
+<p>1、登陆https://dashboard.heroku.com/login</p>
+<p>2、登陆好后，在浏览器地址栏输入https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku</p>
+<p>3、执行以下三个步骤，见下图：</p>
+<p>（1）输入App name.例如<code>test1-goproxy</code></p>
+<p>（2）Choose a region:选择一个.例如United States</p>
+<p>（3）点击：Deploy app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/1-2c554f69.png" alt="1.png"></p>
+<p>4、执行完成以后，这是就完成了部署。</p>
+<p><img src="https://img.hacpai.com/file/2019/07/2-81397b50.png" alt="2.png"></p>
+<p>二、在客户端上执行</p>
+<p>独立goproxy客户端：</p>
+<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
+<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
+<p>安卓客户端：</p>
+<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
+<pre><code class="language-text">主机：test1-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+</code></pre>
+<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
+<p>注意：本次部署中需要调整的就是<code>test1-goproxy</code>改为你自己的名称。</p>
+<h2 id="部署方法二">部署方法二</h2>
+<p>该方法相对方法一步骤多一些，但是可以自己设置加密密码，修改启动参数。</p>
+<p>本方法是fork项目后，可以修改相关的参数，再在heroku上部署。</p>
+<p>一、在github上fork该项目并修改相关参数</p>
+<p>（1）fork项目：https://github.com/snail007/goproxy-heroku</p>
+<p>（2）修改配置参数，具体就是修改bootstrap里的内容，点击该文件</p>
+<p><img src="https://img.hacpai.com/file/2019/07/3-2efbc373.png" alt="3.png"></p>
+<p>修改第7行内容，详细参考：https://snail007.github.io/goproxy/posts/http_cdn_ws/</p>
+<p>二、在heroku上部署</p>
+<p>1、登陆https://dashboard.heroku.com/apps</p>
+<p>2、选择New -&gt; Create new app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/4-75a2c03c.png" alt="4.png"></p>
+<p>3、执行以下三个步骤，见下图：</p>
+<p>（1）输入App name.例如<code>test2-goproxy</code></p>
+<p>（2）Choose a region:选择一个.例如United States</p>
+<p>（3）点击：Create app</p>
+<p><img src="https://img.hacpai.com/file/2019/07/5-2ac7329b.png" alt="5.png"></p>
+<p>选择Deploy-&gt;GitHub Connect to github</p>
+<p><img src="https://img.hacpai.com/file/2019/07/6-196147dd.png" alt="6.png"></p>
+<p>4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect</p>
+<p><img src="https://img.hacpai.com/file/2019/07/7-cce694f3.png" alt="7.png"></p>
+<p>5、手动部署Manual deploy -&gt; Deploy Branch， 部署成功。</p>
+<p><img src="https://img.hacpai.com/file/2019/07/8-e2c8808a.png" alt="8.png"><br>
+<br><br>
+<img src="https://img.hacpai.com/file/2019/07/9-35c0a850.png" alt="9.png"></p>
+<p>三、在客户端上执行（默认不修改代码）</p>
+<p>独立goproxy客户端：</p>
+<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
+<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
+<p>安卓客户端：</p>
+<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
+<pre><code class="language-text">主机：test2-goproxy.herokuapp.com
+
+端口：443
+
+加密方法：aes-256-cfb
+
+密码：123
+
+插件参数：
+</code></pre>
+<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
+<p>注意：本次部署中需要修改test2-goproxy为你自己的名称。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[heroku搭建Oneindex]]></title>
         <id>https://g.yzddhr.me/post/heroku-da-jian-oneindex</id>
         <link href="https://g.yzddhr.me/post/heroku-da-jian-oneindex">
         </link>
         <updated>2019-08-01T07:23:05.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="利用免费空间安装网盘程序">利用免费空间安装网盘程序</h2>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="利用免费空间安装网盘程序">利用免费空间安装网盘程序</h2>
+<!-- more -->
 <p>妈耶，搞到现在才知道有免费空间这种东西，早知道还买个屁的vps，虽然一个月6元的百度云也算是便宜中的战斗机了，但是还是没有发挥出该有的效用，毕竟配置就在这里，主要也就搞个博客，说道博客，过几天做一个博客的种类总结和主题总结，不会太详细，主要就是记录下自己用的博客和个人感觉不错的主题，所以不会是一个巨细无漏的大辞典，主要是看过就能上手的，话回免费空间，主要可以用now.sh或者heroku来搭建oneindex</p>
 <h2 id="nowsh">now.sh</h2>
 <p>oneindex 是将微软的 onedrive 打造成分享网盘的程序。使用 now.sh 提供的 Docker 部署环境免费搭建个人分享网盘。</p>
