@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yzddahaoren.github.io</id>
+    <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T00:02:33.986Z</updated>
+    <updated>2019-08-01T00:08:48.661Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yzddahaoren.github.io"/>
-    <link rel="self" href="https://yzddahaoren.github.io/atom.xml"/>
+    <link rel="alternate" href="https://g.yzddhr.me"/>
+    <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
     <subtitle>记录 :  思考 ; 慎言</subtitle>
-    <logo>https://yzddahaoren.github.io/images/avatar.png</logo>
-    <icon>https://yzddahaoren.github.io/favicon.ico</icon>
+    <logo>https://g.yzddhr.me/images/avatar.png</logo>
+    <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
     <entry>
         <title type="html"><![CDATA[Gridea使用]]></title>
-        <id>https://yzddahaoren.github.io/post/gridea-shi-yong</id>
-        <link href="https://yzddahaoren.github.io/post/gridea-shi-yong">
+        <id>https://g.yzddhr.me/post/gridea-shi-yong</id>
+        <link href="https://g.yzddhr.me/post/gridea-shi-yong">
         </link>
         <updated>2019-07-31T14:34:17.000Z</updated>
         <summary type="html"><![CDATA[<p>用了这么多博客还是这个神器最好.</p>
@@ -28,8 +28,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[halo搭建]]></title>
-        <id>https://yzddahaoren.github.io/post/halo-da-jian</id>
-        <link href="https://yzddahaoren.github.io/post/halo-da-jian">
+        <id>https://g.yzddhr.me/post/halo-da-jian</id>
+        <link href="https://g.yzddhr.me/post/halo-da-jian">
         </link>
         <updated>2019-07-31T14:20:23.000Z</updated>
         <summary type="html"><![CDATA[<p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
@@ -116,8 +116,8 @@ apt install git -y
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://yzddahaoren.github.io/post/hello-gridea</id>
-        <link href="https://yzddahaoren.github.io/post/hello-gridea">
+        <id>https://g.yzddhr.me/post/hello-gridea</id>
+        <link href="https://g.yzddhr.me/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
