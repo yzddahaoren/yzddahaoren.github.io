@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>blog | yzd-gridea</title>
+<title>喜欢的音乐(最近循环) | yzd-gridea</title>
 <meta name="description" content="记录 :  思考 ; 慎言">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -101,34 +107,48 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: blog</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://g.yzddhr.me/post/halo-da-jian">
-                  <h2 class="post-title">halo搭建</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-31
-                </div>
-                <div class="post-abstract">
-                  <p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">喜欢的音乐(最近循环)</h2>
+            <div class="post-date">2019-08-01</div>
+            
+              <div class="feature-container" style="background-image: url('https://g.yzddhr.me/post-images/xi-huan-de-yin-le-zui-jin-xun-huan.jpg')">
               </div>
-              
-                <a class="right" href="https://g.yzddhr.me/post/halo-da-jian">
-                  <div class="feature-container" style="background-image: url('https://g.yzddhr.me/post-images/halo-da-jian.jpg')">
-                  </div>
+            
+            <div class="post-content">
+              <p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
+<!--more-->
+<h2 id="tokyo-luna-shadows">Tokyo --- luna shadows</h2>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504264941&auto=0&height=66"></iframe>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://g.yzddhr.me/tag/9CTakvPYn" class="tag">
+                    music
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
+                  <h3 class="post-title">
+                    经济问题中的导数的应用
+                  </h3>
                 </a>
-              
-            </article>
-          
+              </div>
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -150,6 +170,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '54dc0370b7c1bea2e1a8',
+        clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+        repo: 'yzddahaoren.github.io',
+        owner: 'yzddahaoren',
+        admin: ['yzddahaoren'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

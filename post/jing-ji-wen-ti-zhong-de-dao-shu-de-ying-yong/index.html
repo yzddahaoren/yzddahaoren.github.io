@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>blog | yzd-gridea</title>
+<title>经济问题中的导数的应用 | yzd-gridea</title>
 <meta name="description" content="记录 :  思考 ; 慎言">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -101,34 +107,51 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: blog</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://g.yzddhr.me/post/halo-da-jian">
-                  <h2 class="post-title">halo搭建</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-31
-                </div>
-                <div class="post-abstract">
-                  <p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">经济问题中的导数的应用</h2>
+            <div class="post-date">2019-08-01</div>
+            
+              <div class="feature-container" style="background-image: url('https://g.yzddhr.me/post-images/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong.jpg')">
               </div>
-              
-                <a class="right" href="https://g.yzddhr.me/post/halo-da-jian">
-                  <div class="feature-container" style="background-image: url('https://g.yzddhr.me/post-images/halo-da-jian.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
+            <div class="post-content">
+              <h2 id="概念">概念</h2>
+<h3 id="弹性">弹性</h3>
+<p>(自变量)/(因变量) * 因变量对自变量的求导<br>
+考虑实际上意义添加正负号 &gt;0 添加负号<br>
+本质上解微分方程 物以类聚<br>
+第N个初处的经济意义是从N+1处开始的</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://g.yzddhr.me/tag/e7ZR7PPHh" class="tag">
+                    math
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi">
+                  <h3 class="post-title">
+                    关于github的ssl配置
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -150,6 +173,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '54dc0370b7c1bea2e1a8',
+        clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+        repo: 'yzddahaoren.github.io',
+        owner: 'yzddahaoren',
+        admin: ['yzddahaoren'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

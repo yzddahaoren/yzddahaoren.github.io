@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T00:36:26.083Z</updated>
+    <updated>2019-08-01T01:26:12.746Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[喜欢的音乐(最近循环)]]></title>
+        <id>https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan</id>
+        <link href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan">
+        </link>
+        <updated>2019-08-01T01:17:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
+<!--more-->
+<h2 id="tokyo-luna-shadows">Tokyo --- luna shadows</h2>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504264941&auto=0&height=66"></iframe>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[经济问题中的导数的应用]]></title>
+        <id>https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong</id>
+        <link href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
+        </link>
+        <updated>2019-08-01T01:01:20.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="概念">概念</h2>
+<h3 id="弹性">弹性</h3>
+<p>(自变量)/(因变量) * 因变量对自变量的求导<br>
+考虑实际上意义添加正负号 &gt;0 添加负号<br>
+本质上解微分方程 物以类聚<br>
+第N个初处的经济意义是从N+1处开始的</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于github的ssl配置]]></title>
         <id>https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi</id>
