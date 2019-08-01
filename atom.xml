@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T10:19:40.735Z</updated>
+    <updated>2019-08-01T10:40:14.097Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,55 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[gossa和mpv的结合用法]]></title>
+        <id>https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa</id>
+        <link href="https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa">
+        </link>
+        <updated>2019-08-01T10:21:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>实现的目标：</p>
+<blockquote>
+<p>实现用本地用mpv播放器播放vps的文件,本来也是非常简单的东西,代替ftp用下而已,不然每次用ftp还是有其不好用的地方.</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<p>实现的目标：</p>
+<blockquote>
+<p>实现用本地用mpv播放器播放vps的文件,本来也是非常简单的东西,代替ftp用下而已,不然每次用ftp还是有其不好用的地方.</p>
+</blockquote>
+<!-- more -->
+<h2 id="安装gossa">安装gossa</h2>
+<p>项目地址 : <a href="https://github.com/pldubouilh/gossa">GOSSA</a><br>
+登陆<code>ssh</code><br>
+使用命令:</p>
+<pre><code class="language-shell">wget https://github.com/pldubouilh/gossa/releases/download/v0.0.7/gossa-linux64
+mv gossa-linux64 /usr/local/bin/gossa
+#授权
+chmod +x /usr/local/bin/gossa
+</code></pre>
+<p>启动程序:</p>
+<pre><code>gossa /root/moerats
+</code></pre>
+<p>默认端口是<code>8001</code>,不要忘了后台打开8001端口,并且这个是在本地启动的.其他大方访问使用:</p>
+<pre><code>gossa -h 0.0.0.0 /root/moerats
+#后台运行
+nohup gossa -h 0.0.0.0 /root/moerats &amp;
+</code></pre>
+<h2 id="安装mpv">安装mpv</h2>
+<p>下载mpv编译好的文件:<br>
+<a href="https://mpv.io/installation/">MPV官网</a><br>
+下载好后是个7z文件夹,解压后添加到环境变量:<code>此电脑右键属性 --&gt; 环境变量 --&gt; 添加path变量</code>自行设置.</p>
+<h2 id="使用">使用</h2>
+<p>用上下键使用,右击获得文件的链接,直接<code>mpv URL</code>即可.</p>
+<h2 id="补充">补充</h2>
+<blockquote>
+<p>待完成</p>
+</blockquote>
+<ul>
+<li>mpv的用法</li>
+<li>mpv的进阶用法</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[goproxy的heroku应用]]></title>
         <id>https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong</id>

@@ -30,38 +30,20 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            记录 :  思考 ; 慎言
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="http://github.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://instagram.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-instagram-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85gossa">安装gossa</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85mpv">安装mpv</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
+<li><a href="#%E8%A1%A5%E5%85%85">补充</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -117,58 +99,104 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-2-line"></i> 标签云
-        </h2>
-        <div class="tags-container">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">gossa和mpv的结合用法</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-01 / 1 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/gossa-he-mpv-de-jie-he-yong-fa.JPG" alt="">
+        
+        <div class="post-content yue">
+          <p>实现的目标：</p>
+<blockquote>
+<p>实现用本地用mpv播放器播放vps的文件,本来也是非常简单的东西,代替ftp用下而已,不然每次用ftp还是有其不好用的地方.</p>
+</blockquote>
+<!-- more -->
+<h2 id="安装gossa">安装gossa</h2>
+<p>项目地址 : <a href="https://github.com/pldubouilh/gossa">GOSSA</a><br>
+登陆<code>ssh</code><br>
+使用命令:</p>
+<pre><code class="language-shell">wget https://github.com/pldubouilh/gossa/releases/download/v0.0.7/gossa-linux64
+mv gossa-linux64 /usr/local/bin/gossa
+#授权
+chmod +x /usr/local/bin/gossa
+</code></pre>
+<p>启动程序:</p>
+<pre><code>gossa /root/moerats
+</code></pre>
+<p>默认端口是<code>8001</code>,不要忘了后台打开8001端口,并且这个是在本地启动的.其他大方访问使用:</p>
+<pre><code>gossa -h 0.0.0.0 /root/moerats
+#后台运行
+nohup gossa -h 0.0.0.0 /root/moerats &amp;
+</code></pre>
+<h2 id="安装mpv">安装mpv</h2>
+<p>下载mpv编译好的文件:<br>
+<a href="https://mpv.io/installation/">MPV官网</a><br>
+下载好后是个7z文件夹,解压后添加到环境变量:<code>此电脑右键属性 --&gt; 环境变量 --&gt; 添加path变量</code>自行设置.</p>
+<h2 id="使用">使用</h2>
+<p>用上下键使用,右击获得文件的链接,直接<code>mpv URL</code>即可.</p>
+<h2 id="补充">补充</h2>
+<blockquote>
+<p>待完成</p>
+</blockquote>
+<ul>
+<li>mpv的用法</li>
+<li>mpv的进阶用法</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/RlFLkNEAm">
+            <span class="flex-auto">工具</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/RlFLkNEAm" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">工具</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
+
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-              <span class="flex-auto">技术</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">2</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/ymHPLYauhe" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-              <span class="flex-auto">网站搭建</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">2</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/9CTakvPYn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
-              <span class="flex-auto">music</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/e7ZR7PPHh" :style="{ 'animation-delay': `${4 * 0.2}s` }">
-              <span class="flex-auto">math</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/3GQY31PXb" :style="{ 'animation-delay': `${5 * 0.2}s` }">
-              <span class="flex-auto">ssl</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/pY9qwZ9J9H" :style="{ 'animation-delay': `${6 * 0.2}s` }">
-              <span class="flex-auto">blog</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">2</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/vb0BTUhrtH" :style="{ 'animation-delay': `${7 * 0.2}s` }">
-              <span class="flex-auto">halo</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
-          
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/CaIlt8D-p" :style="{ 'animation-delay': `${8 * 0.2}s` }">
-              <span class="flex-auto">Gridea</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong">
+                <h3 class="post-title">
+                  goproxy的heroku应用
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
