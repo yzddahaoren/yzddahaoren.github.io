@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T01:32:03.879Z</updated>
+    <updated>2019-08-01T01:53:18.742Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -21,7 +21,14 @@
         <content type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
 <!--more-->
 <h2 id="tokyo-luna-shadows">Tokyo --- luna shadows</h2>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504264941&auto=0&height=66"></iframe>]]></content>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504264941&auto=0&height=66"></iframe>
+<h2 id="i-wish-tom-macdonald">I wish --- Tom Macdonald</h2>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1352544870&auto=1&height=66"></iframe>
+<h2 id="gasoline-halsey">Gasoline --- Halsey</h2>
+<p><a href="http://m10.music.126.net/20190801100651/7b9a2ad870c7643e076cbfbb5deb3622/ymusic/a76b/7992/b7a0/1692d8d1a69988f9b14dd0236ac46f37.mp3">MP3</a></p>
+<h2 id="everything-will-flow-suede">Everything Will Flow - Suede</h2>
+<p><a href="http://m10.music.126.net/20190801101223/1474fc66aac6e1c38fecdd23f54151fa/ymusic/8d84/9f46/f67d/fc3b155313385b6dc391f4fac97a629f.mp3">MP3</a></p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[经济问题中的导数的应用]]></title>
