@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>C:/Users/hp/Documents/Gridea/output</id>
+    <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-01T10:18:53.769Z</updated>
+    <updated>2019-08-01T10:19:40.735Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="C:/Users/hp/Documents/Gridea/output"/>
-    <link rel="self" href="C:/Users/hp/Documents/Gridea/output/atom.xml"/>
+    <link rel="alternate" href="https://g.yzddhr.me"/>
+    <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
     <subtitle>记录 :  思考 ; 慎言</subtitle>
-    <logo>C:/Users/hp/Documents/Gridea/output/images/avatar.png</logo>
-    <icon>C:/Users/hp/Documents/Gridea/output/favicon.ico</icon>
+    <logo>https://g.yzddhr.me/images/avatar.png</logo>
+    <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
     <entry>
         <title type="html"><![CDATA[goproxy的heroku应用]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/goproxy-de-heroku-ying-yong/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/goproxy-de-heroku-ying-yong/index.html">
+        <id>https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong</id>
+        <link href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong">
         </link>
         <updated>2019-08-01T07:27:07.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
@@ -107,8 +107,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[heroku搭建Oneindex]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/heroku-da-jian-oneindex/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/heroku-da-jian-oneindex/index.html">
+        <id>https://g.yzddhr.me/post/heroku-da-jian-oneindex</id>
+        <link href="https://g.yzddhr.me/post/heroku-da-jian-oneindex">
         </link>
         <updated>2019-08-01T07:23:05.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="利用免费空间安装网盘程序">利用免费空间安装网盘程序</h2>
@@ -163,8 +163,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[喜欢的音乐(最近循环)]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/xi-huan-de-yin-le-zui-jin-xun-huan/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/xi-huan-de-yin-le-zui-jin-xun-huan/index.html">
+        <id>https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan</id>
+        <link href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan">
         </link>
         <updated>2019-08-01T01:17:19.000Z</updated>
         <summary type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
@@ -183,8 +183,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[经济问题中的导数的应用]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong/index.html">
+        <id>https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong</id>
+        <link href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
         </link>
         <updated>2019-08-01T01:01:20.000Z</updated>
         <summary type="html"><![CDATA[<p>数学3的笔记简洁版</p>
@@ -201,8 +201,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[关于github的ssl配置]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/guan-yu-github-de-ssl-pei-zhi/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/guan-yu-github-de-ssl-pei-zhi/index.html">
+        <id>https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi</id>
+        <link href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi">
         </link>
         <updated>2019-08-01T00:13:16.000Z</updated>
         <summary type="html"><![CDATA[<p>github的相关的SSL配置以及一些错误</p>
@@ -222,8 +222,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea使用]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/gridea-shi-yong/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/gridea-shi-yong/index.html">
+        <id>https://g.yzddhr.me/post/gridea-shi-yong</id>
+        <link href="https://g.yzddhr.me/post/gridea-shi-yong">
         </link>
         <updated>2019-07-31T14:34:17.000Z</updated>
         <summary type="html"><![CDATA[<p>用了这么多博客还是这个神器最好.</p>
@@ -238,8 +238,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[halo搭建]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/halo-da-jian/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/halo-da-jian/index.html">
+        <id>https://g.yzddhr.me/post/halo-da-jian</id>
+        <link href="https://g.yzddhr.me/post/halo-da-jian">
         </link>
         <updated>2019-07-31T14:20:23.000Z</updated>
         <summary type="html"><![CDATA[<p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
@@ -326,8 +326,8 @@ apt install git -y
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>C:/Users/hp/Documents/Gridea/output/post/hello-gridea/index.html</id>
-        <link href="C:/Users/hp/Documents/Gridea/output/post/hello-gridea/index.html">
+        <id>https://g.yzddhr.me/post/hello-gridea</id>
+        <link href="https://g.yzddhr.me/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
