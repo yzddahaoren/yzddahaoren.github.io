@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-02T08:44:10.952Z</updated>
+    <updated>2019-08-02T08:45:57.408Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://g.yzddhr.me/post/github-pages-kai-qi-sslcdn">
         </link>
         <updated>2019-08-02T08:28:56.000Z</updated>
-        <content type="html"><![CDATA[<p>用github能做很多事，除了各种代码托管，现在github越来越大气，开放了个人私有仓库无限开，而且能用来搭建hexo博客之类的，配合jsdeliver的话，github仓库本身就能当CDN用。</p>
+        <summary type="html"><![CDATA[<p>用github能做很多事，</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>用github能做很多事，</p>
+<!-- more -->
+<p>除了各种代码托管，现在github越来越大气，开放了个人私有仓库无限开，而且能用来搭建hexo博客之类的，配合jsdeliver的话，github仓库本身就能当CDN用。</p>
 <h2 id="条件需求">条件需求</h2>
 <ul>
 <li>github账户 <a href="http://github.com">GitHub</a></li>
