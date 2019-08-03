@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-03T07:53:51.670Z</updated>
+    <updated>2019-08-03T12:01:27.232Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,88 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[solo博客搭建配置SSl]]></title>
+        <id>https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl</id>
+        <link href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl">
+        </link>
+        <updated>2019-08-03T11:41:18.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>solo博客&quot;专为程序员设计的博客&quot;<br>
+<a href="https://github.com/b3log/solo">GitHub</a></p>
+</blockquote>
+<p>本文利用docker以及docker-compose搭建solo博客并配置SSL.</p>
+<h2 id="solo效果图">solo效果图:</h2>
+<p><img src="https://g.yzddhr.me/post-images/1564833531441.PNG" alt=""></p>
+<h2 id="环境">环境</h2>
+<h3 id="安装docker">安装docker</h3>
+<pre><code>curl -sSL https://get.docker.com/ | sh 
+systemctl start docker 
+systemctl enable docker
+</code></pre>
+<h3 id="安装docker-compose">安装docker-compose</h3>
+<ul>
+<li>利用pip安装:<br>
+<code>pip install docker-compose</code></li>
+<li>利用静态文件安装</li>
+</ul>
+<pre><code>curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<h2 id="编辑docker-compose文件">编辑docker-compose文件</h2>
+<p>编辑文件:<br>
+<code>vi docker-compose.yml</code><br>
+写入:</p>
+<pre><code>version: &quot;2&quot;                                                                                                              
+                                                                                                                         
+services:                                                                                                                 
+ mysql:                                                                                                                  
+   container_name: mysql                                                                                                 
+   image: mysql:5.5.60                                                                                                   
+   restart: always                                                                                                       
+   volumes:                                                                                                              
+     - ./mysql/data:/var/lib/mysql                                                                                       
+     - ./mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf                                                       
+   ports:                                                                                                                
+     - &quot;6603:3306&quot;                                                                                                       
+   environment:                                                                                                          
+     - MYSQL_ROOT_PASSWORD=数据库密码                                                                                     
+ solo:                                                                                                                   
+   container_name: solo                                                                                                  
+   image: b3log/solo                                                                                                     
+   restart: always                                                                                                       
+   ports:                                                                                                                
+     - &quot;8080:8080&quot;                                                                                                       
+   environment:                                                                                                          
+     RUNTIME_DB: &quot;MYSQL&quot;                                                                                                 
+     JDBC_USERNAME: &quot;root&quot;                                                                                               
+     JDBC_PASSWORD: &quot;数据库密码&quot;                                                                                          
+     JDBC_DRIVER: &quot;com.mysql.jdbc.Driver&quot;                                                                                
+     JDBC_URL: &quot;jdbc:mysql://mysql:3306/solo?useUnicode=yes&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC&quot;     
+   command: --listen_port=8080 --server_scheme=http --server_host=域名或IP 
+</code></pre>
+<p>启动容器:<br>
+<code>docker-compose up -d</code><br>
+在<code>docker-compose.yml</code>的文件夹下会生成MySQL的文件夹;进入文件夹:配置数据库;依次输入以下命令:<br>
+<code>docker exec -it database bash</code><br>
+<code>mysql -uroot -p</code>输入密码登入mysql<br>
+依次执行</p>
+<pre><code>CREATE DATABASE `solo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'solouser'@'%' identified BY 'solo@pwd';
+GRANT ALL ON solo.* TO 'solouser'@'%'; 
+FLUSH PRIVILEGES;
+</code></pre>
+<p>重新<code>docker-compose up -d</code>.</p>
+<h2 id="配置solo的ssl">配置solo的SSL</h2>
+<p>因为用nginx容器反代需要主域名,用二级域名反代会发生错误:当然有主域名,也想用主域名的可以参照<a href="https://github.com/liumapp/solo-in-docker/">docker-in-solo</a>配置https<br>
+以下使用cloudflare生成SSL</p>
+<ul>
+<li>修改<code>docker-compose.yml</code>文件中的<code>solo</code>容器的端口为哦<code>80</code></li>
+<li>修改<code>solo</code>容器的<code>sever_host</code>参数为域名;修改<code>server_scheme</code>参数为<code>https</code></li>
+<li>cloudflare开启<code>强制SSL</code>,开启<code>小黄云</code></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[免费申请AWS的Educate Starter教育版账号]]></title>
         <id>https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao</id>
@@ -376,94 +458,6 @@ nohup gossa -h 0.0.0.0 /root/moerats &amp;
 <p>从最初的wordpress , 到 typecho , 到ghost , 到hexo , 到hugo , 到solo , 到halo ,最后还是决定用这个了,原因只有一个,清净啊!而且很漂亮.<br>
 而且可以也可以用GitHub也可以说是很方便了,顺便一提,我是看到一个6RMB的主题才发现这个好项目的 : &gt;</p>
 <h2 id="gridae大法天下第一">Gridae大法天下第一.!</h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[halo搭建]]></title>
-        <id>https://g.yzddhr.me/post/halo-da-jian</id>
-        <link href="https://g.yzddhr.me/post/halo-da-jian">
-        </link>
-        <updated>2019-07-31T14:20:23.000Z</updated>
-        <summary type="html"><![CDATA[<p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
-<!--more-->
-<p><img src="https://img.hacpai.com/file/2019/07/%E4%B8%8B%E8%BD%BD-90515b11.png" alt="下载.png"></p>
-<blockquote>
-<p>&quot;可能是最好的java博客&quot;</p>
-</blockquote>
-<h1 id="haolo博客">haolo博客</h1>
-<p>halo的意思是光环的意思，博客设计很有现代的风格，简介，并且支持的功能较多，作者更新也很勤快，所以日记本就先用这个halo博客，主题还是用hexo下的next主题</p>
-<h2 id="环境">环境</h2>
-<ul>
-<li>Java</li>
-<li>git</li>
-</ul>
-<h2 id="安装">安装</h2>
-<h3 id="安装java">安装java</h3>
-<p>ubuntu/debina/cenots</p>
-<pre><code>#64位系统下载jdk文件
-wget -O jdk.tar.gz https://www.moerats.com/usr/down/JDK/jdk-8u192-linux-x64.tar.gz
-#32位系统下载jdk文件
-wget -O jdk.tar.gz https://www.moerats.com/usr/down/JDK/jdk-8u192-linux-i586.tar.gz
-
-#解压并删除压缩文件
-tar -zxvf jdk.tar.gz &amp;&amp; rm -rf jdk.tar.gz
-</code></pre>
-<p>编辑<code>ect/profile</code>文件</p>
-<pre><code>vi /etc/profile
-</code></pre>
-<p>添加以下代码</p>
-<pre><code>JAVA_HOME=/root/jdk1.8.0_192
-export JRE_HOME=/root/jdk1.8.0_192/jre 
-export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH 
-export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
-</code></pre>
-<p>保存后,使得配置生效</p>
-<pre><code>source /etc/profile
-</code></pre>
-<p>查看java版本<code>java version</code></p>
-<pre><code>#有以下输出就安装成功
-root@Rats:~# java -version
-java version &quot;1.8.0_192&quot;
-Java(TM) SE Runtime Environment (build 1.8.0_192-b12)
-Java HotSpot(TM) 64-Bit Server VM (build 25.192-b12, mixed mode)
-</code></pre>
-<h3 id="安装git">安装git</h3>
-<pre><code>#CentOS 7系统
-yum install git -y
-
-#Debian、Ubuntu系统
-apt install git -y
-</code></pre>
-<h2 id="快速开始">快速开始</h2>
-<p>下载最新的 Halo 安装包:</p>
-<pre><code>curl -L https://github.com/halo-dev/halo/releases/download/v1.0.3/halo-1.0.3.jar --output halo-latest.jar
-</code></pre>
-<p>或者</p>
-<pre><code>wget https://github.com/halo-dev/halo/releases/download/v1.0.3/halo-1.0.3.jar -O halo-latest.jar
-</code></pre>
-<p>启动 Halo</p>
-<pre><code>nohup java -jar halo-latest.jar &gt;/dev/null 2&gt;&amp;1&amp;
-</code></pre>
-<h2 id="其他">其他</h2>
-<ul>
-<li>管理 APP（halo-app）：https://github.com/halo-dev/halo-app</li>
-<li>主题仓库：https://halo.run/theme</li>
-</ul>
-<h2 id="迁移与备份">迁移与备份</h2>
-<blockquote>
-<p>新的halo并不支持MySQL,所以直接复制<code>~/.halo</code>文件下所有文件即可,迁移到新的主机下的<code>~/.halo</code>即可;</p>
-</blockquote>
-<!-- more -->
-<!-- more -->
-<!-- more -->
-<blockquote>
-<p>基于Java的博客,建议内存<code>&gt;1G</code>;</p>
-</blockquote>
-<blockquote>
-<p>同类型推荐:<a href="https://github.com/b3log/solo">Solo</a></p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
