@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-07T02:20:08.399Z</updated>
+    <updated>2019-08-07T02:29:28.588Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,267 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[自动下载bilibili的视频]]></title>
+        <id>https://g.yzddhr.me/post/zi-dong-xia-zai-bilibili-de-shi-pin</id>
+        <link href="https://g.yzddhr.me/post/zi-dong-xia-zai-bilibili-de-shi-pin">
+        </link>
+        <updated>2019-08-07T02:25:52.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
+<p>vps自动下载手机上b站投币或者收藏的视频。后续可以搭配设置自动同步到onedriver或者google硬盘等。</p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>docker</li>
+<li>web-hook</li>
+<li>IFTTT</li>
+<li>RSSHUB</li>
+<li>you-get</li>
+</ul>
+<h2 id="安装环境">安装环境</h2>
+<p>1.安装docker</p>
+<pre><code>curl -sSL https://get.docker.com/ | sh  
+systemctl start docker  
+systemctl enable docker 
+</code></pre>
+<p>2.安装nodejs</p>
+<pre><code>#Debian/Ubuntu系统  
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+apt install -y nodejs git 
+
+#CentOS系统 
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+</code></pre>
+<h2 id="安装软件">安装软件</h2>
+<ul>
+<li>RSSHUB</li>
+</ul>
+<pre><code>docker run -d --name rsshub -p 1200:1200 diygod/rsshub
+</code></pre>
+<ul>
+<li>web-hook</li>
+</ul>
+<pre><code>git clone https://github.com/DIYgod/download-webhook.git //下载web-hook
+npm install //模块安装
+npm run start &amp; //启动(后台)
+</code></pre>
+<p>测试</p>
+<pre><code>curl -X POST -H &quot;Content-Type:application/json&quot; -d '{&quot;secret&quot;: &quot;mysecret&quot;, &quot;path&quot;: &quot;mypath&quot;, &quot;name&quot;: &quot;myvideo&quot;, &quot;url&quot;: &quot;https://www.bilibili.com/video/av45364988&quot;}' http://127.0.0.1:3000
+</code></pre>
+<p>绿的就说明没问题，注意跑在3000端口，记得打开</p>
+<ul>
+<li>you-get<br>
+注意需要python3环境</li>
+</ul>
+<pre><code>pip3 install you-get
+</code></pre>
+<h2 id="配置">配置</h2>
+<p>进入IFTTT官网<a href="https://ifttt.com/">官网</a><br>
+新建APP，进行如图配置<br>
+<img src="https://img.hacpai.com/file/2019/06/Screenshot-f2761ce1.png" alt="Screenshot.png"></p>
+<p><img src="https://img.hacpai.com/file/2019/06/Screensvhot-737250a9.png" alt="Screensvhot.png"></p>
+<p>成功如图<br>
+<img src="https://img.hacpai.com/file/2019/06/Screshot-7649bd5c.png" alt="Screshot.png"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WSl子系统使用指南]]></title>
+        <id>https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan</id>
+        <link href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan">
+        </link>
+        <updated>2019-08-07T02:23:04.000Z</updated>
+        <content type="html"><![CDATA[<p>以下是已经开启虚拟化之后的操作，包括WSL的一些管理和走过的坑，关于更基础的后面再补吧。<br>
+鉴于国内的文章基本就是抄抄抄，自己连改都不想改的,所以这里还是整理一下吧,减少大家被CSDN那帮弱智抄袭怪被害的次数吧。</p>
+<h2 id="两个管理">两个管理</h2>
+<pre><code>- wslconfig
+- lxrun
+</code></pre>
+<p>这两个命令都是本地Windows使用的，具体使用办法自己看说明，都是汉字。<br>
+可以用这俩个命令设置默认的<code>wsl</code>命令之后进入的系统。就是自己有多个Linux安装后的情况啦。主要是拿来卸载用的。</p>
+<h2 id="文件系统">文件系统</h2>
+<p>WSL和Windows主系统之间的文件系统是可以互相访问的。</p>
+<p>如果在WSL中访问Windows系统的文件，可在根目录下/mnt/看到对应Windows盘符字母的文件夹，通过这些文件夹即可访问Windows的文件系统。</p>
+<p>如果在Windows系统中访问<code>WSL</code>的文件，可在Windows系统中找到已安装Linux发行版的应用数据文件夹，所有Linux系统的数据都在那个文件夹（通过应用商店安装的Linux发行版本质上也是一个应用）。Linux发行版的数据文件夹在<code>C:\Users\{你的用户名}\AppData\Local\Packages\{Linux发行版包名}\LocalState\rootfs</code>路径内，在<code>rootfs</code>文件夹内我们会看到在<code>WSL</code>中的根目录。</p>
+<blockquote>
+<p><strong>注：在Windows下对WSL文件修改可能会造成权限错误</strong></p>
+</blockquote>
+<h2 id="端口">端口</h2>
+<ul>
+<li>Windows本地和子系统是同一个端口，同一个IP，就是localhost。</li>
+</ul>
+<h2 id="卸载">卸载</h2>
+<ol>
+<li>通过<code>wslconfig</code>命令来卸载注册。</li>
+<li>进入上面说的本地文件夹下，删除相关的发行版的目录即可，也就是说其实什么安装子系统也就是注册了一下而已。<br>
+或者：使用</li>
+</ol>
+<pre><code>lxrun /uninstall /full
+</code></pre>
+<blockquote>
+<p>PS:进入上面说的目录进行删除,丛文件夹的内容即里面开始删,不然会提示权限错误,里面删的只剩几个数据库.db之后,就能整个删除了.从新进入Windows store,点击安装提示错误,用管理员的cmd,用cd命令进入给的目录删除相应的目录即可</p>
+</blockquote>
+<p><strong>最后在任务栏右击卸载即可。</strong></p>
+<h1 id="wsl子系统">WSL子系统</h1>
+<p>想了想还是一起写了吧，反正安装也简单的很。</p>
+<h2 id="安装">安装</h2>
+<p>复制来的</p>
+<blockquote>
+<p>在安装前，需要在<strong>启动或关闭Windows功能</strong>中勾选<strong>适用于Linux的Windows子系统</strong>，或者直接在管理员权限的PowerShell中输入<code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code>此条命令，也能达到同样的效果。<br>
+完成上述操作后，可直接在<strong>Microsoft Store</strong>中搜索Linux，到本文书写为止，商店中已经有Ubuntu、SUSE、Debian、Kali等Linux发行版，个人建议下载Ubuntu。<br>
+到Ubuntu的下载页，可以看到发布者为Canonical公司，这也正是Ubuntu的维护公司，值得注意的是，Canonical公司还发布了特定版本的Ubuntu系统，例如Ubuntu 16.04 LTS、Ubuntu 18.04 LTS等，个人建议直接下载无版本号的Ubuntu，而不要下载特定版本的Ubuntu，因为无版本号的Ubuntu会在新版本Ubuntu发布之后切换到最新版，所以它始终指向最新的Ubuntu。同时请注意，应用商店里Ubuntu软件的更新并不会升级Ubuntu版本，如果你恰好安装的是旧版本，想要升级到新版本，可以在WSL中运行<code>do-release-upgrade</code>命令升级到最新版。<br>
+下载完成后，要启动Ubuntu有多种方式，可以在<strong>PowerShell</strong>或<strong>cmd</strong>中输入<code>wsl</code>或<code>bash</code>或<code>ubuntu</code>都可启动，也可以直接在<strong>开始菜单</strong>中点击Ubuntu图标启动。</p>
+</blockquote>
+<h2 id="ssh的配置">ssh的配置</h2>
+<p>window自己的bash 难用的要死，肯定还是要ssh外面用的。<br>
+因为自己的Windows会占用22端口。而子系统和主机是同端口的。<br>
+修改SSH Server的监听端口，这里修改外<code>23</code>。</p>
+<p><code>sudo sed -i '/Port /c Port 23' /etc/ssh/sshd_config</code></p>
+<p>修改SSH Server的监听地址。</p>
+<p><code>sudo sed -i '/ListenAddress 0.0.0.0/c ListenAddress 0.0.0.0' /etc/ssh/sshd_config</code></p>
+<p>按照个人需求配置密码登陆或者密钥登陆，在此不做演示</p>
+<p>重启SSH服务，本地已经能够通过SSH登陆。</p>
+<p><code>sudo service ssh restart</code></p>
+<h3 id="更详细配置">更详细配置</h3>
+<p>要想在WSL中开启SSH服务，需要在配置文件(/etc/ssh/sshd_config)中作如下修改：</p>
+<pre><code>Port 2222  #将22改为2222，因Win10中自带的SSH服务也在监听22端口 
+
+ListenAddress 0.0.0.0  #取消注释，监听所有端口 
+UsePrivilegeSeparation no  #将yes修改为no 
+PermitRootLogin yes  #将prohibit-password修改为yes，允许root用户登录，视个人情况而定 
+PasswordAuthentication yes  #将no修改为yes，允许密码登录
+</code></pre>
+<h3 id="报错解决">报错解决</h3>
+<p><code>service ssh start</code>时报错如下:</p>
+<pre><code>Could not load host key: /etc/ssh/ssh_host_rsa_key
+Could not load host key: /etc/ssh/ssh_host_dsa_key 
+Could not load host key: /etc/ssh/ssh_host_ecdsa_key 
+Could not load host key: /etc/ssh/ssh_host_ed25519_key
+</code></pre>
+<p>问题是没有相关的秘钥<br>
+解决:生成相关的秘钥</p>
+<pre><code>ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key 
+ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key 
+ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key 
+ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key
+</code></pre>
+<h3 id="默认启动">默认启动</h3>
+<p><code>vi /etc/rc.local</code><br>
+加入一行<br>
+<code>/etc/init.d/ssh start</code>在<code>exit 0</code>之前。</p>
+<h2 id="wsl的子系统如何迁移">WSL的子系统如何迁移</h2>
+<p>主流的使用LxRunOffline进行迁移：不过好像也就只迁移到了G盘里面。也不知道有没有什么实质性的用处。</p>
+<ul>
+<li>
+<p>下载 LxRunOffline 软件 链接为：<a href="https://github.com/DDoSolitary/LxRunOffline/releases">https://github.com/DDoSolitary/LxRunOffline/releases</a></p>
+</li>
+<li>
+<p>解压，并在该目录下打开命令提示符，输入如下代码</p>
+</li>
+</ul>
+<pre><code># 显示当前的 Distribution 名称
+&gt; LxRunOffline list 
+Legacy 
+# 移动该 Distribution 
+&gt; LxRunOffline move -n Legacy -d D:\wsl\legacy
+</code></pre>
+<p>上述命令将整个 WSL 的 rootfs 移动至 <code>D:\wsl\legacy</code> 文件夹下。</p>
+<ul>
+<li>check 能否正常使用，按照使用一节提示的操作进行即可</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[内网穿透加shadowsocks实现全局穿透（伪）]]></title>
+        <id>https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei</id>
+        <link href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
+        </link>
+        <updated>2019-08-07T02:21:53.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
+<p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
+<h2 id="环境">环境</h2>
+<p>说是环境，其实是安装的软件啦</p>
+<ul>
+<li>goproxy</li>
+<li>shadowsocks (GO）版本</li>
+<li>公网vps</li>
+<li>shdowsocks rocket （可选），IOS的shadowsocks客户端。</li>
+</ul>
+<h2 id="安装">安装</h2>
+<ul>
+<li>goproxy</li>
+</ul>
+<ol>
+<li>下载proxy<br>
+下载地址 : https://github.com/snail007/goproxy/releases/latest<br>
+下面以v7.9为例，如果有最新版，请使用最新版链接，注意替换下面的下载连接里面的版本号为最新版版本号。</li>
+</ol>
+<pre><code>cd /root/proxy/  
+wget https://github.com/snail007/goproxy/releases/download/v7.9/proxy-linux-amd64.tar.gz  
+</code></pre>
+<ol start="2">
+<li>下载自动安装脚本</li>
+</ol>
+<pre><code>cd /root/proxy/  
+wget https://raw.githubusercontent.com/snail007/goproxy/master/install.sh  
+chmod +x install.sh  
+./install.sh  
+</code></pre>
+<h3 id="生成通讯文件">生成通讯文件</h3>
+<p>http，tcp，udp代理过程会和上级通讯，为了安全我们采用加密通讯，当然可以选择不加密通信通讯，本教程所有和上级通讯都采用加密，需要证书文件。</p>
+<p>1.通过下面的命令生成自签名的证书和key文件。<br>
+<code>./proxy keygen -C proxy</code><br>
+会在当前程序目录下面生成证书文件proxy.crt和key文件proxy.key。</p>
+<p>2.通过下面的命令生，使用自签名证书proxy.crt和key文件proxy.key签发新证书:goproxy.crt和goproxy.key。<br>
+<code>./proxy keygen -s -C proxy -c goproxy</code><br>
+会在当前程序目录下面生成证书文件goproxy.crt和key文件goproxy.key。下载相关证书到本地，放到goproxy.exe文件同一目录。</p>
+<p>3.默认情况下证书的里面的域名是随机的，可以使用<code>-n test.com</code>参数指定。</p>
+<p>4.更多用法:<code>proxy keygen --help</code>。</p>
+<ul>
+<li>shadowsocks-go</li>
+</ul>
+<ol>
+<li>下载对应版本: https://github.com/shadowsocks/shadowsocks-go/releases</li>
+<li>写一个配置<code>config.json</code></li>
+</ol>
+<pre><code>{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;server_port&quot;:7777,
+    &quot;local_port&quot;:1080,
+    &quot;password&quot;:&quot;yzd&quot;,
+    &quot;method&quot;: &quot;aes-128-cfb&quot;,
+    &quot;timeout&quot;:600
+}
+</code></pre>
+<ol start="3">
+<li>运行<code>./shadowsocks-server -c config.json</code></li>
+</ol>
+<h2 id="使用">使用</h2>
+<h3 id="背景">背景</h3>
+<ul>
+<li>内网机器A提供了shadowsocks端口7777</li>
+<li>有VPS一个，公网IP:22.22.22.22</li>
+</ul>
+<h3 id="需求">需求</h3>
+<p>通过访问VPS的28080端口访问到内网机器A的7777端口<br>
+步骤：</p>
+<ol>
+<li>在vps上执行<br>
+<code>./proxy bridge -p &quot;:33080&quot; -C proxy.crt -K proxy.key</code><br>
+<code>./proxy server -r &quot;:28080@:7777&quot; -P &quot;127.0.0.1:33080&quot; -C proxy.crt -K proxy.key</code></li>
+<li>在公司机器A上面执行<br>
+<code>./proxy client -P &quot;22.22.22.22:33080&quot; -C proxy.crt -K proxy.key</code></li>
+<li>完成</li>
+<li>后台运行命令后面加上<code>--daemon</code>参数即可</li>
+</ol>
+<h2 id="原理">原理</h2>
+<p>本地的shadowsocks跑了一个代理在<code>7777</code>端口，跑的是<code>tcp</code>流量，通过内网穿透到公网服务器，即在公网的<code>28080</code>访问的是本地同类流量，所以现在外网的任何一台机子，连上了跑在vps的<code>28080</code>的shadowsocks服务，即相当于连上了内网的网络环境，当然可以访问内网的网络资源。</p>
+<h3 id="注意">注意</h3>
+<ul>
+<li>shadowsocks的内网服务主机的使用，比如这台主机上跑了一个<code>80</code>端口的web，那我连上了公网服务器上面的shadowsocks代理后，使用的不是<code>localhost</code>访问，而应该是内网主机的内网IP，通过<code>ipconfig</code>命令查看。</li>
+<li>其他用法，可以和fiddler抓包软件配合使用，可以搭配<code>ssh</code>使用，方便管理。（荐）</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[用过的博客程序大总结加推荐]]></title>
         <id>https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian</id>
@@ -620,65 +881,6 @@ nohup gossa -h 0.0.0.0 /root/moerats &amp;
 <h2 id="使用体验">使用体验</h2>
 <p>说个改良体验的方法，因为是老式的onedriver上传文件是很不方便的，可以下载一个命令行程序来辅助上传笔记每次用网页上传真的烦。<a href="https://github.com/cnbeining/onedrivecmd">onedrivecmd</a><br>
 不过我是真的佛了，都是在国外的服务器，你就不要想速度能有多快了，很慢，放视频的话还要挂代理，很鸡肋吧，本来onedriver就是这种东西，当服务器的挂载空间都嫌传的慢，不过可能是因为我用额是百度云的服务器，国外的服务器可能会好点。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[喜欢的音乐(最近循环)]]></title>
-        <id>https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan</id>
-        <link href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan">
-        </link>
-        <updated>2019-08-01T01:17:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
-<!--more-->
-<h2 id="tokyo-luna-shadows">Tokyo --- luna shadows</h2>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=504264941&auto=0&height=66"></iframe>
-<h2 id="i-wish-tom-macdonald">I wish --- Tom Macdonald</h2>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1352544870&auto=1&height=66"></iframe>
-<h2 id="gasoline-halsey">Gasoline --- Halsey</h2>
-<p><a href="http://m10.music.126.net/20190801100651/7b9a2ad870c7643e076cbfbb5deb3622/ymusic/a76b/7992/b7a0/1692d8d1a69988f9b14dd0236ac46f37.mp3">MP3</a></p>
-<h2 id="everything-will-flow-suede">Everything Will Flow - Suede</h2>
-<p><a href="http://m10.music.126.net/20190801101223/1474fc66aac6e1c38fecdd23f54151fa/ymusic/8d84/9f46/f67d/fc3b155313385b6dc391f4fac97a629f.mp3">MP3</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[经济问题中的导数的应用]]></title>
-        <id>https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong</id>
-        <link href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
-        </link>
-        <updated>2019-08-01T01:01:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>数学3的笔记简洁版</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>数学3的笔记简洁版</p>
-<!--more-->
-<h2 id="概念">概念</h2>
-<h3 id="弹性">弹性</h3>
-<p>(自变量)/(因变量) * 因变量对自变量的求导<br>
-考虑实际上意义添加正负号 &gt;0 添加负号<br>
-本质上解微分方程 物以类聚<br>
-第N个初处的经济意义是从N+1处开始的</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于github的ssl配置]]></title>
-        <id>https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi</id>
-        <link href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi">
-        </link>
-        <updated>2019-08-01T00:13:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>github的相关的SSL配置以及一些错误</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>github的相关的SSL配置以及一些错误</p>
-<!--more-->
-<h2 id="添加cname">添加CNAME</h2>
-<p>这个不用多说了搭建都知道，就是在下面新建一个CNAME文件，写入域名即可，现在github是支持自定义域名的ssl的，</p>
-<h2 id="错误分析">错误分析</h2>
-<ol>
-<li>百度云的报错，一开始用了cloudflare的CDN，一晚上过后，发现在配置gitalk的时候重定向域名是会报错的，所以先关掉CNAME，然后发现域名被阻断，还是什么百度云的鬼东西，真的佛了，cloudflare是和百度云的中国合作，所以应该是这样吗？</li>
-<li>github和cloudflare的问题，cloudflare应该是用了某些很厉害的什么技术吧，但是在用github的时候生成的证书会和cloudflare的证书冲突，所以万般警告，在配置证书什么的时候，配置好了之后再开CDN，<strong>之前一定不要开CDN！</strong></li>
-</ol>
-<h2 id="github-pages使用体验">github pages使用体验</h2>
-<p>用github当博客，不是说不行，但是使用体验就那样吧，首先你的博客啥隐私都别想有了，而且服务器在国外，速度也是堪忧，还是正儿八经的用物理机或者vps的博客吧，不过这个Gridea是真的挺好的，平时记点东西，也不错。话说我应该可以用一个自建的git服务把Gridea部署在自己的vps上哎!</p>
 ]]></content>
     </entry>
 </feed>

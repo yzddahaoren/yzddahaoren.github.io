@@ -39,38 +39,21 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            记录 :  思考 : 慎言
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="http://github.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://instagram.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-instagram-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD">实现功能</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83">安装环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6">安装软件</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -126,34 +109,126 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-line"></i> music
-        </h2>
-        
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-      <a href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://g.yzddhr.me/post-images/xi-huan-de-yin-le-zui-jin-xun-huan.jpg'">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">自动下载bilibili的视频</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-07 / 1 min read
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">喜欢的音乐(最近循环)</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p>这个页面主要是自己喜欢的几首歌,而且一直单曲循环的,虽然也没人看就是了.</p>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/zi-dong-xia-zai-bilibili-de-shi-pin.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h2 id="实现功能">实现功能</h2>
+<p>vps自动下载手机上b站投币或者收藏的视频。后续可以搭配设置自动同步到onedriver或者google硬盘等。</p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>docker</li>
+<li>web-hook</li>
+<li>IFTTT</li>
+<li>RSSHUB</li>
+<li>you-get</li>
+</ul>
+<h2 id="安装环境">安装环境</h2>
+<p>1.安装docker</p>
+<pre><code>curl -sSL https://get.docker.com/ | sh  
+systemctl start docker  
+systemctl enable docker 
+</code></pre>
+<p>2.安装nodejs</p>
+<pre><code>#Debian/Ubuntu系统  
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+apt install -y nodejs git 
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-08-01 / 1 min read</div>
-    </div>
-  </section>
+#CentOS系统 
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+</code></pre>
+<h2 id="安装软件">安装软件</h2>
+<ul>
+<li>RSSHUB</li>
+</ul>
+<pre><code>docker run -d --name rsshub -p 1200:1200 diygod/rsshub
+</code></pre>
+<ul>
+<li>web-hook</li>
+</ul>
+<pre><code>git clone https://github.com/DIYgod/download-webhook.git //下载web-hook
+npm install //模块安装
+npm run start &amp; //启动(后台)
+</code></pre>
+<p>测试</p>
+<pre><code>curl -X POST -H &quot;Content-Type:application/json&quot; -d '{&quot;secret&quot;: &quot;mysecret&quot;, &quot;path&quot;: &quot;mypath&quot;, &quot;name&quot;: &quot;myvideo&quot;, &quot;url&quot;: &quot;https://www.bilibili.com/video/av45364988&quot;}' http://127.0.0.1:3000
+</code></pre>
+<p>绿的就说明没问题，注意跑在3000端口，记得打开</p>
+<ul>
+<li>you-get<br>
+注意需要python3环境</li>
+</ul>
+<pre><code>pip3 install you-get
+</code></pre>
+<h2 id="配置">配置</h2>
+<p>进入IFTTT官网<a href="https://ifttt.com/">官网</a><br>
+新建APP，进行如图配置<br>
+<img src="https://img.hacpai.com/file/2019/06/Screenshot-f2761ce1.png" alt="Screenshot.png"></p>
+<p><img src="https://img.hacpai.com/file/2019/06/Screensvhot-737250a9.png" alt="Screensvhot.png"></p>
+<p>成功如图<br>
+<img src="https://img.hacpai.com/file/2019/06/Screshot-7649bd5c.png" alt="Screshot.png"></p>
 
-        <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/6tvymCdQH">
+            <span class="flex-auto">网络资源</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL">
+            <span class="flex-auto">技术</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan">
+                <h3 class="post-title">
+                  WSl子系统使用指南
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
 
       </div>
     </div>
