@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-07T02:18:41.631Z</updated>
+    <updated>2019-08-07T02:20:08.399Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
         </link>
         <updated>2019-08-07T02:16:59.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/bing/20171107.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
-<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
+        <content type="html"><![CDATA[<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
 <h2 id="更新">更新</h2>
 <blockquote>
 <p>2019-08-05 : 更新了博文，后面再更吧 😴</p>
