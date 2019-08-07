@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-07T02:33:58.257Z</updated>
+    <updated>2019-08-07T09:43:11.485Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -16,8 +16,12 @@
         <link href="https://g.yzddhr.me/post/zi-dong-xia-zai-bilibili-de-shi-pin">
         </link>
         <updated>2019-08-07T02:25:52.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
+<p>vps自动下载手机上b站投币或者收藏的视频。后续可以搭配设置自动同步到onedriver或者google硬盘等。</p>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
 <p>vps自动下载手机上b站投币或者收藏的视频。后续可以搭配设置自动同步到onedriver或者google硬盘等。</p>
+<!-- more -->
 <h2 id="环境">环境</h2>
 <ul>
 <li>docker</li>
@@ -81,8 +85,11 @@ npm run start &amp; //启动(后台)
         <link href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan">
         </link>
         <updated>2019-08-07T02:23:04.000Z</updated>
-        <content type="html"><![CDATA[<p>以下是已经开启虚拟化之后的操作，包括WSL的一些管理和走过的坑，关于更基础的后面再补吧。<br>
-鉴于国内的文章基本就是抄抄抄，自己连改都不想改的,所以这里还是整理一下吧,减少大家被CSDN那帮弱智抄袭怪被害的次数吧。</p>
+        <summary type="html"><![CDATA[<p>以下是已经开启虚拟化之后的操作，包括WSL的一些管理和走过的坑，关于更基础的后面再补吧。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>以下是已经开启虚拟化之后的操作，包括WSL的一些管理和走过的坑，关于更基础的后面再补吧。</p>
+<!-- more -->
+<p>鉴于国内的文章基本就是抄抄抄，自己连改都不想改的,所以这里还是整理一下吧,减少大家被CSDN那帮弱智抄袭怪被害的次数吧。</p>
 <h2 id="两个管理">两个管理</h2>
 <pre><code>- wslconfig
 - lxrun
@@ -187,8 +194,12 @@ Legacy
         <link href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
         </link>
         <updated>2019-08-07T02:21:53.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
+<p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
 <p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
+<!-- more -->
 <h2 id="环境">环境</h2>
 <p>说是环境，其实是安装的软件啦</p>
 <ul>
@@ -279,7 +290,10 @@ chmod +x install.sh
         <link href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
         </link>
         <updated>2019-08-07T02:16:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
+<!-- more -->
 <h2 id="更新">更新</h2>
 <blockquote>
 <p>2019-08-05 : 更新了博文，后面再更吧 😴</p>
