@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-14T10:20:18.870Z</updated>
+    <updated>2019-08-14T10:52:26.429Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,451 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[免费一年的focusky的激活码]]></title>
+        <id>https://g.yzddhr.me/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma</id>
+        <link href="https://g.yzddhr.me/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma">
+        </link>
+        <updated>2019-08-14T10:50:51.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>关于focusky的介绍就不要了吧,非常好用的PPT软件,素材很多</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>关于focusky的介绍就不要了吧,非常好用的PPT软件,素材很多</p>
+</blockquote>
+<!-- more -->
+<p>下面介绍特别版注册:<strong>截至有效期2019年9月15日</strong>.<br>
+介绍:<br>
+https://www.iplaysoft.com/focusky-zhu-ce-ma.html<br>
+超级激活码：E02C-92AD-595E-99EC-735C<br>
+激活码有效期：即日起至2019年09月15日<br>
+激活后特别版有效期：365天特别版的升级<br>
+1、电脑打开 <a href="http://www.focusky.com.cn/account/register?iCode=pugwh">http://www.focusky.com.cn/account/register?iCode=pugwh</a> ，注册后，登录你的账号，进入“账号升级”后台激活升级。<br>
+2、升级后，打开Focusky软件，登录已升级的账号，就能获得特别版的使用权限。这里需要注意，若升级前正使用账号登录Focusky，升级后，软件上依然显示免费版，那么请先退出账号，重新登录即可。</p>
+<p>邮箱可以使用临时邮箱<br>
+<a href="aws.yzddhr.me:3000">aws.yzddhr.me:3000</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[太喜欢这个欢乐沙雕漂亮的小改改了！]]></title>
+        <id>https://g.yzddhr.me/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao</id>
+        <link href="https://g.yzddhr.me/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
+        </link>
+        <updated>2019-08-14T10:49:09.000Z</updated>
+        <summary type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
+<!-- more -->
+<p>特别是这个视频：<br>
+<a href="https://img.hacpai.com/file/2019/08/690089543912468451260041678916118869249833n-c5e28855.mp4">690089543912468451260041678916118869249833n.mp4</a><br>
+还能说什么呢？<br>
+生活或许很美好？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[axel-corn下载服务器]]></title>
+        <id>https://g.yzddhr.me/post/axel-corn-xia-zai-fu-wu-qi</id>
+        <link href="https://g.yzddhr.me/post/axel-corn-xia-zai-fu-wu-qi">
+        </link>
+        <updated>2019-08-14T10:48:05.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>axel-corn 无意间发现的下载器,基于的是axel的下载工具,这个都知道多线程下载器嘛,好用就完事了,这个项目主要是方便自己的网页短操作.就是这样.</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>axel-corn 无意间发现的下载器,基于的是axel的下载工具,这个都知道多线程下载器嘛,好用就完事了,这个项目主要是方便自己的网页短操作.就是这样.</p>
+</blockquote>
+<!-- more -->
+<h2 id="环境">环境</h2>
+<ul>
+<li>python</li>
+</ul>
+<p>// python的作用主要是就是开一个web ,静态的 ,当然,你说我用caddy不行啊?那当然可以,比起来还是自带的python更方便而已.</p>
+<h2 id="下载安装">下载安装</h2>
+<pre><code>下载和编译:
+$ git clone https://github.com/lihaoyun6/axeldown-core.git
+$ cd axeldown-core
+$ chmod a+x build.sh
+$ ./build.sh
+
+</code></pre>
+<h2 id="环境准备">环境准备:</h2>
+<p>因为项目基于web.py模块提供服务, 故需要先安装web.py</p>
+<pre><code>$ sudo easy_install web.py
+</code></pre>
+<p>启动运行:</p>
+<pre><code>$ cd axeldown-core
+$ python axeldown.py [自定义端口]
+</code></pre>
+<p>例如</p>
+<pre><code>$ python axeldown.py 2333
+</code></pre>
+<p>(不使用自定义端口时, 默认在8080端口开启服务)</p>
+<p>启动服务后在浏览器中打开&quot;<a href="http://127.0.0.1:%E7%AB%AF%E5%8F%A3/">http://127.0.0.1:端口</a>&quot;即可看到管理界面<br>
+<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg"></p>
+<h2 id="结合百度云">结合百度云</h2>
+<p><strong>1. 先解析</strong><br>
+进入下面的连接,解析下百度云的分享文件.<br>
+<a href="https://labs.nazo.moe/netdisk.html">https://labs.nazo.moe/netdisk.html</a><br>
+得到图片这样的一串东西,这个是给<code>ari2c</code>用的,但是下载链接看得出来是哪个吧,把下载链接单独拿出来,就可以了.<br>
+<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png"></p>
+<h2 id="其他">其他</h2>
+<p>顺便说一句,搭配<code>ALOOK</code>,这个搜一下,是<code>IOS</code>的一个浏览器,可以直接解析出某<code>ProXXub</code>的视频的<code>CDN</code>下载链接,这个链接用国内的<code>vps</code>也能下载,速度超快,当然你用IDM也行,但是因为是手机端的操作,这个<code>axel-corn</code>肯定是好用多了.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[色图pixiv下载器]]></title>
+        <id>https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi</id>
+        <link href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi">
+        </link>
+        <updated>2019-08-14T10:46:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
+<!-- more -->
+<p>但是倒的确是是这样,谁不想快点去世呢?大部人还是活着受罪的啊,毕竟.</p>
+<blockquote>
+<p>pixiv : 色图站,没啥好说的.</p>
+</blockquote>
+<h2 id="环境">环境</h2>
+<ul>
+<li>python</li>
+<li>node</li>
+</ul>
+<h2 id="安装">安装</h2>
+<h3 id="脚本">脚本</h3>
+<p><strong>1. 使用一键脚本</strong></p>
+<blockquote>
+<p>注意的是,一键脚本只能下载每日排行榜,当然还是正常的榜,R18榜是不能下的.但是还是挺方便的,毕竟不需要登陆的. ❤️</p>
+</blockquote>
+<p><strong>2. 下载脚本</strong></p>
+<pre><code>wget https://raw.githubusercontent.com/MoeClub/Pixiv/master/pixiv.py
+</code></pre>
+<p>脚本默认<code>25</code>线程，想改的话，直接编辑脚本，搜索<code>25</code>，改成相应数字就可以了。</p>
+<p><strong>3. 使用脚本</strong></p>
+<pre><code>#下载画师原图，使用画师UID即可
+python3 pixiv.py &quot;673179&quot; 
+   
+#下载排行榜原图，使用排行榜地址即可    
+python3 pixiv.py &quot;https://www.pixiv.net/ranking.php?mode=male&quot;  //可改女性排行榜,不可R18 :滑稽
+</code></pre>
+<h3 id="pxder">pxder</h3>
+<p><strong>1. pxder</strong></p>
+<blockquote>
+<p>还算挺好用的下载器吧,主要就是下载自己的收藏夹挺方便的,其他的功能的话,下载画师啥的,还行吧,应该,不过没用过.</p>
+</blockquote>
+<p><strong>2. 安装node</strong></p>
+<pre><code>#Debian/Ubuntu系统 
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+apt install -y git nodejs 
+
+#CentOS系统 
+
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+</code></pre>
+<h2 id="安装更新卸载">安装/更新/卸载</h2>
+<p>打开“命令提示符”或者“Powershell”，执行下面的命令，即可安装或者更新（注：后续命令皆为在此执行）</p>
+<pre><code class="language-bash">npm i -g pxder
+</code></pre>
+<p>如需卸载，执行</p>
+<pre><code class="language-bash">npm uninstall -g pxder
+</code></pre>
+<h2 id="配置">配置</h2>
+<h3 id="登录">登录</h3>
+<pre><code class="language-bash">pxder --login
+</code></pre>
+<p>然后会让你输入用户名密码，登录成功一次后以后如果没有出什么bug则无需再次登录</p>
+<p>注：pxder 仅会在计算机上储存 refreshAccessToken，而不会储存您的帐号密码</p>
+<p>如果要登出</p>
+<pre><code class="language-bash">pxder --logout
+</code></pre>
+<h3 id="设置">设置</h3>
+<p>进入 Pxder 的设置界面</p>
+<pre><code class="language-bash">pxder --setting
+</code></pre>
+<p>有五项设置，按下数字键选择一项进行设置，然后按照要求输入之后回车即可</p>
+<pre><code class="language-bash">[1] Download path     # 下载目录，必须设置
+[2] Download thread   # 下载线程数
+[3] Download timeout  # 下载超时
+[4] Auto rename       # 自动重命名（文件夹）
+[5] Proxy             # 使用代理
+</code></pre>
+<ul>
+<li>
+<p><strong>下载目录</strong><br>
+请注意相对路径与绝对路径的区别，不过不用担心，输入完路径后会显示绝对路径以方便你检查<br>
+目录无需手动建立，下载图片的时候会自动建立</p>
+</li>
+<li>
+<p><strong>下载线程数</strong><br>
+即同时下载的图片数，默认为<code>5</code>，最小为<code>1</code>，最大为<code>32</code><br>
+下载图片时最左侧的一列实际上就是线程编号</p>
+</li>
+<li>
+<p><strong>下载超时及重试</strong><br>
+如果这么多秒之后一张图还没被下载完则算作超时，超时后会自动重试，默认值为<code>30</code><br>
+下载图片时如果线程编号是黄色底的就代表此次是重试<br>
+重试超过<code>10</code>次则视作下载失败</p>
+</li>
+<li>
+<p><strong>自动重命名</strong><br>
+开启了以后，例如这个画师原来叫<code>abc</code>，今天你再次去下载（更新）他的画作，但是他改名叫<code>def</code>了，那么程序会自动帮你重命名画师文件夹</p>
+</li>
+<li>
+<p><strong>使用代理</strong><br>
+支持使用 HTTP 或 SOCKS 代理，即可以使用小飞机<br>
+输入格式为<code>&lt;协议&gt;://[用户名:密码@]&lt;IP&gt;:&lt;端口&gt;</code>，例如：</p>
+<ul>
+<li><code>http://user:passwd@127.0.0.1:1080</code></li>
+<li><code>socks://127.0.0.1:1080</code>（如果你使用小飞机则直接填这个，除非你改过本地端口）</li>
+</ul>
+<p>如果输入空行则关闭代理</p>
+</li>
+</ul>
+<p>注：配置文件存放路径可通过命令<code>pxder --conf-loca</code>查看</p>
+<h2 id="说明">说明</h2>
+<ul>
+<li>由于官方客户端 API 限制 offset 不能大于 5000，所以程序不会也无法得到画师列表、画作列表、收藏列表等 5000 页以后的数据，并且由该原因导致的程序崩溃问题已经在 v2.7.3 修复</li>
+<li>会将同一画师的作品下载在<code>(UID)画师名</code>格式的文件夹内，图片命名格式为<code>(PID)作品名</code><br>
+并且，画师名会自动删除名字中<code>@</code>（包含半角&amp;全角）符号及以后的文字（因为这些基本上都是画师的摊位信息之类的与名字无关的信息）</li>
+<li>文件（夹）名均会过滤掉所有 Windows 和 Linux 中不能或不推荐做文件名的符号</li>
+<li>动图下下来会是所有帧的压缩包，并且会标注 delay 信息
+<ul>
+<li>例如<code>xxx@30ms.zip</code>表示该动图的播放速度为 30ms 一帧</li>
+<li>由于获取动图信息需要额外调用API，因此如果动图较多将会使得解析时间较长</li>
+</ul>
+</li>
+<li>下载时会忽略掉已经下载完成的插画</li>
+<li>下载超时或网络错误会自动重试，重试上限为10次
+<ul>
+<li>如果当某一个线程达到重试上限并且此时有不止一个下载线程处于重试状态，程序将视为暂时出现了网络问题，暂停5分钟后会继续重试</li>
+<li>如果只有一个下载线程出现错误，程序将会放弃下载该p并继续运行（因为有出现过确实是因为P站自己的问题而无法下载的例子<code>48948784_p4</code>）</li>
+</ul>
+</li>
+<li>抗GFW连接重置攻击，解析时被连接重置会自动重试</li>
+</ul>
+<h2 id="正式使用">正式使用</h2>
+<p>如果需要终止程序，请在命令行中按下<code>Ctrl + C</code>或者直接关闭命令行窗口</p>
+<p>请不要吐槽为什么在 Windows 下<code>Ctrl + C</code>后提示的<code>终止批处理操作吗(Y/N)?</code>不管是 Y 还是 N 都依然会终止，因为 nodejs 捕捉到<code>Ctrl + C</code>就自己终止了，Windows 晚了一步（。</p>
+<h3 id="1-下载或更新某画师的所有插画作品">(1) 下载或更新某画师的所有插画作品</h3>
+<p>使用<code>-u</code>或<code>--uid</code>参数，后跟画师的 UID，可单个可多个，如果多个则用英文半角逗号隔开</p>
+<pre><code class="language-bash">pxder -u uid1,uid2,uid3,...
+</code></pre>
+<p>例如</p>
+<pre><code class="language-bash">pxder -u 5899479,724607,11597411
+</code></pre>
+<h3 id="2-下载或更新你关注的所有画师的所有插画作品">(2) 下载或更新你关注的所有画师的所有插画作品</h3>
+<p>该操作同时也会更新已下载的关注画师的作品，并且效率远高于 (3)，比较推荐使用</p>
+<p>会自动排除 pixiv事務局 (uid=<code>11</code>)</p>
+<p>由于收集关注信息需时较久，因此特地针对该功能做了信息缓存：如果你在下载中途退出，那么下次使用该功能时并不需要重新收集，而是利用上次的缓存立即继续下载。</p>
+<ul>
+<li>公开关注与私密关注的缓存是分开的，互不干扰</li>
+<li>如果你需要强制重新收集画师信息（忽略上次的缓存），请在运行命令时加入<code>--force</code>参数</li>
+</ul>
+<h4 id="公开关注的画师">公开关注的画师</h4>
+<pre><code class="language-bash">pxder -f
+# 或
+pxder --follow
+</code></pre>
+<h4 id="私密关注的画师">私密关注的画师</h4>
+<pre><code class="language-bash">pxder -F
+# 或
+pxder --follow--private
+</code></pre>
+<h3 id="3-更新已下载的画师的画作">(3) 更新已下载的画师的画作</h3>
+<p>会对下载目录中检测到的所有下载过的画师的插画进行增量更新下载</p>
+<p>与 (2) 的区别是可以更新你使用 (1) 下载了的但是未关注的画师的插画，但是效率远低于 (2)</p>
+<pre><code class="language-bash">pxder -U
+# 或
+pxder --update
+</code></pre>
+<h3 id="4-下载或更新你的收藏中的插画作品">(4) 下载或更新你的收藏中的插画作品</h3>
+<h4 id="公开收藏">公开收藏</h4>
+<p>插画会被下载至<code>[bookmark] Public</code>文件夹中</p>
+<pre><code class="language-bash">pxder -b
+# 或
+pxder --bookmark
+</code></pre>
+<h4 id="私密收藏">私密收藏</h4>
+<p>插画会被下载至<code>[bookmark] Private</code>文件夹中</p>
+<pre><code class="language-bash">pxder -B
+# 或
+pxder --bookmark--private
+</code></pre>
+<h3 id="5-根据指定-pid-下载插画">(5) 根据指定 PID 下载插画</h3>
+<p>插画会被下载至<code>PID</code>文件夹中</p>
+<pre><code class="language-bash">pxder -p pid1,pid2,pid3,...
+</code></pre>
+<p>例如</p>
+<pre><code class="language-bash">pxder -p 70593670,70594912,70595516
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[heroku搭建RSSHUB]]></title>
+        <id>https://g.yzddhr.me/post/heroku-da-jian-rsshub</id>
+        <link href="https://g.yzddhr.me/post/heroku-da-jian-rsshub">
+        </link>
+        <updated>2019-08-14T10:45:26.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="目的">目的</h2>
+<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="目的">目的</h2>
+<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
+<!-- more -->
+<p>，唉，当今世界，人心浮躁，究竟还有几个自己看自己的RSS信息了，难道被淹没在碎片化信息的洪流中才是正常的状态吗？心里净土终不可得，这是个悲哀的时代，是个宣传伪个性的时代。</p>
+<blockquote>
+<p>🍰 万物皆可 RSS <a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></p>
+</blockquote>
+<h2 id="环境">环境</h2>
+<ul>
+<li>heroku</li>
+<li>RSSHUB</li>
+</ul>
+<h2 id="安装">安装</h2>
+<ul>
+<li>安装heroku</li>
+</ul>
+<ol>
+<li>安装node环境</li>
+</ol>
+<pre><code>#Debian/Ubuntu系统 
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+
+apt install -y git nodejs 
+
+#CentOS系统 
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+
+</code></pre>
+<ol start="2">
+<li>安装<br>
+npm安装cli</li>
+</ol>
+<pre><code>npm install heroku-cli -g  //全局安装,
+</code></pre>
+<p>OR</p>
+<pre><code>npm install heroku-cli --save //当前目录安装,之后再node_文件夹里面设置软连接即可.
+</code></pre>
+<ol start="3">
+<li>下载源码</li>
+</ol>
+<pre><code>git clone https://github.com/DIYgod/RSSHub.git
+</code></pre>
+<ol start="4">
+<li>heroku-cli的配置</li>
+</ol>
+<ul>
+<li>登陆</li>
+</ul>
+<pre><code>heroku login -i       //输入用户名,密码即可
+</code></pre>
+<ul>
+<li>推送<br>
+进入刚才下载的RSSHUB的目录<br>
+做自己想搞得更改</li>
+</ul>
+<pre><code>git add . 
+git commit -m &quot;XXX&quot;
+</code></pre>
+<p>创建应用</p>
+<pre><code>heroku create yzd-test //创建yzd-test的APP
+</code></pre>
+<p>推送</p>
+<pre><code>git push heroku master //推送到master
+</code></pre>
+<h2 id="使用">使用</h2>
+<p>访问:<br>
+<a href="yzd-test.herokuapp.com">yzd-test.herokuapp.com</a>    //当然用你自己的APP名哈.</p>
+<h2 id="使用体验">使用体验</h2>
+<p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.<br>
+以上!</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安装使用serveo （内网穿透）]]></title>
+        <id>https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou</id>
+        <link href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou">
+        </link>
+        <updated>2019-08-14T10:44:33.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
+<!-- more -->
+<p>，对其优点是使用现有的<code>SSH</code>客户端，无需安装客户端即可完成端口转发。当用户连接到<code>Serveo</code>时，他们会获得一个公共<code>URL</code>，任何人都可以使用它来连接到他们的<code>localhost</code>服务器。</p>
+<h2 id="使用">使用</h2>
+<p><strong>官方地址：</strong><a href="http://serveo.net/">http://serveo.net</a></p>
+<p>**使用要求：**可以使用<code>SSH</code>，并且能连接到互联网，<code>Linux</code>、<code>Windows</code>等系统都行。</p>
+<p><strong>1、转发HTTP</strong><br>
+将本地<code>3000</code>端口穿透到公网中，使用命令：</p>
+<pre><code>#要转发其它端口的自行替换
+ssh -R 80:localhost:3000 serveo.net
+</code></pre>
+<p>第一次如果有提示，选择<code>yes</code>即可，之后会为你随机生成一个<code>serveo.net</code>二级域名，然后就可以使用浏览器间接访问本地的<code>localhost:3000</code>了。</p>
+<p>如果要指定二级域名，可以使用命令：</p>
+<pre><code>#这里默认为moerats.serveo.net，自行替换即可
+ssh -R moerats:80:localhost:3000 serveo.net
+</code></pre>
+<p>此时你就可以在外网使用<code>moerats.serveo.net</code>访问你本地的<code>localhost:3000</code>了。</p>
+<p><strong>2、转发SSH</strong><br>
+将本地<code>22</code>端口穿透到公网中，使用命令：</p>
+<pre><code>#可以自行设置名称，这里默认rats
+ssh -R rats:22:localhost:22 serveo.net
+
+</code></pre>
+<p>接下来就可以登录该内网服务器了，使用命令：</p>
+<pre><code>ssh -J serveo.net root@rats
+
+</code></pre>
+<p><strong>3、转发TCP</strong><br>
+将本地<code>1492</code>端口穿透到公网中，使用命令：</p>
+<pre><code>#可以自行设置公网端口，这里默认1492
+ssh -R 1492:localhost:1492 serveo.net
+
+</code></pre>
+<h2 id="进程守护">进程守护</h2>
+<p>这里官方推荐使用<code>AutoSSH</code>，作用是一旦<code>SSH</code>连接超时或停止传递流量，则根据需要重新启动它。</p>
+<p><strong>1、安装AutoSSH</strong></p>
+<pre><code>#Debian/Ubuntu系统
+apt install autossh -y
+
+#CentOS系统
+yum install autossh -y
+
+</code></pre>
+<p><strong>2、使用Systemd</strong></p>
+<p>只适用于<code>CentOS 7</code>、<code>Debian 8+</code>、<code>Ubuntu 16+</code>等。</p>
+<pre><code>#输入你的转发命令，去掉开头的ssh即可
+serveo=&quot;-R 80:localhost:3000 serveo.net&quot;
+#将以下代码一起复制到SSH运行
+cat &gt; /etc/systemd/system/autossh.service &lt;&lt;EOF
+[Unit]
+Description=autossh
+After=network.target
+
+[Service]
+Type=simple
+Environment=&quot;AUTOSSH_GATETIME=0&quot;
+ExecStart=$(command -v autossh) -M 0 -o &quot;ServerAliveInterval 30&quot; -o &quot;ServerAliveCountMax 3&quot; $serveo
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+<p>开始启动并设置开机自启：</p>
+<pre><code>systemctl start autossh
+systemctl enable autossh
+
+</code></pre>
+<p>最后更多的命令和使用可以直接查看官方文档→<a href="http://serveo.net/">传送门</a>。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ubuntu口袋系统搭建之桌面版（TLS）]]></title>
         <id>https://g.yzddhr.me/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls</id>
@@ -327,566 +772,6 @@ Legacy
 <p>上述命令将整个 WSL 的 rootfs 移动至 <code>D:\wsl\legacy</code> 文件夹下。</p>
 <ul>
 <li>check 能否正常使用，按照使用一节提示的操作进行即可</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[内网穿透加shadowsocks实现全局穿透（伪）]]></title>
-        <id>https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei</id>
-        <link href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
-        </link>
-        <updated>2019-08-07T02:21:53.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
-<p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="实现功能">实现功能</h2>
-<p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
-<!-- more -->
-<h2 id="环境">环境</h2>
-<p>说是环境，其实是安装的软件啦</p>
-<ul>
-<li>goproxy</li>
-<li>shadowsocks (GO）版本</li>
-<li>公网vps</li>
-<li>shdowsocks rocket （可选），IOS的shadowsocks客户端。</li>
-</ul>
-<h2 id="安装">安装</h2>
-<ul>
-<li>goproxy</li>
-</ul>
-<ol>
-<li>下载proxy<br>
-下载地址 : https://github.com/snail007/goproxy/releases/latest<br>
-下面以v7.9为例，如果有最新版，请使用最新版链接，注意替换下面的下载连接里面的版本号为最新版版本号。</li>
-</ol>
-<pre><code>cd /root/proxy/  
-wget https://github.com/snail007/goproxy/releases/download/v7.9/proxy-linux-amd64.tar.gz  
-</code></pre>
-<ol start="2">
-<li>下载自动安装脚本</li>
-</ol>
-<pre><code>cd /root/proxy/  
-wget https://raw.githubusercontent.com/snail007/goproxy/master/install.sh  
-chmod +x install.sh  
-./install.sh  
-</code></pre>
-<h3 id="生成通讯文件">生成通讯文件</h3>
-<p>http，tcp，udp代理过程会和上级通讯，为了安全我们采用加密通讯，当然可以选择不加密通信通讯，本教程所有和上级通讯都采用加密，需要证书文件。</p>
-<p>1.通过下面的命令生成自签名的证书和key文件。<br>
-<code>./proxy keygen -C proxy</code><br>
-会在当前程序目录下面生成证书文件proxy.crt和key文件proxy.key。</p>
-<p>2.通过下面的命令生，使用自签名证书proxy.crt和key文件proxy.key签发新证书:goproxy.crt和goproxy.key。<br>
-<code>./proxy keygen -s -C proxy -c goproxy</code><br>
-会在当前程序目录下面生成证书文件goproxy.crt和key文件goproxy.key。下载相关证书到本地，放到goproxy.exe文件同一目录。</p>
-<p>3.默认情况下证书的里面的域名是随机的，可以使用<code>-n test.com</code>参数指定。</p>
-<p>4.更多用法:<code>proxy keygen --help</code>。</p>
-<ul>
-<li>shadowsocks-go</li>
-</ul>
-<ol>
-<li>下载对应版本: https://github.com/shadowsocks/shadowsocks-go/releases</li>
-<li>写一个配置<code>config.json</code></li>
-</ol>
-<pre><code>{
-    &quot;server&quot;:&quot;0.0.0.0&quot;,
-    &quot;server_port&quot;:7777,
-    &quot;local_port&quot;:1080,
-    &quot;password&quot;:&quot;yzd&quot;,
-    &quot;method&quot;: &quot;aes-128-cfb&quot;,
-    &quot;timeout&quot;:600
-}
-</code></pre>
-<ol start="3">
-<li>运行<code>./shadowsocks-server -c config.json</code></li>
-</ol>
-<h2 id="使用">使用</h2>
-<h3 id="背景">背景</h3>
-<ul>
-<li>内网机器A提供了shadowsocks端口7777</li>
-<li>有VPS一个，公网IP:22.22.22.22</li>
-</ul>
-<h3 id="需求">需求</h3>
-<p>通过访问VPS的28080端口访问到内网机器A的7777端口<br>
-步骤：</p>
-<ol>
-<li>在vps上执行<br>
-<code>./proxy bridge -p &quot;:33080&quot; -C proxy.crt -K proxy.key</code><br>
-<code>./proxy server -r &quot;:28080@:7777&quot; -P &quot;127.0.0.1:33080&quot; -C proxy.crt -K proxy.key</code></li>
-<li>在公司机器A上面执行<br>
-<code>./proxy client -P &quot;22.22.22.22:33080&quot; -C proxy.crt -K proxy.key</code></li>
-<li>完成</li>
-<li>后台运行命令后面加上<code>--daemon</code>参数即可</li>
-</ol>
-<h2 id="原理">原理</h2>
-<p>本地的shadowsocks跑了一个代理在<code>7777</code>端口，跑的是<code>tcp</code>流量，通过内网穿透到公网服务器，即在公网的<code>28080</code>访问的是本地同类流量，所以现在外网的任何一台机子，连上了跑在vps的<code>28080</code>的shadowsocks服务，即相当于连上了内网的网络环境，当然可以访问内网的网络资源。</p>
-<h3 id="注意">注意</h3>
-<ul>
-<li>shadowsocks的内网服务主机的使用，比如这台主机上跑了一个<code>80</code>端口的web，那我连上了公网服务器上面的shadowsocks代理后，使用的不是<code>localhost</code>访问，而应该是内网主机的内网IP，通过<code>ipconfig</code>命令查看。</li>
-<li>其他用法，可以和fiddler抓包软件配合使用，可以搭配<code>ssh</code>使用，方便管理。（荐）</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[用过的博客程序大总结加推荐]]></title>
-        <id>https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian</id>
-        <link href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
-        </link>
-        <updated>2019-08-07T02:16:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
-<!-- more -->
-<h2 id="更新">更新</h2>
-<blockquote>
-<p>2019-08-05 : 更新了博文，后面再更吧 😴</p>
-</blockquote>
-<h2 id="介绍">介绍</h2>
-<ul>
-<li>WordPress</li>
-<li>typecho；zblog</li>
-<li>ghost</li>
-<li>hexo；hugo</li>
-<li>halo</li>
-<li>solo</li>
-<li><strong>gridea</strong>(推荐)</li>
-</ul>
-<h2 id="wordpress">WordPress</h2>
-<h3 id="搭建">搭建</h3>
-<ul>
-<li>lnmp环境（建议宝塔面板）<a href="https://bt.cn">宝塔</a></li>
-<li>(或)小内存搭建wp站（见附链接）</li>
-<li>wordpress官网 <a href="https://www.wordpress.com">wordpress</a></li>
-</ul>
-<h3 id="主题站点">主题站点</h3>
-<blockquote>
-<p>wp主题站：https://themeforwp.net/<br>
-主题猫：http://ztmao.com/<br>
-Wordpress主题站：http://www.thefox.cn/<br>
-。。。</p>
-</blockquote>
-<h4 id="主题推荐">主题推荐</h4>
-<ul>
-<li><a href="https://github.com/galnetwen/H-Siren">H-Siren</a>，老哥一直还在更新，很多东西就是有点卡适合喜欢花里胡哨的同学。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-debb9a93.png" alt="Screenshot1.png"></li>
-<li><a href="https://www.fczbl.vip/787.html">犬blog</a>，以前用过一段时间，还不错，后面感觉太冷清了，弃用了。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-acf3664a.png" alt="Screenshot1.png"></li>
-</ul>
-<h3 id="优缺点">优缺点</h3>
-<ul>
-<li>优：<br>
-历史悠久，使用的人很多，主题体系，插件体系完善，基本有问题就能解决</li>
-<li>劣：<br>
-结构冗长，lnmp环境占空间大，响应速度慢，不够小巧美观。</li>
-</ul>
-<h2 id="typecho">typecho</h2>
-<h3 id="搭建-2">搭建</h3>
-<ul>
-<li>lnmp环境</li>
-<li>（或）<a href="https://www.moerats.com/archives/651/">利用caddy加sqlite3搭建小博客</a></li>
-<li>官网 <a href="http://typecho.org/">typecho</a></li>
-</ul>
-<h3 id="主题">主题</h3>
-<p>typecho的主题相比较WP的主题要更加漂亮简洁。</p>
-<ul>
-<li><a href="https://typecho.me/">typecho主题模板站</a></li>
-<li><a href="https://typecho.me/">typecho wiki</a></li>
-<li><a href="https://typecho.top/">typecho主题商店</a></li>
-</ul>
-<h4 id="主题推荐-2">主题推荐</h4>
-<ul>
-<li><a href="https://www.ihewro.com/archives/489/">handsome</a> （收费）很多人都在用，功能很多，作者更新也勤快。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot-8caed178.png" alt="Screenshot.png"></li>
-<li><a href="https://www.96sir.com/archives/134.html">destiny</a> （收费）非常漂亮的主题，价格稍贵，但是对手机端适配的非常漂亮。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot-1e7adf91.png" alt="Screenshot.png"></li>
-<li><a href="https://github.com/AlanDecode/Typecho-Theme-VOID">Void</a> 猴子打印机的产物，作者小熊猫，写了不少的typecho博客主题。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot-1afb0417.png" alt="Screenshot.png"></li>
-<li><a href="https://qqdie.com/archives/violet-typecho-themes.html">Violet</a>（收费），知名博主，qq死，一直更新typecho的相关文章，造诣颇深。<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-81fa5a16.png" alt="Screenshot1.png"></li>
-<li><a href="https://qqdie.com/archives/qingyi.html">Typecho - QingYi</a>，仿开源的论坛的一个主题<br>
-<img src="https://img.hacpai.com/file/2019/08/1849124129-aa951a35.jpg" alt="1849124129.jpg"></li>
-</ul>
-<h3 id="优缺点-2">优缺点</h3>
-<ul>
-<li>优：<br>
-简洁美观，主题现在也不少了，插件也挺丰富的。很多人用</li>
-<li>劣：<br>
-主流安装还是lnmp环境，还是感觉有点冗长，当然docker安也行。</li>
-</ul>
-<h2 id="hexohugo">hexo；hugo</h2>
-<p>hexo和hugo都是静态的博客，但是相比较而言，hugo的生成速度更快一点，但是主题还是hexo多，所以一般还是安装hexo的多点。</p>
-<h3 id="搭建-3">搭建</h3>
-<ul>
-<li>node环境</li>
-<li>git或者静态服务器，用于反代，可选</li>
-</ul>
-<h3 id="主题-2">主题</h3>
-<ul>
-<li>官方仓库<br>
-<a href="https://hexo.io/themes/index.html">hexo.io</a></li>
-</ul>
-<h3 id="主题推荐-3">主题推荐</h3>
-<ul>
-<li>
-<p><a href="https://github.com/iissnan/hexo-theme-next">Next</a><br>
-大名鼎鼎的next，NexT is a high quality elegant <a href="http://hexo.io/">Hexo</a> theme. It is crafted from scratch, with love.<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-555c6aa6.png" alt="Screenshot1.png"></p>
-</li>
-<li>
-<p><a href="https://github.com/honjun/hexo-theme-sakura">Sukara</a><br>
-故乡的樱花又开了，👍 ，功能很全，而且确实很巧玲，主题很新，作者更新还很积极。<br>
-<img src="https://img.hacpai.com/file/2019/08/k-947e0c3e.jpg" alt="k.jpg"></p>
-</li>
-<li>
-<p><a href="https://github.com/ppoffice/hexo-theme-icarus">ICARUS</a><br>
-A simple, delicate, and modern theme for the static site generator Hexo<br>
-<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31-7603e843.png" alt="68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31.png"></p>
-</li>
-<li>
-<p><a href="https://github.com/imzeuk/hugo-theme-zozo">ZOZO</a>，这个主题是真的简洁又漂亮。<br>
-<img src="https://img.hacpai.com/file/2019/08/showcase-e91a7170.png" alt="showcase.png"></p>
-</li>
-<li>
-<p><a href="https://github.com/SumiMakito/hexo-theme-typography">typography</a><br>
-像报纸一样的阅读体验<br>
-<img src="https://img.hacpai.com/file/2019/08/head-24dd838f.png" alt="head.png"></p>
-</li>
-<li>
-<p><a href="https://github.com/smackgg/hexo-theme-smackdown">hexo-theme-smackdown</a><br>
-一个比较浮夸的hexo主题，虽然说有一点脱离了简约<br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-fedc09b9.png" alt="Screenshot1.png"></p>
-</li>
-<li>
-<p><a href="https://github.com/klugjo/hexo-theme-alpha-dust">hexo-theme-alpha-dust</a><br>
-This theme was developed from scratch by myself just for fun. It is a glowy futuristic theme, hope you will find a use for it :)<br>
-<img src="https://img.hacpai.com/file/2019/08/687474703a2f2f7777772e636f6465626c6f63712e636f6d2f696d672f6865786f2d7468656d652d7468756d626e61696c2f416c706861447573742e6a7067-c879598c.jpg" alt="687474703a2f2f7777772e636f6465626c6f63712e636f6d2f696d672f6865786f2d7468656d652d7468756d626e61696c2f416c706861447573742e6a7067.jpg"></p>
-</li>
-<li>
-<p><a href="https://github.com/probberechts/hexo-theme-cactus">hexo-theme-cactus</a><br>
-A responsive, clean and simple <a href="http://hexo.io/">Hexo</a> theme for a personal website.<br>
-<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f646f63732e676f6f676c652e636f6d2f75633f69643d314b36366263637772347a3954674a657630417a437162493742787a5672376d64-042d29ae.png" alt="68747470733a2f2f646f63732e676f6f676c652e636f6d2f75633f69643d314b36366263637772347a3954674a657630417a437162493742787a5672376d64.png"></p>
-</li>
-</ul>
-<blockquote>
-<p>推荐了很多的主题，虽说有点乱吧，但还是大多数我都有自己用过，感觉还是不错的。</p>
-</blockquote>
-<h3 id="优缺点-3">优缺点</h3>
-<ul>
-<li>优：<br>
-简洁，是静态页面，所以访问速度还是挺快的，而且主题很多，而且布置起来的话，也很简洁，一般其他的博客都会适配hexo的md文件，所以迁移博客也比较简单。</li>
-<li>劣：<br>
-配置繁琐，主题的配置，根目录的配置都比较繁琐，而且每次的静态页面的生成也挺废时间的。</li>
-</ul>
-<h2 id="solo博客和halo博客">solo博客和halo博客</h2>
-<p>这两种比较像，搭建起来都很容易，一起说了.</p>
-<ul>
-<li>solo 博客<br>
-<a href="https://github.com/b3log/solo">Solo</a> 是一款小而美的开源博客系统，专为程序员设计。</li>
-</ul>
-<p>Solo 有着非常活跃的<a href="https://hacpai.com/">社区</a>，可将文章作为帖子推送到社区，来自社区的回帖将作为博客评论进行联动。</p>
-<blockquote>
-<p>这是一种全新的网络社区体验，让热爱记录和分享的你不再感到孤单！<br>
-具体细节请浏览 <a href="https://hacpai.com/article/1546941897596">B3log 构思</a></p>
-</blockquote>
-<ul>
-<li>halo 博客<br>
-<strong>Halo</strong> [ˈheɪloʊ]，意为光环。当然，你也可以当成拼音读(哈喽)。</li>
-</ul>
-<p>轻快，简洁，功能强大，使用 Java 开发的博客系统。</p>
-<h3 id="搭建-4">搭建</h3>
-<ul>
-<li>docker ， docker-compose</li>
-<li>Java包</li>
-<li>war包 ，Tomact</li>
-</ul>
-<h3 id="主题-3">主题</h3>
-<ul>
-<li>solo主题：solo的主题是本体里面内置的，换起来很方便。也够用。<br>
-<img src="https://img.hacpai.com/file/2019/08/61179517afd61b00a63611e987d5ddea6d6a0fc9-0d368d02.png" alt="61179517afd61b00a63611e987d5ddea6d6a0fc9.png"></li>
-<li>halo主题：<br>
-不同于solo的内置，只要在主题仓库复制相应的链接，博客就可以自行下载安装。<br>
-<a href="https://halo.run/theme/">主题仓库</a><br>
-<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f692e6c6f6c692e6e65742f323031392f30352f30382f356364326663623231666337362e706e67-00f618af.png" alt="68747470733a2f2f692e6c6f6c692e6e65742f323031392f30352f30382f356364326663623231666337362e706e67.png"></li>
-</ul>
-<h3 id="主题推荐-4">主题推荐</h3>
-<ul>
-<li>solo ：<br>
-Bubble : 气泡，自带live2D，自带特效。<br>
-<img src="https://img.hacpai.com/file/2019/08/Bubble-c1e22a77.jpg" alt="Bubble.jpg"></li>
-<li>Casper : 简洁material风，文章的特征图很漂亮。<br>
-<img src="https://img.hacpai.com/file/2019/08/Casper-cbcaca66.jpg" alt="Casper.jpg"></li>
-</ul>
-<h3 id="优缺点-4">优缺点</h3>
-<ul>
-<li>优<br>
-首先说下有点吧，这个solo和halo博客都是完成度很高的博客，不管是在书写体验，还是前端页面上面，界面简洁漂亮，而且各有各的特点，solo的博客的图床很有特点，因为solo博客是基于黑客派这么一个社区的应用，所以作者内置了一个图床，省去了找图床的麻烦，halo博客的书写体验更棒，是基于gridea的解释器<strong>markdown</strong>工具，书写体验不亚用ios里面webn书写工具啥的，比typra感觉也更好。当然两款博客都是支持都出导入hexo的文件的。</li>
-<li>劣<br>
-halo博客暂时没有什么不适应的地方，要是硬说的话，主题还是太少了，而且漂亮的主题也是收费的，但是作者还在努力完善。<br>
-solo博客的话，其实书写体验还是不够好，建议在<strong>markdown</strong>书写的时候可以代码高亮语句，这样层次分明更好一点。还有就是Java博客嘛，占用内存都不会小的，一般1G以上，不够的话考虑可以用虚拟内存。</li>
-</ul>
-<h2 id="gridea推荐"><strong>gridea</strong>（推荐）</h2>
-<p>✍️一个静态博客写作客户端 (A static blog writing client)<br>
-<a href="https://gridea.dev/">GRIDEA</a>是海岛心hey大佬设计的本地<strong>markdown</strong>书写工具，但是可以同步本地的文章到github或者coding，其原理和hexo，hugo是一样的，都是本地生成静态的文件然后上传支持静态资源的服务器，但是平心而论，gridea是比hexo更棒的，虽然主题数目上确实远没有hexo多，但gridea的本质上是<strong>markdown</strong>书写工具啊，在书写体验上可以说是做到了完美，而不亚于hexo主题的高完成度和美观度，这种在不是主要功能却做得如此棒的特质，确实是很难得的。</p>
-<h3 id="安装">安装</h3>
-<ul>
-<li>下载安装包<br>
-<a href="https://gridea.dev">官网</a>，下载对应安装包安装即可，全平台支持。</li>
-</ul>
-<h3 id="主题-4">主题</h3>
-<p><a href="https://gridea.dev/themes/">主题仓库</a><br>
-<img src="https://img.hacpai.com/file/2019/08/Screenshot1-6b4f86b9.png" alt="Screenshot1.png"></p>
-<blockquote>
-<p>个人推荐的是gridea的主题Walker，只要6RMB，还是可以接受的，而且却是漂亮的。</p>
-</blockquote>
-<h3 id="优缺点-5">优缺点</h3>
-<ul>
-<li>优：<br>
-在一款好用的书写工具的同时，兼顾了博客生成器的功能，对数学公式的支持很棒。</li>
-<li>劣：<br>
-暂时不能自动同步github和coding以外的容器，并且迁移博客是需要手动本分相应的配置源文件夹的。</li>
-</ul>
-<h2 id="免费的博客资源">免费的博客资源</h2>
-<ul>
-<li>微博</li>
-<li>微软的Blogger : <a href="https://www.blogger.com/">https://www.blogger.com</a></li>
-<li>carrd.co : <a href="https://carrd.co/">https://carrd.co/</a></li>
-</ul>
-<h2 id="附链接">附链接</h2>
-<ul>
-<li><a href="https://www.moerats.com/archives/651/">小内存VPS安装Caddy+PHP 7+Sqlite 3环境，并快速搭建Typecho博客</a></li>
-<li><a href="https://www.moerats.com/archives/749/">小内存VPS一键安装Typecho/WordPress/Zblog/Kodexplorer及整站备份等</a></li>
-<li><a href="https://www.moerats.com/archives/689/">Caddy环境下一些Web应用程序的配置参考</a></li>
-<li><a href="https://www.moerats.com/archives/656/">Caddy环境下WordPress博客伪静态设置</a></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[solo博客搭建配置SSl]]></title>
-        <id>https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl</id>
-        <link href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl">
-        </link>
-        <updated>2019-08-03T11:41:18.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>solo博客&quot;专为程序员设计的博客&quot;<br>
-<a href="https://github.com/b3log/solo">GitHub</a></p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>solo博客&quot;专为程序员设计的博客&quot;<br>
-<a href="https://github.com/b3log/solo">GitHub</a></p>
-</blockquote>
-<!-- more -->
-<blockquote></blockquote>
-<p>本文利用docker以及docker-compose搭建solo博客并配置SSL.</p>
-<h2 id="solo效果图">solo效果图:</h2>
-<p><img src="https://g.yzddhr.me/post-images/1564833531441.PNG" alt=""></p>
-<h2 id="环境">环境</h2>
-<h3 id="安装docker">安装docker</h3>
-<pre><code>curl -sSL https://get.docker.com/ | sh 
-systemctl start docker 
-systemctl enable docker
-</code></pre>
-<h3 id="安装docker-compose">安装docker-compose</h3>
-<ul>
-<li>利用pip安装:<br>
-<code>pip install docker-compose</code></li>
-<li>利用静态文件安装</li>
-</ul>
-<pre><code>curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-</code></pre>
-<h2 id="编辑docker-compose文件">编辑docker-compose文件</h2>
-<p>编辑文件:<br>
-<code>vi docker-compose.yml</code><br>
-写入:</p>
-<pre><code>version: &quot;2&quot;                                                                                                              
-                                                                                                                         
-services:                                                                                                                 
- mysql:                                                                                                                  
-   container_name: mysql                                                                                                 
-   image: mysql:5.5.60                                                                                                   
-   restart: always                                                                                                       
-   volumes:                                                                                                              
-     - ./mysql/data:/var/lib/mysql                                                                                       
-     - ./mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf                                                       
-   ports:                                                                                                                
-     - &quot;6603:3306&quot;                                                                                                       
-   environment:                                                                                                          
-     - MYSQL_ROOT_PASSWORD=数据库密码                                                                                     
- solo:                                                                                                                   
-   container_name: solo                                                                                                  
-   image: b3log/solo                                                                                                     
-   restart: always                                                                                                       
-   ports:                                                                                                                
-     - &quot;8080:8080&quot;                                                                                                       
-   environment:                                                                                                          
-     RUNTIME_DB: &quot;MYSQL&quot;                                                                                                 
-     JDBC_USERNAME: &quot;root&quot;                                                                                               
-     JDBC_PASSWORD: &quot;数据库密码&quot;                                                                                          
-     JDBC_DRIVER: &quot;com.mysql.jdbc.Driver&quot;                                                                                
-     JDBC_URL: &quot;jdbc:mysql://mysql:3306/solo?useUnicode=yes&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC&quot;     
-   command: --listen_port=8080 --server_scheme=http --server_host=域名或IP 
-</code></pre>
-<p>启动容器:<br>
-<code>docker-compose up -d</code><br>
-在<code>docker-compose.yml</code>的文件夹下会生成MySQL的文件夹;进入文件夹:配置数据库;依次输入以下命令:<br>
-<code>docker exec -it database bash</code><br>
-<code>mysql -uroot -p</code>输入密码登入mysql<br>
-依次执行</p>
-<pre><code>CREATE DATABASE `solo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER 'solouser'@'%' identified BY 'solo@pwd';
-GRANT ALL ON solo.* TO 'solouser'@'%'; 
-FLUSH PRIVILEGES;
-</code></pre>
-<p>重新<code>docker-compose up -d</code>.</p>
-<h2 id="配置solo的ssl">配置solo的SSL</h2>
-<p>因为用nginx容器反代需要主域名,用二级域名反代会发生错误:当然有主域名,也想用主域名的可以参照<a href="https://github.com/liumapp/solo-in-docker/">docker-in-solo</a>配置https<br>
-以下使用cloudflare生成SSL</p>
-<ul>
-<li>修改<code>docker-compose.yml</code>文件中的<code>solo</code>容器的端口为哦<code>80</code></li>
-<li>修改<code>solo</code>容器的<code>sever_host</code>参数为域名;修改<code>server_scheme</code>参数为<code>https</code></li>
-<li>cloudflare开启<code>强制SSL</code>,开启<code>小黄云</code></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[免费申请AWS的Educate Starter教育版账号]]></title>
-        <id>https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao</id>
-        <link href="https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao">
-        </link>
-        <updated>2019-08-03T07:32:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>申请免费的AWS云服务器（不需要信用卡),</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>申请免费的AWS云服务器（不需要信用卡),</p>
-<!-- more -->
-<p>AWS还是一如既往的财大气粗,想当年某宝买的8元的虚拟信用卡撸了AWS一年的云服务器,后来还是流量超了15G才没用的.现在水篇Educate Starter的 申请教程.</p>
-<h2 id="条件">条件</h2>
-<ul>
-<li>学生邮箱(EDU邮箱)</li>
-</ul>
-<h2 id="申请">申请</h2>
-<p>其实关于EDU邮箱的获取有很多方法,但是其实每个学校都有自己的EDU邮箱,不过很多人不用就是了.可自行Google申请.</p>
-<ol>
-<li>进入AWS官网</li>
-</ol>
-<p>地址:</p>
-<blockquote>
-<p>https://aws.amazon.com/tw/education/awseducate/</p>
-</blockquote>
-<p>申请页面，有关于详细的AWS Educate的计划，有兴趣的可以看一看，如果和我一样比较浮躁的话，直接点击”加入AWS Educate”即可开始申请了。</p>
-<p>在申请过程中，需要主要的是一定要选在校学生本科那个选项，至于邮箱那一栏请填写你的edu邮箱。之后你会收到一封验证邮箱的邮件，点击链接验证即可。之后需要等待Amazon进行审核。<br>
-<img src="https://g.yzddhr.me/post-images/1564817956766.jpg" alt=""></p>
-<ol start="2">
-<li>
-<p>审核完毕<br>
-审核完毕后会发个连接过来设置密码<br>
-<img src="https://g.yzddhr.me/post-images/1564817980744.PNG" alt=""><br>
-<img src="https://g.yzddhr.me/post-images/1564818048104.jpg" alt=""><br>
-可以看见，账户上有75美元，美元的有效期限为365天！！！点击黄色的Button进入你的控制台吧！！！<br>
-注意在进入控制台的时候会有选择你要登入的账户,有账户的话直接选上面的&quot;已经有AWS的账户&quot;,这边我没有账户,(因为注册AWS要绑定信用卡啊),选下面的&quot;用Educate Starter账户&quot;<br>
-<img src="https://g.yzddhr.me/post-images/1564818272029.PNG" alt=""></p>
-</li>
-<li>
-<p>使用</p>
-</li>
-</ol>
-<p>后面就是创建虚机的过程了,以前应该是有75刀的,不知道现在是什么情况,就30刀了,但是注意,这个是你的信用额度,是指在免费的套餐之外的,超额部分收费可以抵扣的额度,而AWS的机子,只要注意每月上行下行的各15G流量限制就行了,一般不会用超的.<br>
-<img src="https://g.yzddhr.me/post-images/1564818486856.PNG" alt=""></p>
-<ul>
-<li>进入控制台<br>
-<img src="https://g.yzddhr.me/post-images/1564818651310.PNG" alt=""></li>
-<li>熟悉的创建界面<br>
-<img src="https://g.yzddhr.me/post-images/1564818674973.PNG" alt=""></li>
-</ul>
-<blockquote>
-<p>后续的化直接用putty什么xshell什么ssh连上就能用了</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[github pages开启ssl+CDN]]></title>
-        <id>https://g.yzddhr.me/post/github-pages-kai-qi-sslcdn</id>
-        <link href="https://g.yzddhr.me/post/github-pages-kai-qi-sslcdn">
-        </link>
-        <updated>2019-08-02T08:28:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>用github能做很多事，</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>用github能做很多事，</p>
-<!-- more -->
-<p>除了各种代码托管，现在github越来越大气，开放了个人私有仓库无限开，而且能用来搭建hexo博客之类的，配合jsdeliver的话，github仓库本身就能当CDN用。</p>
-<h2 id="条件需求">条件需求</h2>
-<ul>
-<li>github账户 <a href="http://github.com">GitHub</a></li>
-<li>cloudflare账户 <a href="http://cloudflare.com">cloudflare</a></li>
-</ul>
-<h2 id="搭建github-pages">搭建GitHub pages</h2>
-<p>搭建GitHub的博客主要有三种方式</p>
-<ul>
-<li>hexo , hugo 等静态博客</li>
-<li>利用GitHub gist api搭建动态博客 <a href="https://github.com/GitHub-Laziji/vblog">地址</a></li>
-<li>借助grides搭建静态的html博客 <a href="https://github.com/getgridea/gridea">地址</a></li>
-</ul>
-<h2 id="配置caname">配置CANAME</h2>
-<ul>
-<li>配置的自定义域名不能开启<code>ssl</code>,会和后面的cloudflare冲突,报错.</li>
-<li>cloudflare的设置必须在GitHub的自定义域名生效之后才能操作.</li>
-</ul>
-<h2 id="配置cloudflare">配置cloudflare</h2>
-<ul>
-<li><code>DNS</code>接入cloudflare</li>
-<li>设置小黄云</li>
-<li>开启强制<code>SSL</code></li>
-</ul>
-<h2 id="效果">效果</h2>
-<p><img src="https://g.yzddhr.me/post-images/1564735240178.PNG" alt=""><br>
-显示是cloudflare的证书,说明配置成功.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[gossa和mpv的结合用法]]></title>
-        <id>https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa</id>
-        <link href="https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa">
-        </link>
-        <updated>2019-08-01T10:21:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>实现的目标：</p>
-<blockquote>
-<p>实现用本地用mpv播放器播放vps的文件,本来也是非常简单的东西,代替ftp用下而已,不然每次用ftp还是有其不好用的地方.</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<p>实现的目标：</p>
-<blockquote>
-<p>实现用本地用mpv播放器播放vps的文件,本来也是非常简单的东西,代替ftp用下而已,不然每次用ftp还是有其不好用的地方.</p>
-</blockquote>
-<!-- more -->
-<h2 id="安装gossa">安装gossa</h2>
-<p>项目地址 : <a href="https://github.com/pldubouilh/gossa">GOSSA</a><br>
-登陆<code>ssh</code><br>
-使用命令:</p>
-<pre><code class="language-shell">wget https://github.com/pldubouilh/gossa/releases/download/v0.0.7/gossa-linux64
-mv gossa-linux64 /usr/local/bin/gossa
-#授权
-chmod +x /usr/local/bin/gossa
-</code></pre>
-<p>启动程序:</p>
-<pre><code>gossa /root/moerats
-</code></pre>
-<p>默认端口是<code>8001</code>,不要忘了后台打开8001端口,并且这个是在本地启动的.其他大方访问使用:</p>
-<pre><code>gossa -h 0.0.0.0 /root/moerats
-#后台运行
-nohup gossa -h 0.0.0.0 /root/moerats &amp;
-</code></pre>
-<h2 id="安装mpv">安装mpv</h2>
-<p>下载mpv编译好的文件:<br>
-<a href="https://mpv.io/installation/">MPV官网</a><br>
-下载好后是个7z文件夹,解压后添加到环境变量:<code>此电脑右键属性 --&gt; 环境变量 --&gt; 添加path变量</code>自行设置.</p>
-<h2 id="使用">使用</h2>
-<p>用上下键使用,右击获得文件的链接,直接<code>mpv URL</code>即可.</p>
-<h2 id="补充">补充</h2>
-<blockquote>
-<p>待完成</p>
-</blockquote>
-<ul>
-<li>mpv的用法</li>
-<li>mpv的进阶用法</li>
 </ul>
 ]]></content>
     </entry>
