@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-13T12:43:46.553Z</updated>
+    <updated>2019-08-14T10:05:56.523Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,131 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2019, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[ubuntu口袋系统搭建之桌面版（TLS）]]></title>
+        <id>https://g.yzddhr.me/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls</id>
+        <link href="https://g.yzddhr.me/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls">
+        </link>
+        <updated>2019-08-14T10:04:35.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>搭建口袋系统，即插即用，最近刚好需要用Linux，为了方便安装一个随身系统，即插即用，方便的使用node和docker等，本文使用Vm workstation搭建</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>搭建口袋系统，即插即用，最近刚好需要用Linux，为了方便安装一个随身系统，即插即用，方便的使用node和docker等，本文使用Vm workstation搭建</p>
+<!-- more -->
+<blockquote>
+<p>网络教程众多，但是大多数含糊其词，请严格按照本文操作。</p>
+</blockquote>
+<h2 id="环境条件">环境（条件）</h2>
+<ul>
+<li>Ubuntu14.04镜像（可选，本人是电脑配置跟不上才选的14，当然也可以用18）</li>
+<li>VM workstations</li>
+<li>一个U盘（这边建议USB3.0，本人用的是USB2.0结果慢的想死）</li>
+</ul>
+<h2 id="安装">安装</h2>
+<h3 id="vm-虚机安装">VM 虚机安装</h3>
+<p>下载地址:链接: https://pan.baidu.com/s/12Mn69kd1gSni85CKNvA5Fw 提取码: xwyw<br>
+下载安装输入安装包里面的密钥即可。</p>
+<h3 id="虚拟环境开启">虚拟环境开启</h3>
+<p>对于大多数PC来说，默认没有开启虚机环境，需要开启虚拟化技术，才能用VM虚拟机。</p>
+<p><strong>1. 检查windows操作系统是否已经打开了Hyper-V功能：</strong></p>
+<p>控制面板——&gt;程序——&gt;启用或关闭Windows功能——&gt;勾选Hyper-V<br>
+<img src="https://img.hacpai.com/file/2019/08/1-dba475d7.png" alt="1.png"></p>
+<p><strong>2. 检查BIOS是否开启了虚拟化功能：</strong></p>
+<p>这个的话，不同的主板的bios进入是不一样的，自行百度。<br>
+附HP官网说明:https://support.hp.com/cn-zh/document/c05189714</p>
+<h3 id="开启-vmware-usb-服务">开启 VMware USB 服务</h3>
+<p><img src="https://img.hacpai.com/file/2019/08/ia100000002-98ef37a2.png" alt="ia100000002.png"><br>
+启动后如下图<br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000003-a3566643.png" alt="ia100000003.png"></p>
+<h3 id="新建虚机">新建虚机</h3>
+<p><strong>1. 开启软件，新建虚机</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000004-68be674c.png" alt="ia100000004.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000447-dbca37d1.png" alt="ia100000447.png"><br>
+<strong>2. 随便一个名字</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000448-de9d58c5.png" alt="ia100000448.png"><br>
+<strong>3. 选择储存为单个文件</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000449-809cf9eb.png" alt="ia100000449.png"><br>
+<strong>4. 编辑虚拟机</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000451-03030864.png" alt="ia100000451.png"><br>
+<strong>5. 双击“处理器”全部勾选</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000453-d3e721b3.png" alt="ia100000453.png"><br>
+<strong>6. 双击USB选项。全部勾选</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/Snipaste20190814171129-f3446527.png" alt="Snipaste20190814171129.png"><br>
+<strong>7. 选择相应镜像文件</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000457-6818939a.png" alt="ia100000457.png"><br>
+<strong>8. 播放虚拟机</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000458-982eeeeb.png" alt="ia100000458.png"></p>
+<blockquote>
+<p>如果无法正常的开启虚拟机的话，说明虚拟化的功能还是没有开启，说明前面还是没有做到位。自行百度。</p>
+</blockquote>
+<p><strong>9. 选择试用Try Ubuntu</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000459-3e82f4cd.png" alt="ia100000459.png"><br>
+<strong>10.连接U盘</strong><br>
+<em>这里注意点击一下虚拟机的画面，不然不可使用键鼠</em><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000460-fae2b255.png" alt="ia100000460.png"><br>
+<strong>11. 点击安装Ubuntu</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000465-1a9eec95.png" alt="ia100000465.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000466-dbb50268.png" alt="ia100000466.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000468-e4560829.png" alt="ia100000468.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000469-7400ac0a.png" alt="ia100000469.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000467-997c3f00.png" alt="ia100000467.png"><br>
+<strong>12. 磁盘分区</strong><br>
+<em>这里注意双击你自己的U盘或者移动硬盘，我的是用硬盘，自己区分</em><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000470-f465b464.png" alt="ia100000470.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000471-4936f346.png" alt="ia100000471.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000475-39ebb17c.png" alt="ia100000475.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000477-86eca695.png" alt="ia100000477.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000472-cc22facb.png" alt="ia100000472.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000473-29091617.png" alt="ia100000473.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000475-f6d54b33.png" alt="ia100000475.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000477-59687875.png" alt="ia100000477.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000478-15bd080e.png" alt="ia100000478.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000479-ec47b968.png" alt="ia100000479.png"><br>
+<strong>13. 进入漫长的等待过程</strong><br>
+<em>这个过程真的非常漫长，这边建议USB2。0最好不要安装，USB2.0推荐后面安装ubutnu server的教程</em><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000480-9b6004d1.png" alt="ia100000480.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000481-8da41772.png" alt="ia100000481.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000482-c3ef74d7.png" alt="ia100000482.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000483-17c316af.png" alt="ia100000483.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000486-86819df6.png" alt="ia100000486.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000487-4045d2bc.png" alt="ia100000487.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000488-14d95be7.png" alt="ia100000488.png"><br>
+<strong>14. 安装完成</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000489-45a48858.png" alt="ia100000489.png"><br>
+<strong>15. 关闭软件</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000490-19351df5.png" alt="ia100000490.png"><br>
+<strong>16. 设置U盘启动</strong><br>
+<em>建议自行百度，不同的主板的BIOS设置不同</em><br>
+就HP来说；如下操作：</p>
+<ol>
+<li>开机时按下esc进入BIOS</li>
+<li>进入安全选项卡（security）</li>
+<li>按F5或者F6调整选项位置（F5向下，F6向上）</li>
+<li>F10保存并退出<br>
+<strong>即可进入系统</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000492-677d70ed.png" alt="ia100000492.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000493-e2cd5742.png" alt="ia100000493.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/ia100000494-f8bf8b2d.png" alt="ia100000494.png"></li>
+</ol>
+<h3 id="使用体验">使用体验</h3>
+<blockquote>
+<p>不要用，怪不得没人用这种口袋系统，首先我用的是USB2.0可能也是一个原因，但是说实话，普通U盘还是就不同装了吧，建议老毛桃的win PE还是不错的选择。<br>
+这里老毛桃的官网：</p>
+</blockquote>
+<ol>
+<li>http://www.laomaotao.org/<br>
+这个网站的话，是官方网站，但是软件会报毒。</li>
+<li>https://www.laomaotao.net/<br>
+这个网站不会报错，而且这个网站不会报毒，还是绿色版本。推荐。</li>
+</ol>
+<h3 id="优缺点">优缺点</h3>
+<p>**优点:**很显然，毕竟是口袋系统，所以方便性还是有的。<br>
+**缺点:**使用速度慢，当然可能是我的缺点（没有USB3.0），和系统无关，但是使用体验还是不甚理想，而且如果要使用无线网的话，还必须设置无线网驱动。</p>
+<h2 id="下期">下期</h2>
+<p>利用VM 虚拟机安装ubuntu server的口袋系统。（推荐）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[免费的免备案的CDN]]></title>
         <id>https://g.yzddhr.me/post/mian-fei-de-mian-bei-an-de-cdn</id>
@@ -765,101 +890,6 @@ nohup gossa -h 0.0.0.0 /root/moerats &amp;
 <li>mpv的用法</li>
 <li>mpv的进阶用法</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[goproxy的heroku应用]]></title>
-        <id>https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong</id>
-        <link href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong">
-        </link>
-        <updated>2019-08-01T07:27:07.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="gorpxoy-heroku">gorpxoy-heroku</h2>
-<!-- more -->
-<p>Heroku 是一个支持多种编程语言的云平台即服务，gorpxoy-heroku 则是可部署在 Heroku 平台的 gorpxoy 服务。gorpxoy-heroku 使用的 WebSocket 代替原本的 sockets 作为底层传输。</p>
-<p>下面的部署方法，前提是你已经拥有一个heroku账号。</p>
-<p>1.注册 Heroku 帐号</p>
-<p>Heroku 提供免费账号，部分介绍如下：</p>
-<p>512 MB RAM per dyno</p>
-<p>Free apps sleep automatically after 30 mins of inactivity to conserve your dyno hours</p>
-<p>Free apps wake automatically when a web request is received</p>
-<p>https://devcenter.heroku.com/articles/limits</p>
-<p>https://devcenter.heroku.com/articles/free-dyno-hours#usage</p>
-<p>注册地址：https://signup.heroku.com/ （注册和部署过程可能需要梯子）</p>
-<h2 id="部署方法一简单">部署方法一（简单）</h2>
-<p>本方法为快速部署。</p>
-<p>一、在heroku上的部署</p>
-<p>1、登陆https://dashboard.heroku.com/login</p>
-<p>2、登陆好后，在浏览器地址栏输入https://heroku.com/deploy?template=https://github.com/snail007/goproxy-heroku</p>
-<p>3、执行以下三个步骤，见下图：</p>
-<p>（1）输入App name.例如<code>test1-goproxy</code></p>
-<p>（2）Choose a region:选择一个.例如United States</p>
-<p>（3）点击：Deploy app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/1-2c554f69.png" alt="1.png"></p>
-<p>4、执行完成以后，这是就完成了部署。</p>
-<p><img src="https://img.hacpai.com/file/2019/07/2-81397b50.png" alt="2.png"></p>
-<p>二、在客户端上执行</p>
-<p>独立goproxy客户端：</p>
-<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
-<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
-<p>安卓客户端：</p>
-<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
-<pre><code class="language-text">主机：test1-goproxy.herokuapp.com
-
-端口：443
-
-加密方法：aes-256-cfb
-
-密码：123
-
-插件参数：
-</code></pre>
-<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
-<p>注意：本次部署中需要调整的就是<code>test1-goproxy</code>改为你自己的名称。</p>
-<h2 id="部署方法二">部署方法二</h2>
-<p>该方法相对方法一步骤多一些，但是可以自己设置加密密码，修改启动参数。</p>
-<p>本方法是fork项目后，可以修改相关的参数，再在heroku上部署。</p>
-<p>一、在github上fork该项目并修改相关参数</p>
-<p>（1）fork项目：https://github.com/snail007/goproxy-heroku</p>
-<p>（2）修改配置参数，具体就是修改bootstrap里的内容，点击该文件</p>
-<p><img src="https://img.hacpai.com/file/2019/07/3-2efbc373.png" alt="3.png"></p>
-<p>修改第7行内容，详细参考：https://snail007.github.io/goproxy/posts/http_cdn_ws/</p>
-<p>二、在heroku上部署</p>
-<p>1、登陆https://dashboard.heroku.com/apps</p>
-<p>2、选择New -&gt; Create new app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/4-75a2c03c.png" alt="4.png"></p>
-<p>3、执行以下三个步骤，见下图：</p>
-<p>（1）输入App name.例如<code>test2-goproxy</code></p>
-<p>（2）Choose a region:选择一个.例如United States</p>
-<p>（3）点击：Create app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/5-2ac7329b.png" alt="5.png"></p>
-<p>选择Deploy-&gt;GitHub Connect to github</p>
-<p><img src="https://img.hacpai.com/file/2019/07/6-196147dd.png" alt="6.png"></p>
-<p>4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect</p>
-<p><img src="https://img.hacpai.com/file/2019/07/7-cce694f3.png" alt="7.png"></p>
-<p>5、手动部署Manual deploy -&gt; Deploy Branch， 部署成功。</p>
-<p><img src="https://img.hacpai.com/file/2019/07/8-e2c8808a.png" alt="8.png"><br>
-<br><br>
-<img src="https://img.hacpai.com/file/2019/07/9-35c0a850.png" alt="9.png"></p>
-<p>三、在客户端上执行（默认不修改代码）</p>
-<p>独立goproxy客户端：</p>
-<p><code>proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
-<p>在浏览器上设置代理：127.0.0.1:6600   http</p>
-<p>安卓客户端：</p>
-<p>安卓 <a href="https://github.com/snail007/goproxy-ss-plugin-android">goproxy-ss-plugin</a> 插件配置可以写：</p>
-<pre><code class="language-text">主机：test2-goproxy.herokuapp.com
-
-端口：443
-
-加密方法：aes-256-cfb
-
-密码：123
-
-插件参数：
-</code></pre>
-<p><code>-S http -j 123 -h aes-256-cfb -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass --timeout 30000</code></p>
-<p>注意：本次部署中需要修改test2-goproxy为你自己的名称。</p>
 ]]></content>
     </entry>
 </feed>
