@@ -1,463 +1,462 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>yzd-gridea</title>
-<meta name="description" content="记录 :  思考 : 慎言" />
-<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1566345654901">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <meta charset="utf-8" >
 
+<title>文章归档 | yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1566346908906">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-125127562-1');
-</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://g.yzddhr.me">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1566345654901" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://g.yzddhr.me">
+        <img src="https://g.yzddhr.me/images/avatar.png?v=1566346908906" class="site-logo">
+        <h1 class="site-title">yzd-gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
       </div>
+    </div>
+    <div>
       
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            记录 :  思考 : 慎言
-          </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="/tag/9CTakvPYn/" class="site-nav">
+            音乐
+          </a>
+        
+      
+        
+          <a href="https://g.yzddhr.me/post/friends/" class="site-nav">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/yzddahaoren" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      记录 :  思考 : 慎言
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a> | <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+
+          <h2 class="archives-title">文章归档</h2>
+          <div class="archives-container">
             
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2019</h2>
               
-                <a href="http://github.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian">
+                      <h2 class="post-title">
+                        发卡系统搭建
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai">
+                      <h2 class="post-title">
+                        亚历山大大帝是否真实存在
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/git-pei-zhi-duo-zhang-hao">
+                      <h2 class="post-title">
+                        git配置多账号
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma">
+                      <h2 class="post-title">
+                        免费一年的focusky的激活码
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
+                      <h2 class="post-title">
+                        太喜欢这个欢乐沙雕漂亮的小改改了！
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/axel-corn-xia-zai-fu-wu-qi">
+                      <h2 class="post-title">
+                        axel-corn下载服务器
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi">
+                      <h2 class="post-title">
+                        色图pixiv下载器
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/heroku-da-jian-rsshub">
+                      <h2 class="post-title">
+                        heroku搭建RSSHUB
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou">
+                      <h2 class="post-title">
+                        安装使用serveo （内网穿透）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls">
+                      <h2 class="post-title">
+                        ubuntu口袋系统搭建之桌面版（TLS）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/mian-fei-de-mian-bei-an-de-cdn">
+                      <h2 class="post-title">
+                        免费的免备案的CDN
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/zi-dong-xia-zai-bilibili-de-shi-pin">
+                      <h2 class="post-title">
+                        自动下载bilibili的视频（RSSHUB）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan">
+                      <h2 class="post-title">
+                        WSl子系统使用指南
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
+                      <h2 class="post-title">
+                        内网穿透加shadowsocks实现全局穿透（伪）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
+                      <h2 class="post-title">
+                        用过的博客程序大总结加推荐
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl">
+                      <h2 class="post-title">
+                        solo博客搭建配置SSl
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao">
+                      <h2 class="post-title">
+                        免费申请AWS的Educate Starter教育版账号
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/github-pages-kai-qi-sslcdn">
+                      <h2 class="post-title">
+                        github pages开启ssl+CDN
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa">
+                      <h2 class="post-title">
+                        gossa和mpv的结合用法
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong">
+                      <h2 class="post-title">
+                        goproxy的heroku应用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/heroku-da-jian-oneindex">
+                      <h2 class="post-title">
+                        heroku搭建Oneindex
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan">
+                      <h2 class="post-title">
+                        喜欢的音乐(最近循环)
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong">
+                      <h2 class="post-title">
+                        经济问题中的导数的应用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi">
+                      <h2 class="post-title">
+                        关于github的ssl配置
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/gridea-shi-yong">
+                      <h2 class="post-title">
+                        Gridea使用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/halo-da-jian">
+                      <h2 class="post-title">
+                        halo搭建
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/friends">
+                      <h2 class="post-title">
+                        友链
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
               
             
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2018</h2>
               
-            
+                
               
-            
+                
               
-            
+                
               
-            
+                
               
-            
+                
               
-            
+                
               
-                <a href="https://instagram.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-instagram-line"></i>
-                </a>
+                
               
-            
+                
               
-            
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <article class="post">
+                    <a href="https://g.yzddhr.me/post/hello-gridea">
+                      <h2 class="post-title">
+                        Hello Gridea
+                      </h2>
+                    </a>
+                  </article>
+                
               
             
           </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
 
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="/" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-      
-        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
-          音乐
-        </a>
-      
-    
-      
-        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
-          友链
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
-    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-archive-line"></i> 文章归档
-        </h2>
-        
-
-        <div class="archives-container">
-          
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-                <a href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    发卡系统搭建
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-19</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    亚历山大大帝是否真实存在
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-15</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/git-pei-zhi-duo-zhang-hao" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    git配置多账号
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-15</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    免费一年的focusky的激活码
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    太喜欢这个欢乐沙雕漂亮的小改改了！
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/axel-corn-xia-zai-fu-wu-qi" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    axel-corn下载服务器
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    色图pixiv下载器
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/heroku-da-jian-rsshub" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    heroku搭建RSSHUB
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    安装使用serveo （内网穿透）
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    ubuntu口袋系统搭建之桌面版（TLS）
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-14</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/mian-fei-de-mian-bei-an-de-cdn" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    免费的免备案的CDN
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-13</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/zi-dong-xia-zai-bilibili-de-shi-pin" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    自动下载bilibili的视频（RSSHUB）
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-07</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    WSl子系统使用指南
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-07</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    内网穿透加shadowsocks实现全局穿透（伪）
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-07</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    用过的博客程序大总结加推荐
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-07</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    solo博客搭建配置SSl
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-03</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    免费申请AWS的Educate Starter教育版账号
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-03</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/github-pages-kai-qi-sslcdn" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    github pages开启ssl+CDN
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-02</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/gossa-he-mpv-de-jie-he-yong-fa" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    gossa和mpv的结合用法
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/goproxy-de-heroku-ying-yong" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    goproxy的heroku应用
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/heroku-da-jian-oneindex" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    heroku搭建Oneindex
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/xi-huan-de-yin-le-zui-jin-xun-huan" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    喜欢的音乐(最近循环)
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/jing-ji-wen-ti-zhong-de-dao-shu-de-ying-yong" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    经济问题中的导数的应用
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/guan-yu-github-de-ssl-pei-zhi" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    关于github的ssl配置
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-01</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/gridea-shi-yong" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Gridea使用
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-31</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/halo-da-jian" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    halo搭建
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-31</div>
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/friends" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    友链
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-07-31</div>
-              
-            
-              
-            
-          
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2018
-            </h2>
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://g.yzddhr.me/post/hello-gridea" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Hello Gridea
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2018-12-12</div>
-              
-            
-          
-        </div>
-
-        <div>
-          <div class="pagination-container animated fadeIn">
+          <div class="pagination-container">
   
   
 </div>
@@ -466,104 +465,25 @@
       </div>
     </div>
 
-    <script src="/media/prism.js"></script>  
-<script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-Prism.highlightAll()
+<script type="application/javascript">
 
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+hljs.initHighlightingOnLoad()
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
+
+
+
+
   </body>
 </html>
