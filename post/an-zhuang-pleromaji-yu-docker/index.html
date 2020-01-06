@@ -1,0 +1,549 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578306674960">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578306674960" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83">安装环境</a></li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA">项目构建</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E7%BD%AE">数据库设置</a></li>
+<li><a href="#nginx%E9%85%8D%E7%BD%AE%E5%AE%98%E6%96%B9">nginx配置(官方)</a></li>
+<li><a href="#nginx%E9%85%8D%E7%BD%AE%E8%87%AA%E8%A1%8C">nginx配置(自行)</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">使用体验</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+          音乐
+        </a>
+      
+    
+      
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">安装pleroma(基于docker)</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-24 / 7 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/an-zhuang-pleromaji-yu-docker.jpg" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>pleroma是一款分布式的社交网络系统,和twitter类似<br>
+Pleroma支持ActivityPub，这意味着可以和Mastodon/Misskey上的用户进行互动.<br>
+Pleroma的特点是：高性能/内存使用率低，低配置的机器有福了，跑不了Mastodon可以换用Pleroma。而且喜欢小巧/紧凑风格的人，应该会非常喜欢Pleroma的前端和一系列主题。</p>
+</blockquote>
+<p><strong>以下安装基于docker</strong></p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>docker</li>
+<li>docker-compose</li>
+<li>内存至少<code>1G</code></li>
+</ul>
+<h2 id="安装环境">安装环境</h2>
+<p><strong>docker</strong></p>
+<pre><code>curl -sSL https://get.docker.com/ | sh
+service docker start
+</code></pre>
+<p><strong>docker-compose</strong></p>
+<pre><code>curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<h2 id="项目构建">项目构建</h2>
+<p><strong>可隆项目</strong><br>
+<code>https://github.com/angristan/docker-pleroma.git</code><br>
+<strong>进入下载的文件夹</strong><br>
+编辑<code>docker-compose.yml</code>文件</p>
+<pre><code>version: '2.3'
+
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    container_name: pleroma_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: pleroma
+      POSTGRES_PASSWORD: pleroma
+      POSTGRES_DB: pleroma
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
+  web:
+    build: .
+    image: pleroma
+    container_name: pleroma_web
+    restart: always
+    ports:
+      - &quot;127.0.0.1:4000:4000&quot;
+    volumes:
+      - ./uploads:/pleroma/uploads
+    depends_on:
+      - postgres
+</code></pre>
+<blockquote>
+<p>修改<code>POSTGRES_PASSWORD</code>参数成自己的密码(可选).</p>
+</blockquote>
+<p><strong>创建配置文件文件夹</strong></p>
+<pre><code>mkdir uploads config
+chown -R 911:911 uploads
+</code></pre>
+<p><strong>安装<code>citext</code> PostgreSQL插件</strong></p>
+<pre><code>docker-compose up -d postgres
+docker exec -i pleroma_postgres psql -U pleroma -c &quot;CREATE EXTENSION IF NOT EXISTS citext;&quot;
+docker-compose down
+</code></pre>
+<p><strong>编辑<code>config/secret.exs</code>文件</strong></p>
+<pre><code>use Mix.Config
+
+config :pleroma, Pleroma.Web.Endpoint,
+   http: [ ip: {0, 0, 0, 0}, ],
+   url: [host: &quot;pleroma.domain.tld&quot;, scheme: &quot;https&quot;, port: 443],
+   secret_key_base: &quot;&lt;use 'openssl rand -base64 48' to generate a key&gt;&quot;
+
+config :pleroma, :instance,
+  name: &quot;Pleroma&quot;,
+  email: &quot;admin@email.tld&quot;,
+  limit: 5000,
+  registrations_open: true
+
+config :pleroma, :media_proxy,
+  enabled: false,
+  redirect_on_failure: true,
+  base_url: &quot;https://cache.domain.tld&quot;
+
+# Configure your database
+config :pleroma, Pleroma.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: &quot;pleroma&quot;,
+  password: &quot;pleroma&quot;,
+  database: &quot;pleroma&quot;,
+  hostname: &quot;postgres&quot;,
+  pool_size: 10
+</code></pre>
+<blockquote>
+<p>修改如下参数</p>
+</blockquote>
+<ul>
+<li><code>host</code></li>
+<li><code>secret_key_base</code></li>
+<li><code>email</code></li>
+</ul>
+<p><strong>生成镜像</strong></p>
+<pre><code>docker-compose build
+# or
+docker build -t pleroma .          //(推荐)
+</code></pre>
+<h2 id="数据库设置">数据库设置</h2>
+<p><strong>创建数据库</strong></p>
+<pre><code>docker-compose run --rm web mix ecto.migrate
+</code></pre>
+<p><strong>复制密钥<code>secret.exs</code></strong></p>
+<pre><code>docker-compose run --rm web mix web_push.gen.keypair  //复制产生的一串东西到`secret.exs`
+</code></pre>
+<p><strong>重新构建,写入密钥</strong></p>
+<pre><code>docker-compose build
+# or
+docker build -t pleroma .
+</code></pre>
+<p><strong>启动实例</strong></p>
+<pre><code>docker-compose up -d
+</code></pre>
+<p><strong>查看输出</strong></p>
+<pre><code>docker logs -f pleroma_web
+</code></pre>
+<h2 id="nginx配置官方">nginx配置(官方)</h2>
+<blockquote>
+<p>配置如下</p>
+</blockquote>
+<pre><code># default nginx site config for Pleroma
+#
+# Simple installation instructions:
+# 1. Install your TLS certificate, possibly using Let's Encrypt.
+# 2. Replace 'example.tld' with your instance's domain wherever it appears.
+# 3. Copy this file to /etc/nginx/sites-available/ and then add a symlink to it
+#    in /etc/nginx/sites-enabled/ and run 'nginx -s reload' or restart nginx.
+
+proxy_cache_path /tmp/pleroma-media-cache levels=1:2 keys_zone=pleroma_media_cache:10m max_size=10g
+                 inactive=720m use_temp_path=off;
+
+server {
+    server_name    example.tld;
+
+    listen         80;
+    listen         [::]:80;
+
+    # Uncomment this if you need to use the 'webroot' method with certbot. Make sure
+    # that the directory exists and that it is accessible by the webserver. If you followed
+    # the guide, you already ran 'mkdir -p /var/lib/letsencrypt' to create the folder.
+    # You may need to load this file with the ssl server block commented out, run certbot
+    # to get the certificate, and then uncomment it.
+    #
+    # location ~ /\.well-known/acme-challenge {
+    #     root /var/lib/letsencrypt/;
+    # }
+    location / {
+      return         301 https://$server_name$request_uri;
+    }
+}
+
+# Enable SSL session caching for improved performance
+ssl_session_cache shared:ssl_session_cache:10m;
+
+server {
+    server_name example.tld;
+
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    ssl_session_timeout 5m;
+
+    ssl_trusted_certificate   /etc/letsencrypt/live/example.tld/chain.pem;
+    ssl_certificate           /etc/letsencrypt/live/example.tld/fullchain.pem;
+    ssl_certificate_key       /etc/letsencrypt/live/example.tld/privkey.pem;
+
+    # Add TLSv1.0 to support older devices
+    ssl_protocols TLSv1.2;
+    # Uncomment line below if you want to support older devices (Before Android 4.4.2, IE 8, etc.)
+    # ssl_ciphers &quot;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&quot;;
+    ssl_ciphers &quot;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4&quot;;
+    ssl_prefer_server_ciphers on;
+    # In case of an old server with an OpenSSL version of 1.0.2 or below,
+    # leave only prime256v1 or comment out the following line.
+    ssl_ecdh_curve X25519:prime256v1:secp384r1:secp521r1;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript application/activity+json application/atom+xml;
+
+    # the nginx default is 1m, not enough for large media uploads
+    client_max_body_size 16m;
+
+    location / {
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;upgrade&quot;;
+        proxy_set_header Host $http_host;
+
+	# this is explicitly IPv4 since Pleroma.Web.Endpoint binds on IPv4 only
+	# and `localhost.` resolves to [::0] on some systems: see issue #930
+        proxy_pass http://127.0.0.1:4000;
+
+        client_max_body_size 16m;
+    }
+
+    location ~ ^/(media|proxy) {
+        proxy_cache pleroma_media_cache;
+        slice              1m;
+        proxy_cache_key    $host$uri$is_args$args$slice_range;
+        proxy_set_header   Range $slice_range;
+        proxy_http_version 1.1;
+        proxy_cache_valid  200 206 301 304 1h;
+        proxy_cache_lock on;
+        proxy_ignore_client_abort on;
+        proxy_buffering on;
+        chunked_transfer_encoding on;
+        proxy_ignore_headers Cache-Control;
+        proxy_hide_header Cache-Control;
+        proxy_pass http://localhost:4000;
+    }
+}
+
+</code></pre>
+<p><strong>建议机器只开<code>25</code> <code>80</code> <code>443</code> 端口</strong></p>
+<h2 id="nginx配置自行">nginx配置(自行)</h2>
+<p><strong>安装nginx</strong></p>
+<pre><code>apt install -y nginx certbot  
+</code></pre>
+<p><strong>添加储存库</strong></p>
+<pre><code>sudo add-apt-repository ppa:certbot/certbot
+</code></pre>
+<p><strong>更新</strong></p>
+<pre><code>sudo apt-get update
+</code></pre>
+<p><strong>安装证书插件</strong></p>
+<pre><code>sudo apt-get install python-certbot-nginx
+</code></pre>
+<p><strong>编辑配置文件</strong></p>
+<pre><code>nano /etc/nginx/conf.d/pleroma.conf
+</code></pre>
+<p><strong>反向代理</strong></p>
+<pre><code>server {
+    listen       80;
+    server_name  pleroma.koko.cat;
+    client_max_body_size 100M;
+
+    location / {
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;upgrade&quot;;
+        proxy_set_header Host $http_host;
+        proxy_pass http://127.0.0.1:4000;
+    }
+}
+</code></pre>
+<p><strong>签发证书</strong></p>
+<pre><code>certbot --nginx --agree-tos --no-eff-email
+</code></pre>
+<h2 id="使用体验">使用体验</h2>
+<p>先比较于<code>Mastodon</code>更简洁,更漂亮.kksk.<br>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820190140-2249d038.png" alt="lala.im20190820190140.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191625-231cefaa.png" alt="lala.im20190820191625.png"><br>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191313-7e2011aa.png" alt="lala.im20190820191313.png"></p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  更新后的gridea的使用体验
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian">
+                <h3 class="post-title">
+                  发卡系统搭建
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

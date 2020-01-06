@@ -1,0 +1,499 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578306674960">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578306674960" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E8%84%9A%E6%9C%AC">脚本</a></li>
+<li><a href="#pxder">pxder</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0%E5%8D%B8%E8%BD%BD">安装/更新/卸载</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE">配置</a>
+<ul>
+<li><a href="#%E7%99%BB%E5%BD%95">登录</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE">设置</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AF%B4%E6%98%8E">说明</a></li>
+<li><a href="#%E6%AD%A3%E5%BC%8F%E4%BD%BF%E7%94%A8">正式使用</a>
+<ul>
+<li><a href="#1-%E4%B8%8B%E8%BD%BD%E6%88%96%E6%9B%B4%E6%96%B0%E6%9F%90%E7%94%BB%E5%B8%88%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%92%E7%94%BB%E4%BD%9C%E5%93%81">(1) 下载或更新某画师的所有插画作品</a></li>
+<li><a href="#2-%E4%B8%8B%E8%BD%BD%E6%88%96%E6%9B%B4%E6%96%B0%E4%BD%A0%E5%85%B3%E6%B3%A8%E7%9A%84%E6%89%80%E6%9C%89%E7%94%BB%E5%B8%88%E7%9A%84%E6%89%80%E6%9C%89%E6%8F%92%E7%94%BB%E4%BD%9C%E5%93%81">(2) 下载或更新你关注的所有画师的所有插画作品</a>
+<ul>
+<li><a href="#%E5%85%AC%E5%BC%80%E5%85%B3%E6%B3%A8%E7%9A%84%E7%94%BB%E5%B8%88">公开关注的画师</a></li>
+<li><a href="#%E7%A7%81%E5%AF%86%E5%85%B3%E6%B3%A8%E7%9A%84%E7%94%BB%E5%B8%88">私密关注的画师</a></li>
+</ul>
+</li>
+<li><a href="#3-%E6%9B%B4%E6%96%B0%E5%B7%B2%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%94%BB%E5%B8%88%E7%9A%84%E7%94%BB%E4%BD%9C">(3) 更新已下载的画师的画作</a></li>
+<li><a href="#4-%E4%B8%8B%E8%BD%BD%E6%88%96%E6%9B%B4%E6%96%B0%E4%BD%A0%E7%9A%84%E6%94%B6%E8%97%8F%E4%B8%AD%E7%9A%84%E6%8F%92%E7%94%BB%E4%BD%9C%E5%93%81">(4) 下载或更新你的收藏中的插画作品</a>
+<ul>
+<li><a href="#%E5%85%AC%E5%BC%80%E6%94%B6%E8%97%8F">公开收藏</a></li>
+<li><a href="#%E7%A7%81%E5%AF%86%E6%94%B6%E8%97%8F">私密收藏</a></li>
+</ul>
+</li>
+<li><a href="#5-%E6%A0%B9%E6%8D%AE%E6%8C%87%E5%AE%9A-pid-%E4%B8%8B%E8%BD%BD%E6%8F%92%E7%94%BB">(5) 根据指定 PID 下载插画</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+          音乐
+        </a>
+      
+    
+      
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">色图pixiv下载器</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-14 / 8 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/se-tu-pixiv-xia-zai-qi.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
+<!-- more -->
+<p>但是倒的确是是这样,谁不想快点去世呢?大部人还是活着受罪的啊,毕竟.</p>
+<blockquote>
+<p>pixiv : 色图站,没啥好说的.</p>
+</blockquote>
+<h2 id="环境">环境</h2>
+<ul>
+<li>python</li>
+<li>node</li>
+</ul>
+<h2 id="安装">安装</h2>
+<h3 id="脚本">脚本</h3>
+<p><strong>1. 使用一键脚本</strong></p>
+<blockquote>
+<p>注意的是,一键脚本只能下载每日排行榜,当然还是正常的榜,R18榜是不能下的.但是还是挺方便的,毕竟不需要登陆的. ❤️</p>
+</blockquote>
+<p><strong>2. 下载脚本</strong></p>
+<pre><code>wget https://raw.githubusercontent.com/MoeClub/Pixiv/master/pixiv.py
+</code></pre>
+<p>脚本默认<code>25</code>线程，想改的话，直接编辑脚本，搜索<code>25</code>，改成相应数字就可以了。</p>
+<p><strong>3. 使用脚本</strong></p>
+<pre><code>#下载画师原图，使用画师UID即可
+python3 pixiv.py &quot;673179&quot; 
+   
+#下载排行榜原图，使用排行榜地址即可    
+python3 pixiv.py &quot;https://www.pixiv.net/ranking.php?mode=male&quot;  //可改女性排行榜,不可R18 :滑稽
+</code></pre>
+<h3 id="pxder">pxder</h3>
+<p><strong>1. pxder</strong></p>
+<blockquote>
+<p>还算挺好用的下载器吧,主要就是下载自己的收藏夹挺方便的,其他的功能的话,下载画师啥的,还行吧,应该,不过没用过.</p>
+</blockquote>
+<p><strong>2. 安装node</strong></p>
+<pre><code>#Debian/Ubuntu系统 
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+apt install -y git nodejs 
+
+#CentOS系统 
+
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+</code></pre>
+<h2 id="安装更新卸载">安装/更新/卸载</h2>
+<p>打开“命令提示符”或者“Powershell”，执行下面的命令，即可安装或者更新（注：后续命令皆为在此执行）</p>
+<pre><code class="language-bash">npm i -g pxder
+</code></pre>
+<p>如需卸载，执行</p>
+<pre><code class="language-bash">npm uninstall -g pxder
+</code></pre>
+<h2 id="配置">配置</h2>
+<h3 id="登录">登录</h3>
+<pre><code class="language-bash">pxder --login
+</code></pre>
+<p>然后会让你输入用户名密码，登录成功一次后以后如果没有出什么bug则无需再次登录</p>
+<p>注：pxder 仅会在计算机上储存 refreshAccessToken，而不会储存您的帐号密码</p>
+<p>如果要登出</p>
+<pre><code class="language-bash">pxder --logout
+</code></pre>
+<h3 id="设置">设置</h3>
+<p>进入 Pxder 的设置界面</p>
+<pre><code class="language-bash">pxder --setting
+</code></pre>
+<p>有五项设置，按下数字键选择一项进行设置，然后按照要求输入之后回车即可</p>
+<pre><code class="language-bash">[1] Download path     # 下载目录，必须设置
+[2] Download thread   # 下载线程数
+[3] Download timeout  # 下载超时
+[4] Auto rename       # 自动重命名（文件夹）
+[5] Proxy             # 使用代理
+</code></pre>
+<ul>
+<li>
+<p><strong>下载目录</strong><br>
+请注意相对路径与绝对路径的区别，不过不用担心，输入完路径后会显示绝对路径以方便你检查<br>
+目录无需手动建立，下载图片的时候会自动建立</p>
+</li>
+<li>
+<p><strong>下载线程数</strong><br>
+即同时下载的图片数，默认为<code>5</code>，最小为<code>1</code>，最大为<code>32</code><br>
+下载图片时最左侧的一列实际上就是线程编号</p>
+</li>
+<li>
+<p><strong>下载超时及重试</strong><br>
+如果这么多秒之后一张图还没被下载完则算作超时，超时后会自动重试，默认值为<code>30</code><br>
+下载图片时如果线程编号是黄色底的就代表此次是重试<br>
+重试超过<code>10</code>次则视作下载失败</p>
+</li>
+<li>
+<p><strong>自动重命名</strong><br>
+开启了以后，例如这个画师原来叫<code>abc</code>，今天你再次去下载（更新）他的画作，但是他改名叫<code>def</code>了，那么程序会自动帮你重命名画师文件夹</p>
+</li>
+<li>
+<p><strong>使用代理</strong><br>
+支持使用 HTTP 或 SOCKS 代理，即可以使用小飞机<br>
+输入格式为<code>&lt;协议&gt;://[用户名:密码@]&lt;IP&gt;:&lt;端口&gt;</code>，例如：</p>
+<ul>
+<li><code>http://user:passwd@127.0.0.1:1080</code></li>
+<li><code>socks://127.0.0.1:1080</code>（如果你使用小飞机则直接填这个，除非你改过本地端口）</li>
+</ul>
+<p>如果输入空行则关闭代理</p>
+</li>
+</ul>
+<p>注：配置文件存放路径可通过命令<code>pxder --conf-loca</code>查看</p>
+<h2 id="说明">说明</h2>
+<ul>
+<li>由于官方客户端 API 限制 offset 不能大于 5000，所以程序不会也无法得到画师列表、画作列表、收藏列表等 5000 页以后的数据，并且由该原因导致的程序崩溃问题已经在 v2.7.3 修复</li>
+<li>会将同一画师的作品下载在<code>(UID)画师名</code>格式的文件夹内，图片命名格式为<code>(PID)作品名</code><br>
+并且，画师名会自动删除名字中<code>@</code>（包含半角&amp;全角）符号及以后的文字（因为这些基本上都是画师的摊位信息之类的与名字无关的信息）</li>
+<li>文件（夹）名均会过滤掉所有 Windows 和 Linux 中不能或不推荐做文件名的符号</li>
+<li>动图下下来会是所有帧的压缩包，并且会标注 delay 信息
+<ul>
+<li>例如<code>xxx@30ms.zip</code>表示该动图的播放速度为 30ms 一帧</li>
+<li>由于获取动图信息需要额外调用API，因此如果动图较多将会使得解析时间较长</li>
+</ul>
+</li>
+<li>下载时会忽略掉已经下载完成的插画</li>
+<li>下载超时或网络错误会自动重试，重试上限为10次
+<ul>
+<li>如果当某一个线程达到重试上限并且此时有不止一个下载线程处于重试状态，程序将视为暂时出现了网络问题，暂停5分钟后会继续重试</li>
+<li>如果只有一个下载线程出现错误，程序将会放弃下载该p并继续运行（因为有出现过确实是因为P站自己的问题而无法下载的例子<code>48948784_p4</code>）</li>
+</ul>
+</li>
+<li>抗GFW连接重置攻击，解析时被连接重置会自动重试</li>
+</ul>
+<h2 id="正式使用">正式使用</h2>
+<p>如果需要终止程序，请在命令行中按下<code>Ctrl + C</code>或者直接关闭命令行窗口</p>
+<p>请不要吐槽为什么在 Windows 下<code>Ctrl + C</code>后提示的<code>终止批处理操作吗(Y/N)?</code>不管是 Y 还是 N 都依然会终止，因为 nodejs 捕捉到<code>Ctrl + C</code>就自己终止了，Windows 晚了一步（。</p>
+<h3 id="1-下载或更新某画师的所有插画作品">(1) 下载或更新某画师的所有插画作品</h3>
+<p>使用<code>-u</code>或<code>--uid</code>参数，后跟画师的 UID，可单个可多个，如果多个则用英文半角逗号隔开</p>
+<pre><code class="language-bash">pxder -u uid1,uid2,uid3,...
+</code></pre>
+<p>例如</p>
+<pre><code class="language-bash">pxder -u 5899479,724607,11597411
+</code></pre>
+<h3 id="2-下载或更新你关注的所有画师的所有插画作品">(2) 下载或更新你关注的所有画师的所有插画作品</h3>
+<p>该操作同时也会更新已下载的关注画师的作品，并且效率远高于 (3)，比较推荐使用</p>
+<p>会自动排除 pixiv事務局 (uid=<code>11</code>)</p>
+<p>由于收集关注信息需时较久，因此特地针对该功能做了信息缓存：如果你在下载中途退出，那么下次使用该功能时并不需要重新收集，而是利用上次的缓存立即继续下载。</p>
+<ul>
+<li>公开关注与私密关注的缓存是分开的，互不干扰</li>
+<li>如果你需要强制重新收集画师信息（忽略上次的缓存），请在运行命令时加入<code>--force</code>参数</li>
+</ul>
+<h4 id="公开关注的画师">公开关注的画师</h4>
+<pre><code class="language-bash">pxder -f
+# 或
+pxder --follow
+</code></pre>
+<h4 id="私密关注的画师">私密关注的画师</h4>
+<pre><code class="language-bash">pxder -F
+# 或
+pxder --follow--private
+</code></pre>
+<h3 id="3-更新已下载的画师的画作">(3) 更新已下载的画师的画作</h3>
+<p>会对下载目录中检测到的所有下载过的画师的插画进行增量更新下载</p>
+<p>与 (2) 的区别是可以更新你使用 (1) 下载了的但是未关注的画师的插画，但是效率远低于 (2)</p>
+<pre><code class="language-bash">pxder -U
+# 或
+pxder --update
+</code></pre>
+<h3 id="4-下载或更新你的收藏中的插画作品">(4) 下载或更新你的收藏中的插画作品</h3>
+<h4 id="公开收藏">公开收藏</h4>
+<p>插画会被下载至<code>[bookmark] Public</code>文件夹中</p>
+<pre><code class="language-bash">pxder -b
+# 或
+pxder --bookmark
+</code></pre>
+<h4 id="私密收藏">私密收藏</h4>
+<p>插画会被下载至<code>[bookmark] Private</code>文件夹中</p>
+<pre><code class="language-bash">pxder -B
+# 或
+pxder --bookmark--private
+</code></pre>
+<h3 id="5-根据指定-pid-下载插画">(5) 根据指定 PID 下载插画</h3>
+<p>插画会被下载至<code>PID</code>文件夹中</p>
+<pre><code class="language-bash">pxder -p pid1,pid2,pid3,...
+</code></pre>
+<p>例如</p>
+<pre><code class="language-bash">pxder -p 70593670,70594912,70595516
+</code></pre>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/XMM61pE4h">
+            <span class="flex-auto">开车</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/6tvymCdQH">
+            <span class="flex-auto">网络资源</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/axel-corn-xia-zai-fu-wu-qi">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  axel-corn下载服务器
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/heroku-da-jian-rsshub">
+                <h3 class="post-title">
+                  heroku搭建RSSHUB
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

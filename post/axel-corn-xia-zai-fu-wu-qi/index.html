@@ -1,0 +1,333 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578306674960">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578306674960" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85">下载安装</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">环境准备:</a></li>
+<li><a href="#%E7%BB%93%E5%90%88%E7%99%BE%E5%BA%A6%E4%BA%91">结合百度云</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+          音乐
+        </a>
+      
+    
+      
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">axel-corn下载服务器</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-14 / 2 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/axel-corn-xia-zai-fu-wu-qi.jpg" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>axel-corn 无意间发现的下载器,基于的是axel的下载工具,这个都知道多线程下载器嘛,好用就完事了,这个项目主要是方便自己的网页短操作.就是这样.</p>
+</blockquote>
+<!-- more -->
+<h2 id="环境">环境</h2>
+<ul>
+<li>python</li>
+</ul>
+<p>// python的作用主要是就是开一个web ,静态的 ,当然,你说我用caddy不行啊?那当然可以,比起来还是自带的python更方便而已.</p>
+<h2 id="下载安装">下载安装</h2>
+<pre><code>下载和编译:
+$ git clone https://github.com/lihaoyun6/axeldown-core.git
+$ cd axeldown-core
+$ chmod a+x build.sh
+$ ./build.sh
+
+</code></pre>
+<h2 id="环境准备">环境准备:</h2>
+<p>因为项目基于web.py模块提供服务, 故需要先安装web.py</p>
+<pre><code>$ sudo easy_install web.py
+</code></pre>
+<p>启动运行:</p>
+<pre><code>$ cd axeldown-core
+$ python axeldown.py [自定义端口]
+</code></pre>
+<p>例如</p>
+<pre><code>$ python axeldown.py 2333
+</code></pre>
+<p>(不使用自定义端口时, 默认在8080端口开启服务)</p>
+<p>启动服务后在浏览器中打开&quot;<a href="http://127.0.0.1:%E7%AB%AF%E5%8F%A3/">http://127.0.0.1:端口</a>&quot;即可看到管理界面<br>
+<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg"></p>
+<h2 id="结合百度云">结合百度云</h2>
+<p><strong>1. 先解析</strong><br>
+进入下面的连接,解析下百度云的分享文件.<br>
+<a href="https://labs.nazo.moe/netdisk.html">https://labs.nazo.moe/netdisk.html</a><br>
+得到图片这样的一串东西,这个是给<code>ari2c</code>用的,但是下载链接看得出来是哪个吧,把下载链接单独拿出来,就可以了.<br>
+<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png"></p>
+<h2 id="其他">其他</h2>
+<p>顺便说一句,搭配<code>ALOOK</code>,这个搜一下,是<code>IOS</code>的一个浏览器,可以直接解析出某<code>ProXXub</code>的视频的<code>CDN</code>下载链接,这个链接用国内的<code>vps</code>也能下载,速度超快,当然你用IDM也行,但是因为是手机端的操作,这个<code>axel-corn</code>肯定是好用多了.</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Xpx84UCuu">
+            <span class="flex-auto">下载器</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/RlFLkNEAm">
+            <span class="flex-auto">工具</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL">
+            <span class="flex-auto">技术</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  太喜欢这个欢乐沙雕漂亮的小改改了！
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi">
+                <h3 class="post-title">
+                  色图pixiv下载器
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

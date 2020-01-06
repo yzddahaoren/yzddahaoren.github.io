@@ -1,0 +1,366 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578306674960">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578306674960" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">使用体验</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+          音乐
+        </a>
+      
+    
+      
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">heroku搭建RSSHUB</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-14 / 2 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/heroku-da-jian-rsshub.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h2 id="目的">目的</h2>
+<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
+<!-- more -->
+<p>，唉，当今世界，人心浮躁，究竟还有几个自己看自己的RSS信息了，难道被淹没在碎片化信息的洪流中才是正常的状态吗？心里净土终不可得，这是个悲哀的时代，是个宣传伪个性的时代。</p>
+<blockquote>
+<p>🍰 万物皆可 RSS <a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></p>
+</blockquote>
+<h2 id="环境">环境</h2>
+<ul>
+<li>heroku</li>
+<li>RSSHUB</li>
+</ul>
+<h2 id="安装">安装</h2>
+<ul>
+<li>安装heroku</li>
+</ul>
+<ol>
+<li>安装node环境</li>
+</ol>
+<pre><code>#Debian/Ubuntu系统 
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash - 
+
+apt install -y git nodejs 
+
+#CentOS系统 
+curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
+yum install nodejs git -y
+
+</code></pre>
+<ol start="2">
+<li>安装<br>
+npm安装cli</li>
+</ol>
+<pre><code>npm install heroku-cli -g  //全局安装,
+</code></pre>
+<p>OR</p>
+<pre><code>npm install heroku-cli --save //当前目录安装,之后再node_文件夹里面设置软连接即可.
+</code></pre>
+<ol start="3">
+<li>下载源码</li>
+</ol>
+<pre><code>git clone https://github.com/DIYgod/RSSHub.git
+</code></pre>
+<ol start="4">
+<li>heroku-cli的配置</li>
+</ol>
+<ul>
+<li>登陆</li>
+</ul>
+<pre><code>heroku login -i       //输入用户名,密码即可
+</code></pre>
+<ul>
+<li>推送<br>
+进入刚才下载的RSSHUB的目录<br>
+做自己想搞得更改</li>
+</ul>
+<pre><code>git add . 
+git commit -m &quot;XXX&quot;
+</code></pre>
+<p>创建应用</p>
+<pre><code>heroku create yzd-test //创建yzd-test的APP
+</code></pre>
+<p>推送</p>
+<pre><code>git push heroku master //推送到master
+</code></pre>
+<h2 id="使用">使用</h2>
+<p>访问:<br>
+<a href="yzd-test.herokuapp.com">yzd-test.herokuapp.com</a>    //当然用你自己的APP名哈.</p>
+<h2 id="使用体验">使用体验</h2>
+<p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.<br>
+以上!</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/6tvymCdQH">
+            <span class="flex-auto">网络资源</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL">
+            <span class="flex-auto">技术</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/ymHPLYauhe">
+            <span class="flex-auto">网站搭建</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  色图pixiv下载器
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou">
+                <h3 class="post-title">
+                  安装使用serveo （内网穿透）
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>yzd-gridea</title>
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578306674960">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578306674960" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#solo%E6%95%88%E6%9E%9C%E5%9B%BE">solo效果图:</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85docker">安装docker</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85docker-compose">安装docker-compose</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BC%96%E8%BE%91docker-compose%E6%96%87%E4%BB%B6">编辑docker-compose文件</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEsolo%E7%9A%84ssl">配置solo的SSL</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+      
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+          音乐
+        </a>
+      
+    
+      
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">solo博客搭建配置SSl</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-03 / 3 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/solo-bo-ke-da-jian-pei-zhi-ssl.jpg" alt="">
+        
+        <div class="post-content yue">
+          <blockquote>
+<p>solo博客&quot;专为程序员设计的博客&quot;<br>
+<a href="https://github.com/b3log/solo">GitHub</a></p>
+</blockquote>
+<!-- more -->
+<blockquote></blockquote>
+<p>本文利用docker以及docker-compose搭建solo博客并配置SSL.</p>
+<h2 id="solo效果图">solo效果图:</h2>
+<figure data-type="image" tabindex="1"><img src="https://g.yzddhr.me/post-images/1564833531441.PNG" alt=""></figure>
+<h2 id="环境">环境</h2>
+<h3 id="安装docker">安装docker</h3>
+<pre><code>curl -sSL https://get.docker.com/ | sh 
+systemctl start docker 
+systemctl enable docker
+</code></pre>
+<h3 id="安装docker-compose">安装docker-compose</h3>
+<ul>
+<li>利用pip安装:<br>
+<code>pip install docker-compose</code></li>
+<li>利用静态文件安装</li>
+</ul>
+<pre><code>curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<h2 id="编辑docker-compose文件">编辑docker-compose文件</h2>
+<p>编辑文件:<br>
+<code>vi docker-compose.yml</code><br>
+写入:</p>
+<pre><code>version: &quot;2&quot;                                                                                                              
+                                                                                                                         
+services:                                                                                                                 
+ mysql:                                                                                                                  
+   container_name: mysql                                                                                                 
+   image: mysql:5.5.60                                                                                                   
+   restart: always                                                                                                       
+   volumes:                                                                                                              
+     - ./mysql/data:/var/lib/mysql                                                                                       
+     - ./mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf                                                       
+   ports:                                                                                                                
+     - &quot;6603:3306&quot;                                                                                                       
+   environment:                                                                                                          
+     - MYSQL_ROOT_PASSWORD=数据库密码                                                                                     
+ solo:                                                                                                                   
+   container_name: solo                                                                                                  
+   image: b3log/solo                                                                                                     
+   restart: always                                                                                                       
+   ports:                                                                                                                
+     - &quot;8080:8080&quot;                                                                                                       
+   environment:                                                                                                          
+     RUNTIME_DB: &quot;MYSQL&quot;                                                                                                 
+     JDBC_USERNAME: &quot;root&quot;                                                                                               
+     JDBC_PASSWORD: &quot;数据库密码&quot;                                                                                          
+     JDBC_DRIVER: &quot;com.mysql.jdbc.Driver&quot;                                                                                
+     JDBC_URL: &quot;jdbc:mysql://mysql:3306/solo?useUnicode=yes&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC&quot;     
+   command: --listen_port=8080 --server_scheme=http --server_host=域名或IP 
+</code></pre>
+<p>启动容器:<br>
+<code>docker-compose up -d</code><br>
+在<code>docker-compose.yml</code>的文件夹下会生成MySQL的文件夹;进入文件夹:配置数据库;依次输入以下命令:<br>
+<code>docker exec -it database bash</code><br>
+<code>mysql -uroot -p</code>输入密码登入mysql<br>
+依次执行</p>
+<pre><code>CREATE DATABASE `solo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'solouser'@'%' identified BY 'solo@pwd';
+GRANT ALL ON solo.* TO 'solouser'@'%'; 
+FLUSH PRIVILEGES;
+</code></pre>
+<p>重新<code>docker-compose up -d</code>.</p>
+<h2 id="配置solo的ssl">配置solo的SSL</h2>
+<p>因为用nginx容器反代需要主域名,用二级域名反代会发生错误:当然有主域名,也想用主域名的可以参照<a href="https://github.com/liumapp/solo-in-docker/">docker-in-solo</a>配置https<br>
+以下使用cloudflare生成SSL</p>
+<ul>
+<li>修改<code>docker-compose.yml</code>文件中的<code>solo</code>容器的端口为哦<code>80</code></li>
+<li>修改<code>solo</code>容器的<code>sever_host</code>参数为域名;修改<code>server_scheme</code>参数为<code>https</code></li>
+<li>cloudflare开启<code>强制SSL</code>,开启<code>小黄云</code></li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Vha37qTmi">
+            <span class="flex-auto">solo</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/ymHPLYauhe">
+            <span class="flex-auto">网站搭建</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  用过的博客程序大总结加推荐
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/mian-fei-shen-qing-aws-de-educate-starter-jiao-yu-ban-zhang-hao">
+                <h3 class="post-title">
+                  免费申请AWS的Educate Starter教育版账号
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
