@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>yzd-gridea</title>
 <meta name="description" content="记录 :  思考 : 慎言" />
-<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1566634006725">
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578304971584">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -32,7 +32,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://g.yzddhr.me">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1566634006725" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578304971584" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
       </div>
@@ -110,7 +110,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">goproxy的heroku应用</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-08-01 / 2 min read
+          2019-08-01 / 4 min read
         </div>
         
           <img class="post-feature-image rounded-lg mx-auto my-4" src="https://g.yzddhr.me/post-images/goproxy-de-heroku-ying-yong.jpg" alt="">
@@ -137,9 +137,9 @@
 <p>（1）输入App name.例如<code>test1-goproxy</code></p>
 <p>（2）Choose a region:选择一个.例如United States</p>
 <p>（3）点击：Deploy app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/1-2c554f69.png" alt="1.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/file/2019/07/1-2c554f69.png" alt="1.png" loading="lazy"></figure>
 <p>4、执行完成以后，这是就完成了部署。</p>
-<p><img src="https://img.hacpai.com/file/2019/07/2-81397b50.png" alt="2.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://img.hacpai.com/file/2019/07/2-81397b50.png" alt="2.png" loading="lazy"></figure>
 <p>二、在客户端上执行</p>
 <p>独立goproxy客户端：</p>
 <p><code>proxy.exe http -t tcp -p :6600 -T wss -P test1-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>
@@ -164,25 +164,25 @@
 <p>一、在github上fork该项目并修改相关参数</p>
 <p>（1）fork项目：https://github.com/snail007/goproxy-heroku</p>
 <p>（2）修改配置参数，具体就是修改bootstrap里的内容，点击该文件</p>
-<p><img src="https://img.hacpai.com/file/2019/07/3-2efbc373.png" alt="3.png"></p>
+<figure data-type="image" tabindex="3"><img src="https://img.hacpai.com/file/2019/07/3-2efbc373.png" alt="3.png" loading="lazy"></figure>
 <p>修改第7行内容，详细参考：https://snail007.github.io/goproxy/posts/http_cdn_ws/</p>
 <p>二、在heroku上部署</p>
 <p>1、登陆https://dashboard.heroku.com/apps</p>
 <p>2、选择New -&gt; Create new app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/4-75a2c03c.png" alt="4.png"></p>
+<figure data-type="image" tabindex="4"><img src="https://img.hacpai.com/file/2019/07/4-75a2c03c.png" alt="4.png" loading="lazy"></figure>
 <p>3、执行以下三个步骤，见下图：</p>
 <p>（1）输入App name.例如<code>test2-goproxy</code></p>
 <p>（2）Choose a region:选择一个.例如United States</p>
 <p>（3）点击：Create app</p>
-<p><img src="https://img.hacpai.com/file/2019/07/5-2ac7329b.png" alt="5.png"></p>
+<figure data-type="image" tabindex="5"><img src="https://img.hacpai.com/file/2019/07/5-2ac7329b.png" alt="5.png" loading="lazy"></figure>
 <p>选择Deploy-&gt;GitHub Connect to github</p>
-<p><img src="https://img.hacpai.com/file/2019/07/6-196147dd.png" alt="6.png"></p>
+<figure data-type="image" tabindex="6"><img src="https://img.hacpai.com/file/2019/07/6-196147dd.png" alt="6.png" loading="lazy"></figure>
 <p>4、连接到自己的github，搜索goproxy-heroku项目，点击连接Connect</p>
-<p><img src="https://img.hacpai.com/file/2019/07/7-cce694f3.png" alt="7.png"></p>
+<figure data-type="image" tabindex="7"><img src="https://img.hacpai.com/file/2019/07/7-cce694f3.png" alt="7.png" loading="lazy"></figure>
 <p>5、手动部署Manual deploy -&gt; Deploy Branch， 部署成功。</p>
-<p><img src="https://img.hacpai.com/file/2019/07/8-e2c8808a.png" alt="8.png"><br>
+<p><img src="https://img.hacpai.com/file/2019/07/8-e2c8808a.png" alt="8.png" loading="lazy"><br>
 <br><br>
-<img src="https://img.hacpai.com/file/2019/07/9-35c0a850.png" alt="9.png"></p>
+<img src="https://img.hacpai.com/file/2019/07/9-35c0a850.png" alt="9.png" loading="lazy"></p>
 <p>三、在客户端上执行（默认不修改代码）</p>
 <p>独立goproxy客户端：</p>
 <p><code>proxy.exe http -t tcp -p :6600 -T wss -P test2-goproxy.herokuapp.com:443 --parent-ws-password pass -q 8.8.8.8:53 --timeout 30000</code></p>

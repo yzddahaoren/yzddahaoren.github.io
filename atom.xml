@@ -2,14 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2019-08-24T08:06:56.055Z</updated>
+    <updated>2020-01-06T10:03:06.167Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
     <subtitle>记录 :  思考 : 慎言</subtitle>
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
-    <rights>All rights reserved 2019, yzd-gridea</rights>
+    <rights>All rights reserved 2020, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[更新后的gridea的使用体验]]></title>
+        <id>https://g.yzddhr.me/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan</id>
+        <link href="https://g.yzddhr.me/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan">
+        </link>
+        <updated>2020-01-06T09:59:10.000Z</updated>
+        <content type="html"><![CDATA[<p>今天更新了gridea的最新版本，从第一个版本也有挺久没用gridea的了，果然不出所料，速度卡的要死</p>
+<h2 id="缺点">缺点</h2>
+<ul>
+<li>容易卡死（本人用的缩略图比较大）</li>
+<li>反应速度太慢</li>
+<li>设置选项太少</li>
+</ul>
+<p><strong>使用体验根本就是不甚理想</strong></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[安装pleroma(基于docker)]]></title>
         <id>https://g.yzddhr.me/post/an-zhuang-pleromaji-yu-docker</id>
@@ -119,7 +135,7 @@ config :pleroma, Pleroma.Repo,
 <p><strong>生成镜像</strong></p>
 <pre><code>docker-compose build
 # or
-docker build -t pleroma            //(推荐)
+docker build -t pleroma .          //(推荐)
 </code></pre>
 <h2 id="数据库设置">数据库设置</h2>
 <p><strong>创建数据库</strong></p>
@@ -278,9 +294,9 @@ server {
 </code></pre>
 <h2 id="使用体验">使用体验</h2>
 <p>先比较于<code>Mastodon</code>更简洁,更漂亮.kksk.<br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820190140-2249d038.png" alt="lala.im20190820190140.png"><br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191625-231cefaa.png" alt="lala.im20190820191625.png"><br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191313-7e2011aa.png" alt="lala.im20190820191313.png"></p>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820190140-2249d038.png" alt="lala.im20190820190140.png" loading="lazy"><br>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191625-231cefaa.png" alt="lala.im20190820191625.png" loading="lazy"><br>
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191313-7e2011aa.png" alt="lala.im20190820191313.png" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -289,7 +305,7 @@ server {
         <link href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian">
         </link>
         <updated>2019-08-19T12:59:21.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" loading="lazy"></figure>
 <p>使用项目搭建自己的发卡系统</p>
 <blockquote>
 <p>项目地址:<br>
@@ -414,7 +430,7 @@ main
 <code>free -m</code>查看内存.</p>
 <h2 id="命令">命令</h2>
 <p>docker各种镜像关系如图:<br>
-<img src="https://img.hacpai.com/file/2019/08/p-2f6fd591.png" alt="p.png"></p>
+<img src="https://img.hacpai.com/file/2019/08/p-2f6fd591.png" alt="p.png" loading="lazy"></p>
 <ul>
 <li>利用<code>docker-compose</code>部署</li>
 </ul>
@@ -428,7 +444,7 @@ main
 <li>phpadmin入口：http://域名:8080 用来修改数据库</li>
 <li>kodexplore入口：http://域名:999 用来管理源码或替换图片等等。<br>
 <strong>可能问题</strong><br>
-<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67-985c198b.png" alt="68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67.png"></li>
+<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67-985c198b.png" alt="68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67.png" loading="lazy"></li>
 </ul>
 ]]></content>
     </entry>
@@ -441,32 +457,32 @@ main
         <content type="html"><![CDATA[<p><strong>个人观点: 亚历山大不存在</strong><br>
 亚历山大被誉为西方的战神，他是亚历山大帝国的建立者，也是波斯帝国的掘墓人。直到现在关于亚历山大东征的故事，在中西方流传很广。</p>
 <p>但是就是这样一个伟大的战神，却遭到很多历史爱好者的质疑。很多人说亚历山大是虚拟的，也根本不存在什么亚历山大帝国。他们为什么得出这个结论，小编在此给大家分析下：<br>
-<img src="https://g.yzddhr.me/post-images/1565869711930.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869711930.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗?</p>
 <p>一、被亚历山大征服的地方，没有任何信史记载</p>
 <p>亚历山大一生征服过许多地方，古代埃及、两河流域地区、古代波斯和古代印度地区。应该说这么大规模的征服行动，古希腊和被征服的地方应该有信史记载。</p>
 <p>但是不管是希腊还是埃及、印度、波斯和巴比伦，都没有原始的信史记载被亚历山大征服。唯一可以证明的就是文艺复兴时期翻译的所谓的阿拉巴史料，但是阿拉伯史料原本据说丢了。<br>
-<img src="https://g.yzddhr.me/post-images/1565869721728.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869721728.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>二、波斯帝国不是亚历山大所灭</p>
 <p>根据伊朗历史的记载，波斯帝国真正灭亡的原因是：公元前337年阿塔薛西斯三世之子阿勒西斯全家被杀，大流士三世被拥立为王，很多人并不认可大流士三世的统治。</p>
 <p>波斯统治的地区各自拥兵自重，中央与地方矛盾日益尖锐。此时埃及人、马其顿人、巴比伦人、亚述人纷纷起来反叛，在内忧外患下波斯王朝最终解体。<br>
-<img src="https://g.yzddhr.me/post-images/1565869767013.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869767013.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>三、波斯地区希腊化是一个谎言</p>
 <p>波斯在中国古代被称为大食，很早就与中国有贸易往来，战国时期的赵国就有商人到波斯做玉石生意，但是从未记载过大食被谁征服的事情。</p>
 <p>如果亚历山大真的征服了波斯，对于喜欢修史的中国人，一定会提及这段历史。由于现代的伊朗没有话语权，他们的历史被淹没在西方人编造的故事里，波斯文明被强行希腊化。<br>
-<img src="https://g.yzddhr.me/post-images/1565869788329.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869788329.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>四、亚历山大东征，就是一群流寇造反的故事</p>
 <p>大流士三世的统治的时候，埃及人、马其顿人、巴比伦人、亚述人都起来造反，难免会出现几个比较牛逼的头目，他们带领着反叛武装，一路趁机烧杀抢掠。亚历山大东征，就是一群流寇造反的故事。</p>
 <p>如果亚历山大东征是真实的，那么从希腊半岛到印度，几千公里他的补给是怎么解决的？1812年拿破仑入侵沙俄，30万人掉队病号减员95000人，战斗损失14万多人，而亚历山大要比拿破仑早2000多年。<br>
-<img src="https://g.yzddhr.me/post-images/1565869798681.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869798681.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>五、亚历山大征服了所有的古文明，为何放过中国</p>
 <p>亚历山大一生征服了埃及、巴比伦、印度、波斯，如果再加上希腊，除了中国几乎所有的古文明都被征服，他为何单独放过了中国？而上述几个被征服的地区，有一个共同点就是都没有完整的信史保留。</p>
 <p>而中国有着世界上最完整的信史记载，如果亚历山大东征是文艺复兴时期杜撰的，杜撰者就无法杜撰亚历山大征服中国的故事。因为我们的信史不但记载我们历史的辉煌，也记载我们被入侵的历史。<br>
-<img src="https://g.yzddhr.me/post-images/1565869842187.jpg" alt=""><br>
+<img src="https://g.yzddhr.me/post-images/1565869842187.jpg" alt="" loading="lazy"><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>更让人不可思议的是亚历山大死后，他建立的庞大的亚历山大帝国在同一年就消亡。就好像这个国家的存在，就是为了证明亚历山大的伟大，其他没有任何意义。</p>
 <p>如果亚历山大这个人真是虚拟的，那么所谓的亚历山大帝国就根本不存在。在信息化如此透明的今天，在西方白头盔公然造假都能获得奥斯卡奖。那么在信息封闭的古代，就没有什么不可杜撰的了.</p>
@@ -637,13 +653,13 @@ $ python axeldown.py [自定义端口]
 </code></pre>
 <p>(不使用自定义端口时, 默认在8080端口开启服务)</p>
 <p>启动服务后在浏览器中打开&quot;<a href="http://127.0.0.1:%E7%AB%AF%E5%8F%A3/">http://127.0.0.1:端口</a>&quot;即可看到管理界面<br>
-<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg"></p>
+<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg" loading="lazy"></p>
 <h2 id="结合百度云">结合百度云</h2>
 <p><strong>1. 先解析</strong><br>
 进入下面的连接,解析下百度云的分享文件.<br>
 <a href="https://labs.nazo.moe/netdisk.html">https://labs.nazo.moe/netdisk.html</a><br>
 得到图片这样的一串东西,这个是给<code>ari2c</code>用的,但是下载链接看得出来是哪个吧,把下载链接单独拿出来,就可以了.<br>
-<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png"></p>
+<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png" loading="lazy"></p>
 <h2 id="其他">其他</h2>
 <p>顺便说一句,搭配<code>ALOOK</code>,这个搜一下,是<code>IOS</code>的一个浏览器,可以直接解析出某<code>ProXXub</code>的视频的<code>CDN</code>下载链接,这个链接用国内的<code>vps</code>也能下载,速度超快,当然你用IDM也行,但是因为是手机端的操作,这个<code>axel-corn</code>肯定是好用多了.</p>
 ]]></content>
@@ -919,85 +935,6 @@ git commit -m &quot;XXX&quot;
 <h2 id="使用体验">使用体验</h2>
 <p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.<br>
 以上!</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[安装使用serveo （内网穿透）]]></title>
-        <id>https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou</id>
-        <link href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou">
-        </link>
-        <updated>2019-08-14T10:44:33.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
-<!-- more -->
-<p>，对其优点是使用现有的<code>SSH</code>客户端，无需安装客户端即可完成端口转发。当用户连接到<code>Serveo</code>时，他们会获得一个公共<code>URL</code>，任何人都可以使用它来连接到他们的<code>localhost</code>服务器。</p>
-<h2 id="使用">使用</h2>
-<p><strong>官方地址：</strong><a href="http://serveo.net/">http://serveo.net</a></p>
-<p>**使用要求：**可以使用<code>SSH</code>，并且能连接到互联网，<code>Linux</code>、<code>Windows</code>等系统都行。</p>
-<p><strong>1、转发HTTP</strong><br>
-将本地<code>3000</code>端口穿透到公网中，使用命令：</p>
-<pre><code>#要转发其它端口的自行替换
-ssh -R 80:localhost:3000 serveo.net
-</code></pre>
-<p>第一次如果有提示，选择<code>yes</code>即可，之后会为你随机生成一个<code>serveo.net</code>二级域名，然后就可以使用浏览器间接访问本地的<code>localhost:3000</code>了。</p>
-<p>如果要指定二级域名，可以使用命令：</p>
-<pre><code>#这里默认为moerats.serveo.net，自行替换即可
-ssh -R moerats:80:localhost:3000 serveo.net
-</code></pre>
-<p>此时你就可以在外网使用<code>moerats.serveo.net</code>访问你本地的<code>localhost:3000</code>了。</p>
-<p><strong>2、转发SSH</strong><br>
-将本地<code>22</code>端口穿透到公网中，使用命令：</p>
-<pre><code>#可以自行设置名称，这里默认rats
-ssh -R rats:22:localhost:22 serveo.net
-
-</code></pre>
-<p>接下来就可以登录该内网服务器了，使用命令：</p>
-<pre><code>ssh -J serveo.net root@rats
-
-</code></pre>
-<p><strong>3、转发TCP</strong><br>
-将本地<code>1492</code>端口穿透到公网中，使用命令：</p>
-<pre><code>#可以自行设置公网端口，这里默认1492
-ssh -R 1492:localhost:1492 serveo.net
-
-</code></pre>
-<h2 id="进程守护">进程守护</h2>
-<p>这里官方推荐使用<code>AutoSSH</code>，作用是一旦<code>SSH</code>连接超时或停止传递流量，则根据需要重新启动它。</p>
-<p><strong>1、安装AutoSSH</strong></p>
-<pre><code>#Debian/Ubuntu系统
-apt install autossh -y
-
-#CentOS系统
-yum install autossh -y
-
-</code></pre>
-<p><strong>2、使用Systemd</strong></p>
-<p>只适用于<code>CentOS 7</code>、<code>Debian 8+</code>、<code>Ubuntu 16+</code>等。</p>
-<pre><code>#输入你的转发命令，去掉开头的ssh即可
-serveo=&quot;-R 80:localhost:3000 serveo.net&quot;
-#将以下代码一起复制到SSH运行
-cat &gt; /etc/systemd/system/autossh.service &lt;&lt;EOF
-[Unit]
-Description=autossh
-After=network.target
-
-[Service]
-Type=simple
-Environment=&quot;AUTOSSH_GATETIME=0&quot;
-ExecStart=$(command -v autossh) -M 0 -o &quot;ServerAliveInterval 30&quot; -o &quot;ServerAliveCountMax 3&quot; $serveo
-Restart=on-abort
-
-[Install]
-WantedBy=multi-user.target
-EOF
-</code></pre>
-<p>开始启动并设置开机自启：</p>
-<pre><code>systemctl start autossh
-systemctl enable autossh
-
-</code></pre>
-<p>最后更多的命令和使用可以直接查看官方文档→<a href="http://serveo.net/">传送门</a>。</p>
 ]]></content>
     </entry>
 </feed>
