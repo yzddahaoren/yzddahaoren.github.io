@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2020-01-06T10:03:06.167Z</updated>
+    <updated>2020-01-06T10:16:52.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -23,7 +23,11 @@
 <li>反应速度太慢</li>
 <li>设置选项太少</li>
 </ul>
-<p><strong>使用体验根本就是不甚理想</strong></p>
+<p><strong>使用体验根本就是不甚理想</strong>
+于是又下载回了老版本
+嗯，就是这样
+还是老版本比较方便
+毕竟一个纯净的博客只需要支持公式的markdown就是最高要求了，能怎么简洁还是怎么简洁的来比较好。</p>
 ]]></content>
     </entry>
     <entry>
@@ -33,8 +37,8 @@
         </link>
         <updated>2019-08-24T08:03:50.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
-<p>pleroma是一款分布式的社交网络系统,和twitter类似<br>
-Pleroma支持ActivityPub，这意味着可以和Mastodon/Misskey上的用户进行互动.<br>
+<p>pleroma是一款分布式的社交网络系统,和twitter类似
+Pleroma支持ActivityPub，这意味着可以和Mastodon/Misskey上的用户进行互动.
 Pleroma的特点是：高性能/内存使用率低，低配置的机器有福了，跑不了Mastodon可以换用Pleroma。而且喜欢小巧/紧凑风格的人，应该会非常喜欢Pleroma的前端和一系列主题。</p>
 </blockquote>
 <p><strong>以下安装基于docker</strong></p>
@@ -54,9 +58,9 @@ service docker start
 chmod +x /usr/local/bin/docker-compose
 </code></pre>
 <h2 id="项目构建">项目构建</h2>
-<p><strong>可隆项目</strong><br>
-<code>https://github.com/angristan/docker-pleroma.git</code><br>
-<strong>进入下载的文件夹</strong><br>
+<p><strong>可隆项目</strong>
+<code>https://github.com/angristan/docker-pleroma.git</code>
+<strong>进入下载的文件夹</strong>
 编辑<code>docker-compose.yml</code>文件</p>
 <pre><code>version: '2.3'
 
@@ -293,10 +297,10 @@ server {
 <pre><code>certbot --nginx --agree-tos --no-eff-email
 </code></pre>
 <h2 id="使用体验">使用体验</h2>
-<p>先比较于<code>Mastodon</code>更简洁,更漂亮.kksk.<br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820190140-2249d038.png" alt="lala.im20190820190140.png" loading="lazy"><br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191625-231cefaa.png" alt="lala.im20190820191625.png" loading="lazy"><br>
-<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191313-7e2011aa.png" alt="lala.im20190820191313.png" loading="lazy"></p>
+<p>先比较于<code>Mastodon</code>更简洁,更漂亮.kksk.
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820190140-2249d038.png" alt="lala.im20190820190140.png">
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191625-231cefaa.png" alt="lala.im20190820191625.png">
+<img src="https://img.hacpai.com/file/2019/08/lala.im20190820191313-7e2011aa.png" alt="lala.im20190820191313.png"></p>
 ]]></content>
     </entry>
     <entry>
@@ -305,10 +309,10 @@ server {
         <link href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian">
         </link>
         <updated>2019-08-19T12:59:21.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" loading="lazy"></figure>
+        <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
 <p>使用项目搭建自己的发卡系统</p>
 <blockquote>
-<p>项目地址:<br>
+<p>项目地址:
 <a href="https://github.com/zlkbdotnet/zfaka">https://github.com/zlkbdotnet/zfaka</a></p>
 </blockquote>
 <p>本文使用的是基于docker搭建</p>
@@ -425,12 +429,12 @@ case &quot;$num&quot; in
 }
 main
 </code></pre>
-<p><strong>保存并命名为swap.sh</strong><br>
-<code>bash swap.sh</code>即可.<br>
+<p><strong>保存并命名为swap.sh</strong>
+<code>bash swap.sh</code>即可.
 <code>free -m</code>查看内存.</p>
 <h2 id="命令">命令</h2>
-<p>docker各种镜像关系如图:<br>
-<img src="https://img.hacpai.com/file/2019/08/p-2f6fd591.png" alt="p.png" loading="lazy"></p>
+<p>docker各种镜像关系如图:
+<img src="https://img.hacpai.com/file/2019/08/p-2f6fd591.png" alt="p.png"></p>
 <ul>
 <li>利用<code>docker-compose</code>部署</li>
 </ul>
@@ -442,9 +446,9 @@ main
 <ul>
 <li>ZFAKA主程序入口为：http://域名:3002 打开后填入数据库密码即可完成安装步骤。</li>
 <li>phpadmin入口：http://域名:8080 用来修改数据库</li>
-<li>kodexplore入口：http://域名:999 用来管理源码或替换图片等等。<br>
-<strong>可能问题</strong><br>
-<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67-985c198b.png" alt="68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67.png" loading="lazy"></li>
+<li>kodexplore入口：http://域名:999 用来管理源码或替换图片等等。
+<strong>可能问题</strong>
+<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67-985c198b.png" alt="68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67.png"></li>
 </ul>
 ]]></content>
     </entry>
@@ -454,35 +458,35 @@ main
         <link href="https://g.yzddhr.me/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai">
         </link>
         <updated>2019-08-15T11:45:28.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>个人观点: 亚历山大不存在</strong><br>
+        <content type="html"><![CDATA[<p><strong>个人观点: 亚历山大不存在</strong>
 亚历山大被誉为西方的战神，他是亚历山大帝国的建立者，也是波斯帝国的掘墓人。直到现在关于亚历山大东征的故事，在中西方流传很广。</p>
-<p>但是就是这样一个伟大的战神，却遭到很多历史爱好者的质疑。很多人说亚历山大是虚拟的，也根本不存在什么亚历山大帝国。他们为什么得出这个结论，小编在此给大家分析下：<br>
-<img src="https://g.yzddhr.me/post-images/1565869711930.jpg" alt="" loading="lazy"><br>
+<p>但是就是这样一个伟大的战神，却遭到很多历史爱好者的质疑。很多人说亚历山大是虚拟的，也根本不存在什么亚历山大帝国。他们为什么得出这个结论，小编在此给大家分析下：
+<img src="https://g.yzddhr.me/post-images/1565869711930.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗?</p>
 <p>一、被亚历山大征服的地方，没有任何信史记载</p>
 <p>亚历山大一生征服过许多地方，古代埃及、两河流域地区、古代波斯和古代印度地区。应该说这么大规模的征服行动，古希腊和被征服的地方应该有信史记载。</p>
-<p>但是不管是希腊还是埃及、印度、波斯和巴比伦，都没有原始的信史记载被亚历山大征服。唯一可以证明的就是文艺复兴时期翻译的所谓的阿拉巴史料，但是阿拉伯史料原本据说丢了。<br>
-<img src="https://g.yzddhr.me/post-images/1565869721728.jpg" alt="" loading="lazy"><br>
+<p>但是不管是希腊还是埃及、印度、波斯和巴比伦，都没有原始的信史记载被亚历山大征服。唯一可以证明的就是文艺复兴时期翻译的所谓的阿拉巴史料，但是阿拉伯史料原本据说丢了。
+<img src="https://g.yzddhr.me/post-images/1565869721728.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>二、波斯帝国不是亚历山大所灭</p>
 <p>根据伊朗历史的记载，波斯帝国真正灭亡的原因是：公元前337年阿塔薛西斯三世之子阿勒西斯全家被杀，大流士三世被拥立为王，很多人并不认可大流士三世的统治。</p>
-<p>波斯统治的地区各自拥兵自重，中央与地方矛盾日益尖锐。此时埃及人、马其顿人、巴比伦人、亚述人纷纷起来反叛，在内忧外患下波斯王朝最终解体。<br>
-<img src="https://g.yzddhr.me/post-images/1565869767013.jpg" alt="" loading="lazy"><br>
+<p>波斯统治的地区各自拥兵自重，中央与地方矛盾日益尖锐。此时埃及人、马其顿人、巴比伦人、亚述人纷纷起来反叛，在内忧外患下波斯王朝最终解体。
+<img src="https://g.yzddhr.me/post-images/1565869767013.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>三、波斯地区希腊化是一个谎言</p>
 <p>波斯在中国古代被称为大食，很早就与中国有贸易往来，战国时期的赵国就有商人到波斯做玉石生意，但是从未记载过大食被谁征服的事情。</p>
-<p>如果亚历山大真的征服了波斯，对于喜欢修史的中国人，一定会提及这段历史。由于现代的伊朗没有话语权，他们的历史被淹没在西方人编造的故事里，波斯文明被强行希腊化。<br>
-<img src="https://g.yzddhr.me/post-images/1565869788329.jpg" alt="" loading="lazy"><br>
+<p>如果亚历山大真的征服了波斯，对于喜欢修史的中国人，一定会提及这段历史。由于现代的伊朗没有话语权，他们的历史被淹没在西方人编造的故事里，波斯文明被强行希腊化。
+<img src="https://g.yzddhr.me/post-images/1565869788329.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>四、亚历山大东征，就是一群流寇造反的故事</p>
 <p>大流士三世的统治的时候，埃及人、马其顿人、巴比伦人、亚述人都起来造反，难免会出现几个比较牛逼的头目，他们带领着反叛武装，一路趁机烧杀抢掠。亚历山大东征，就是一群流寇造反的故事。</p>
-<p>如果亚历山大东征是真实的，那么从希腊半岛到印度，几千公里他的补给是怎么解决的？1812年拿破仑入侵沙俄，30万人掉队病号减员95000人，战斗损失14万多人，而亚历山大要比拿破仑早2000多年。<br>
-<img src="https://g.yzddhr.me/post-images/1565869798681.jpg" alt="" loading="lazy"><br>
+<p>如果亚历山大东征是真实的，那么从希腊半岛到印度，几千公里他的补给是怎么解决的？1812年拿破仑入侵沙俄，30万人掉队病号减员95000人，战斗损失14万多人，而亚历山大要比拿破仑早2000多年。
+<img src="https://g.yzddhr.me/post-images/1565869798681.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>五、亚历山大征服了所有的古文明，为何放过中国</p>
 <p>亚历山大一生征服了埃及、巴比伦、印度、波斯，如果再加上希腊，除了中国几乎所有的古文明都被征服，他为何单独放过了中国？而上述几个被征服的地区，有一个共同点就是都没有完整的信史保留。</p>
-<p>而中国有着世界上最完整的信史记载，如果亚历山大东征是文艺复兴时期杜撰的，杜撰者就无法杜撰亚历山大征服中国的故事。因为我们的信史不但记载我们历史的辉煌，也记载我们被入侵的历史。<br>
-<img src="https://g.yzddhr.me/post-images/1565869842187.jpg" alt="" loading="lazy"><br>
+<p>而中国有着世界上最完整的信史记载，如果亚历山大东征是文艺复兴时期杜撰的，杜撰者就无法杜撰亚历山大征服中国的故事。因为我们的信史不但记载我们历史的辉煌，也记载我们被入侵的历史。
+<img src="https://g.yzddhr.me/post-images/1565869842187.jpg" alt="">
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>更让人不可思议的是亚历山大死后，他建立的庞大的亚历山大帝国在同一年就消亡。就好像这个国家的存在，就是为了证明亚历山大的伟大，其他没有任何意义。</p>
 <p>如果亚历山大这个人真是虚拟的，那么所谓的亚历山大帝国就根本不存在。在信息化如此透明的今天，在西方白头盔公然造假都能获得奥斯卡奖。那么在信息封闭的古代，就没有什么不可杜撰的了.</p>
@@ -503,15 +507,15 @@ main
 </ul>
 <h2 id="步骤">步骤</h2>
 <h3 id="ssh-key生成">SSH KEY生成</h3>
-<p><strong>1. 申请github账号</strong><br>
-现在的github是真的大方，免费的个人仓库无限使用。我还是能说什么？基佬网万岁！:heart<br>
-<strong>2. SSH kEY配置</strong><br>
-<strong>2.1 第一个 SSH Key 的生成</strong><br>
+<p><strong>1. 申请github账号</strong>
+现在的github是真的大方，免费的个人仓库无限使用。我还是能说什么？基佬网万岁！:heart
+<strong>2. SSH kEY配置</strong>
+<strong>2.1 第一个 SSH Key 的生成</strong>
 打开 git bash，输入以下命令生成 github-user1 的 SSH Key：</p>
 <pre><code>ssh-keygen -t rsa -C &quot;github-user1@email.com&quot;
 </code></pre>
-<p>第一个 ssh key 使用默认名字，三下回车，完成第一个默认的 ssh key。<br>
-在当前用户目录的 .ssh 目录下会生成 id_rsa 私钥文件和 id_rsa.pub 公钥文件，将 id_rsa.pub 公钥中的内容添加至 github-user1 的 GitHub 云端中。<br>
+<p>第一个 ssh key 使用默认名字，三下回车，完成第一个默认的 ssh key。
+在当前用户目录的 .ssh 目录下会生成 id_rsa 私钥文件和 id_rsa.pub 公钥文件，将 id_rsa.pub 公钥中的内容添加至 github-user1 的 GitHub 云端中。
 然后在 git bash 中输入以下命令测试该用户的 SSH 密钥是否有效：</p>
 <pre><code>ssh -T git@github.com
 </code></pre>
@@ -519,7 +523,7 @@ main
 <blockquote>
 <p>Hi github-user1! You've successfully authenticated, but GitHub does not provide shell access.</p>
 </blockquote>
-<p><strong>2.2 第二个 SSH KEY生成</strong><br>
+<p><strong>2.2 第二个 SSH KEY生成</strong>
 git bash 中输入以下命令，生成 gitee-user1 的密钥，注意第二个 SSH Key 不能再使用默认的文件名 id_rsa，否则会覆盖之前的密钥文件：</p>
 <pre><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa_gitee_one -C &quot;gitee-user1@email.com&quot;
 </code></pre>
@@ -550,7 +554,7 @@ Host gitee.com
 ssh -T git@gitee.com
 </code></pre>
 <h3 id="本地仓库配置">本地仓库配置</h3>
-<p><strong>3.1 删除本地的原来配置</strong><br>
+<p><strong>3.1 删除本地的原来配置</strong>
 进入相关的仓库</p>
 <pre><code># github.com域
 git remote rm origin
@@ -560,8 +564,8 @@ git remote add origin git@two.github.com:github-user2/text.git
 git remote rm origin
 git remote add origin git@two.gitee.com:gitee-user2/text.git
 </code></pre>
-<p><strong>3.2 设置新的用户和密码</strong><br>
-进入相关的仓库<br>
+<p><strong>3.2 设置新的用户和密码</strong>
+进入相关的仓库
 分别在各仓库下配置相应的用户名和邮箱</p>
 <pre><code>git config user.name &quot;username&quot;
 git config user.email &quot;username@email.com&quot;
@@ -585,15 +589,15 @@ git config user.email &quot;username@email.com&quot;
 <p>关于focusky的介绍就不要了吧,非常好用的PPT软件,素材很多</p>
 </blockquote>
 <!-- more -->
-<p>下面介绍特别版注册:<strong>截至有效期2019年9月15日</strong>.<br>
-介绍:<br>
-https://www.iplaysoft.com/focusky-zhu-ce-ma.html<br>
+<p>下面介绍特别版注册:<strong>截至有效期2019年9月15日</strong>.
+介绍:
+https://www.iplaysoft.com/focusky-zhu-ce-ma.html
 超级激活码：E02C-92AD-595E-99EC-735C<br>
 激活码有效期：即日起至2019年09月15日<br>
 激活后特别版有效期：365天特别版的升级<br>
 1、电脑打开 <a href="http://www.focusky.com.cn/account/register?iCode=pugwh">http://www.focusky.com.cn/account/register?iCode=pugwh</a> ，注册后，登录你的账号，进入“账号升级”后台激活升级。<br>
 2、升级后，打开Focusky软件，登录已升级的账号，就能获得特别版的使用权限。这里需要注意，若升级前正使用账号登录Focusky，升级后，软件上依然显示免费版，那么请先退出账号，重新登录即可。</p>
-<p>邮箱可以使用临时邮箱<br>
+<p>邮箱可以使用临时邮箱
 <a href="aws.yzddhr.me:3000">aws.yzddhr.me:3000</a></p>
 ]]></content>
     </entry>
@@ -607,9 +611,9 @@ https://www.iplaysoft.com/focusky-zhu-ce-ma.html<br>
 ]]></summary>
         <content type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
 <!-- more -->
-<p>特别是这个视频：<br>
-<a href="https://img.hacpai.com/file/2019/08/690089543912468451260041678916118869249833n-c5e28855.mp4">690089543912468451260041678916118869249833n.mp4</a><br>
-还能说什么呢？<br>
+<p>特别是这个视频：
+<a href="https://img.hacpai.com/file/2019/08/690089543912468451260041678916118869249833n-c5e28855.mp4">690089543912468451260041678916118869249833n.mp4</a>
+还能说什么呢？
 生活或许很美好？</p>
 ]]></content>
     </entry>
@@ -652,14 +656,14 @@ $ python axeldown.py [自定义端口]
 <pre><code>$ python axeldown.py 2333
 </code></pre>
 <p>(不使用自定义端口时, 默认在8080端口开启服务)</p>
-<p>启动服务后在浏览器中打开&quot;<a href="http://127.0.0.1:%E7%AB%AF%E5%8F%A3/">http://127.0.0.1:端口</a>&quot;即可看到管理界面<br>
-<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg" loading="lazy"></p>
+<p>启动服务后在浏览器中打开&quot;<a href="http://127.0.0.1:%E7%AB%AF%E5%8F%A3/">http://127.0.0.1:端口</a>&quot;即可看到管理界面
+<img src="https://img.hacpai.com/file/2019/08/run-ead3f1f5.jpg" alt="run.jpg"></p>
 <h2 id="结合百度云">结合百度云</h2>
-<p><strong>1. 先解析</strong><br>
-进入下面的连接,解析下百度云的分享文件.<br>
-<a href="https://labs.nazo.moe/netdisk.html">https://labs.nazo.moe/netdisk.html</a><br>
-得到图片这样的一串东西,这个是给<code>ari2c</code>用的,但是下载链接看得出来是哪个吧,把下载链接单独拿出来,就可以了.<br>
-<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png" loading="lazy"></p>
+<p><strong>1. 先解析</strong>
+进入下面的连接,解析下百度云的分享文件.
+<a href="https://labs.nazo.moe/netdisk.html">https://labs.nazo.moe/netdisk.html</a>
+得到图片这样的一串东西,这个是给<code>ari2c</code>用的,但是下载链接看得出来是哪个吧,把下载链接单独拿出来,就可以了.
+<img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png"></p>
 <h2 id="其他">其他</h2>
 <p>顺便说一句,搭配<code>ALOOK</code>,这个搜一下,是<code>IOS</code>的一个浏览器,可以直接解析出某<code>ProXXub</code>的视频的<code>CDN</code>下载链接,这个链接用国内的<code>vps</code>也能下载,速度超快,当然你用IDM也行,但是因为是手机端的操作,这个<code>axel-corn</code>肯定是好用多了.</p>
 ]]></content>
@@ -894,7 +898,7 @@ yum install nodejs git -y
 
 </code></pre>
 <ol start="2">
-<li>安装<br>
+<li>安装
 npm安装cli</li>
 </ol>
 <pre><code>npm install heroku-cli -g  //全局安装,
@@ -916,8 +920,8 @@ npm安装cli</li>
 <pre><code>heroku login -i       //输入用户名,密码即可
 </code></pre>
 <ul>
-<li>推送<br>
-进入刚才下载的RSSHUB的目录<br>
+<li>推送
+进入刚才下载的RSSHUB的目录
 做自己想搞得更改</li>
 </ul>
 <pre><code>git add . 
@@ -930,10 +934,10 @@ git commit -m &quot;XXX&quot;
 <pre><code>git push heroku master //推送到master
 </code></pre>
 <h2 id="使用">使用</h2>
-<p>访问:<br>
+<p>访问:
 <a href="yzd-test.herokuapp.com">yzd-test.herokuapp.com</a>    //当然用你自己的APP名哈.</p>
 <h2 id="使用体验">使用体验</h2>
-<p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.<br>
+<p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.
 以上!</p>
 ]]></content>
     </entry>
