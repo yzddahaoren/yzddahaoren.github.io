@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2020-01-06T10:39:47.101Z</updated>
+    <updated>2020-01-06T10:51:44.335Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,106 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2020, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[利用小内存主机安装typecho,wordpress,云盘等]]></title>
+        <id>https://g.yzddhr.me/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng</id>
+        <link href="https://g.yzddhr.me/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng">
+        </link>
+        <updated>2020-01-06T10:42:07.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>支持安装的程序有<strong>Typecho/WordPress/Zblog/Kodexplorer</strong><br>
+支持的功能有备份和还原</p>
+</blockquote>
+<h2 id="环境安装">环境安装</h2>
+<ol>
+<li>项目地址:https://github.com/dylanbai8/Onekey_Caddy_PHP7_Sqlite3</li>
+<li>下载相关的甲苯:</li>
+</ol>
+<pre><code>wget -N --no-check-certificate git.io/c.sh &amp;&amp; chmod +x c.sh &amp;&amp; bash c.sh
+</code></pre>
+<p><strong>程序会自动给你安装好<code>php``caddy``sqlite</code>等环境</strong></p>
+<h2 id="使用">使用</h2>
+<p>**可以使用以下</p>
+<pre><code>#一键安装typecho博客
+bash c.sh -t
+
+#一键安装wordpress博客
+bash c.sh -w
+
+#一键安装zblog博客
+bash c.sh -z
+
+#一键安装kodexplorer可道云
+bash c.sh -k
+
+#一键安装laverna印象笔记
+bash c.sh -l
+
+#一键整站备份（一键打包/www网站目录、含数据库）
+bash c.sh -a
+
+#一键安装v2ra*
+bash c.sh -v
+
+#一键安装rinetd bbr端口加速
+bash c.sh -b
+</code></pre>
+<h2 id="设置伪静态">设置伪静态</h2>
+<blockquote>
+<p>Caddy配置文件路径/etc/dylanbai8/caddy/Caddyfile。</p>
+</blockquote>
+<ol>
+<li>编辑配置文件</li>
+</ol>
+<p><code>vi /etc/dylanbai8/caddy/Caddyfile</code></p>
+<ol start="2">
+<li>写入内容</li>
+</ol>
+<pre><code>#Wordpress伪静态
+rewrite {
+  if {path} not_match ^\/wp-admin
+  to {path} {path}/ /index.php?{query}
+}
+
+#Typecho伪静态
+rewrite {
+    if {path} not_match ^\/admin
+    to {path} {path}/ /index.php?{query}
+ }
+</code></pre>
+<ol start="3">
+<li>重启<code>caddy</code><br>
+<code>systemctl restart caddy</code></li>
+</ol>
+<h2 id="管理和卸载">管理和卸载</h2>
+<ul>
+<li>卸载</li>
+</ul>
+<pre><code>#卸载caddy
+bash c.sh -unc
+
+#卸载php+sqlite
+bash c.sh -unp
+
+#卸载v2ra*
+bash c.sh -unv
+
+#卸载rinetdbbr
+bash c.sh -unb
+</code></pre>
+<ul>
+<li>相关的管理命令</li>
+</ul>
+<pre><code>启动：systemctl start caddy
+停止：systemctl stop caddy
+重启：systemctl restart caddy
+
+Caddy配置文件位置：/etc/dylanbai8
+
+网站目录：/www
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[更新后的gridea的使用体验]]></title>
         <id>https://g.yzddhr.me/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan</id>
@@ -858,89 +958,6 @@ pxder --bookmark--private
 <p>例如</p>
 <pre><code class="language-bash">pxder -p 70593670,70594912,70595516
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[heroku搭建RSSHUB]]></title>
-        <id>https://g.yzddhr.me/post/heroku-da-jian-rsshub</id>
-        <link href="https://g.yzddhr.me/post/heroku-da-jian-rsshub">
-        </link>
-        <updated>2019-08-14T10:45:26.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="目的">目的</h2>
-<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="目的">目的</h2>
-<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
-<!-- more -->
-<p>，唉，当今世界，人心浮躁，究竟还有几个自己看自己的RSS信息了，难道被淹没在碎片化信息的洪流中才是正常的状态吗？心里净土终不可得，这是个悲哀的时代，是个宣传伪个性的时代。</p>
-<blockquote>
-<p>🍰 万物皆可 RSS <a href="https://docs.rsshub.app/">https://docs.rsshub.app</a></p>
-</blockquote>
-<h2 id="环境">环境</h2>
-<ul>
-<li>heroku</li>
-<li>RSSHUB</li>
-</ul>
-<h2 id="安装">安装</h2>
-<ul>
-<li>安装heroku</li>
-</ul>
-<ol>
-<li>安装node环境</li>
-</ol>
-<pre><code>#Debian/Ubuntu系统 
-
-curl -sL https://deb.nodesource.com/setup_10.x | bash - 
-
-apt install -y git nodejs 
-
-#CentOS系统 
-curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
-yum install nodejs git -y
-
-</code></pre>
-<ol start="2">
-<li>安装<br>
-npm安装cli</li>
-</ol>
-<pre><code>npm install heroku-cli -g  //全局安装,
-</code></pre>
-<p>OR</p>
-<pre><code>npm install heroku-cli --save //当前目录安装,之后再node_文件夹里面设置软连接即可.
-</code></pre>
-<ol start="3">
-<li>下载源码</li>
-</ol>
-<pre><code>git clone https://github.com/DIYgod/RSSHub.git
-</code></pre>
-<ol start="4">
-<li>heroku-cli的配置</li>
-</ol>
-<ul>
-<li>登陆</li>
-</ul>
-<pre><code>heroku login -i       //输入用户名,密码即可
-</code></pre>
-<ul>
-<li>推送<br>
-进入刚才下载的RSSHUB的目录<br>
-做自己想搞得更改</li>
-</ul>
-<pre><code>git add . 
-git commit -m &quot;XXX&quot;
-</code></pre>
-<p>创建应用</p>
-<pre><code>heroku create yzd-test //创建yzd-test的APP
-</code></pre>
-<p>推送</p>
-<pre><code>git push heroku master //推送到master
-</code></pre>
-<h2 id="使用">使用</h2>
-<p>访问:<br>
-<a href="yzd-test.herokuapp.com">yzd-test.herokuapp.com</a>    //当然用你自己的APP名哈.</p>
-<h2 id="使用体验">使用体验</h2>
-<p>RSSHUB的功能丰富,作为一名歇斯底里的批小将,我认为使用体验还不错.<br>
-以上!</p>
 ]]></content>
     </entry>
 </feed>
