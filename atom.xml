@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2020-01-06T10:51:44.335Z</updated>
+    <updated>2020-01-06T10:53:37.637Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -23,13 +23,13 @@
 <h2 id="环境安装">环境安装</h2>
 <ol>
 <li>项目地址:https://github.com/dylanbai8/Onekey_Caddy_PHP7_Sqlite3</li>
-<li>下载相关的甲苯:</li>
+<li>下载相关的脚本:</li>
 </ol>
 <pre><code>wget -N --no-check-certificate git.io/c.sh &amp;&amp; chmod +x c.sh &amp;&amp; bash c.sh
 </code></pre>
-<p><strong>程序会自动给你安装好<code>php``caddy``sqlite</code>等环境</strong></p>
+<p><strong>程序会自动给你安装好<code>php,caddy,sqlite</code>等环境</strong></p>
 <h2 id="使用">使用</h2>
-<p>**可以使用以下</p>
+<p>可以使用以下</p>
 <pre><code>#一键安装typecho博客
 bash c.sh -t
 
