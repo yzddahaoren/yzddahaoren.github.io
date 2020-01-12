@@ -2,112 +2,134 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>内网穿透加shadowsocks实现全局穿透（伪） | yzd-gridea</title>
+<title>yzd-gridea</title>
 <meta name="description" content="记录 :  思考 : 慎言" />
-<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578829916183">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578830085181">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125127562-1');
+</script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://g.yzddhr.me">
-  <img class="avatar" src="https://g.yzddhr.me/images/avatar.png?v=1578829916183" alt="">
-  </a>
-  <h1 class="site-title">
-    yzd-gridea
-  </h1>
-  <p class="site-description">
-    记录 :  思考 : 慎言
-  </p>
-  <div class="menu-container">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://g.yzddhr.me">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578830085181" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD">实现功能</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#%E7%94%9F%E6%88%90%E9%80%9A%E8%AE%AF%E6%96%87%E4%BB%B6">生成通讯文件</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
+<ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E9%9C%80%E6%B1%82">需求</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8E%9F%E7%90%86">原理</a>
+<ul>
+<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
     
       
-        <a href="/" class="menu">
+        <a href="/" class="menu" style="animation-delay: 0s">
           首页
         </a>
       
     
       
-        <a href="/archives" class="menu">
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
           归档
         </a>
       
     
       
-        <a href="/tags" class="menu">
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
           标签
         </a>
       
     
       
-        <a href="/post/about" class="menu">
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
           关于
         </a>
       
     
       
-        <a href="/tag/9CTakvPYn/" class="menu">
+        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
           音乐
         </a>
       
     
       
-        <a href="https://g.yzddhr.me/post/friends/" class="menu">
+        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
           友链
         </a>
       
     
   </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
   </div>
 </div>
-
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              内网穿透加shadowsocks实现全局穿透（伪）
-            </h2>
-            <div class="post-info">
-              <span>
-                2019-08-07
-              </span>
-              <span>
-                4 min read
-              </span>
-              
-                <a href="https://g.yzddhr.me/tag/TNORygQ9Z" class="post-tag">
-                  # 内网穿透
-                </a>
-              
-                <a href="https://g.yzddhr.me/tag/Cy04ipSbL" class="post-tag">
-                  # 技术
-                </a>
-              
-            </div>
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="实现功能">实现功能</h2>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">内网穿透加shadowsocks实现全局穿透（伪）</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-07 / 4 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="实现功能">实现功能</h2>
 <p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
 <!-- more -->
 <h2 id="环境">环境</h2>
@@ -193,48 +215,42 @@ chmod +x install.sh
 <li>其他用法，可以和fiddler抓包软件配合使用，可以搭配<code>ssh</code>使用，方便管理。（荐）</li>
 </ul>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD">实现功能</a></li>
-<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
-<ul>
-<li><a href="#%E7%94%9F%E6%88%90%E9%80%9A%E8%AE%AF%E6%96%87%E4%BB%B6">生成通讯文件</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
-<ul>
-<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
-<li><a href="#%E9%9C%80%E6%B1%82">需求</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a>
-<ul>
-<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
         </div>
 
         
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
-              <h3 class="post-title">
-                用过的博客程序大总结加推荐
-              </h3>
-            </a>
-          </div>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/TNORygQ9Z">
+            <span class="flex-auto">内网穿透</span>
+          </a>
         
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/Cy04ipSbL">
+            <span class="flex-auto">技术</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://g.yzddhr.me/post/wsl-zi-xi-tong-shi-yong-zhi-nan">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  WSl子系统使用指南
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian">
+                <h3 class="post-title">
+                  用过的博客程序大总结加推荐
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
 
         
           
@@ -264,54 +280,107 @@ chmod +x install.sh
           
         
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a> | 
-  <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
-
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-      }
-      console.log('section.offsetHeight', section.offsetHeight);
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
-  });
-
-</script>
-
       </div>
     </div>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
   </body>
 </html>
