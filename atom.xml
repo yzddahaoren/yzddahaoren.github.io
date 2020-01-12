@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2020-01-06T10:53:37.637Z</updated>
+    <updated>2020-01-12T10:24:27.285Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://g.yzddhr.me/images/avatar.png</logo>
     <icon>https://g.yzddhr.me/favicon.ico</icon>
     <rights>All rights reserved 2020, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[2020可用的百度云下载器]]></title>
+        <id>https://g.yzddhr.me/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi</id>
+        <link href="https://g.yzddhr.me/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
+        </link>
+        <updated>2020-01-12T10:23:42.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/file/2020/01/3e0da953774b64a26a64149757a893b1-7754a996.jpg" alt="3e0da953774b64a26a64149757a893b1.jpg"></figure>
+<p>特色图片随便选了一个库里面的了，抱歉了哈 :13:</p>
+<h2 id="使用工具">使用工具</h2>
+<blockquote>
+<p>软件名为亿寻，应该是某位湖南大佬写的，目前仅限国内使用，国外用户就不用看了。</p>
+</blockquote>
+<h2 id="相关信息">相关信息</h2>
+<ul>
+<li>亿寻主页：<a href="https://github.com/0-01/0/blob/master/1">主页</a></li>
+<li>下载地址：<a href="https://www.lanzous.com/b00n7nu4d">下载</a></li>
+<li>使用方法：<a href="https://www.runningcheese.com/baiduyun#read">方法</a></li>
+<li>湖南地区请下载 亿寻 PRO 版</li>
+</ul>
+<h2 id="使用方法">使用方法</h2>
+<ul>
+<li>解压压缩包，打开软件</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://img.hacpai.com/file/2020/01/image-5d10ee19.png" alt="image.png"></figure>
+<ul>
+<li>打开就出错，不过忽略就行了</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://img.hacpai.com/file/2020/01/image-09c37f48.png" alt="image.png"></figure>
+<ul>
+<li>然后“文件 --&gt; 打开”</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://img.hacpai.com/file/2020/01/image-0b4e8c2b.png" alt="image.png"></figure>
+<ul>
+<li>选择下载方式：“右建 --&gt; 选择第二种方式下载”</li>
+</ul>
+<figure data-type="image" tabindex="5"><img src="https://img.hacpai.com/file/2020/01/image-fa299262.png" alt="image.png"></figure>
+<p><strong>不知道为什么，第一种方式下载我这里不行，安徽电信</strong></p>
+<ul>
+<li>设定下载位置：默认：当前用户的“下载”文件夹</li>
+</ul>
+<figure data-type="image" tabindex="6"><img src="https://img.hacpai.com/file/2020/01/image-8def0ef1.png" alt="image.png"></figure>
+<ul>
+<li>速度测试</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://img.hacpai.com/file/2020/01/image-f1969ff2.png" alt="image.png"></figure>
+<blockquote>
+<p>本人网速慢。差不多可以慢速。</p>
+</blockquote>
+<h2 id="其他">其他</h2>
+<p>附：百度云下载 ：链接: https://pan.baidu.com/s/1T05TMYi4VEbue3XVun1Rtw 提取码: tk4z</p>
+<p>测试文件：链接: https://pan.baidu.com/s/12gOC3BeVCVMXqr_oXCtTPw 提取码: 2333</p>
+<p>有的时候，可能下载失败，报错<code>403</code>，重新右键下载即可。</p>
+<h2 id="总结">总结：</h2>
+<ul>
+<li>速度尚可</li>
+<li>百度云<strong>188</strong>会员<code>白 买 力</code></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[利用小内存主机安装typecho,wordpress,云盘等]]></title>
         <id>https://g.yzddhr.me/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng</id>
@@ -768,196 +827,6 @@ $ python axeldown.py [自定义端口]
 <img src="https://img.hacpai.com/file/2019/08/20-b9449b6e.png" alt="20.png"></p>
 <h2 id="其他">其他</h2>
 <p>顺便说一句,搭配<code>ALOOK</code>,这个搜一下,是<code>IOS</code>的一个浏览器,可以直接解析出某<code>ProXXub</code>的视频的<code>CDN</code>下载链接,这个链接用国内的<code>vps</code>也能下载,速度超快,当然你用IDM也行,但是因为是手机端的操作,这个<code>axel-corn</code>肯定是好用多了.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[色图pixiv下载器]]></title>
-        <id>https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi</id>
-        <link href="https://g.yzddhr.me/post/se-tu-pixiv-xia-zai-qi">
-        </link>
-        <updated>2019-08-14T10:46:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
-<!-- more -->
-<p>但是倒的确是是这样,谁不想快点去世呢?大部人还是活着受罪的啊,毕竟.</p>
-<blockquote>
-<p>pixiv : 色图站,没啥好说的.</p>
-</blockquote>
-<h2 id="环境">环境</h2>
-<ul>
-<li>python</li>
-<li>node</li>
-</ul>
-<h2 id="安装">安装</h2>
-<h3 id="脚本">脚本</h3>
-<p><strong>1. 使用一键脚本</strong></p>
-<blockquote>
-<p>注意的是,一键脚本只能下载每日排行榜,当然还是正常的榜,R18榜是不能下的.但是还是挺方便的,毕竟不需要登陆的. ❤️</p>
-</blockquote>
-<p><strong>2. 下载脚本</strong></p>
-<pre><code>wget https://raw.githubusercontent.com/MoeClub/Pixiv/master/pixiv.py
-</code></pre>
-<p>脚本默认<code>25</code>线程，想改的话，直接编辑脚本，搜索<code>25</code>，改成相应数字就可以了。</p>
-<p><strong>3. 使用脚本</strong></p>
-<pre><code>#下载画师原图，使用画师UID即可
-python3 pixiv.py &quot;673179&quot; 
-   
-#下载排行榜原图，使用排行榜地址即可    
-python3 pixiv.py &quot;https://www.pixiv.net/ranking.php?mode=male&quot;  //可改女性排行榜,不可R18 :滑稽
-</code></pre>
-<h3 id="pxder">pxder</h3>
-<p><strong>1. pxder</strong></p>
-<blockquote>
-<p>还算挺好用的下载器吧,主要就是下载自己的收藏夹挺方便的,其他的功能的话,下载画师啥的,还行吧,应该,不过没用过.</p>
-</blockquote>
-<p><strong>2. 安装node</strong></p>
-<pre><code>#Debian/Ubuntu系统 
-
-curl -sL https://deb.nodesource.com/setup_10.x | bash - 
-apt install -y git nodejs 
-
-#CentOS系统 
-
-curl -sL https://rpm.nodesource.com/setup_10.x | bash - 
-yum install nodejs git -y
-</code></pre>
-<h2 id="安装更新卸载">安装/更新/卸载</h2>
-<p>打开“命令提示符”或者“Powershell”，执行下面的命令，即可安装或者更新（注：后续命令皆为在此执行）</p>
-<pre><code class="language-bash">npm i -g pxder
-</code></pre>
-<p>如需卸载，执行</p>
-<pre><code class="language-bash">npm uninstall -g pxder
-</code></pre>
-<h2 id="配置">配置</h2>
-<h3 id="登录">登录</h3>
-<pre><code class="language-bash">pxder --login
-</code></pre>
-<p>然后会让你输入用户名密码，登录成功一次后以后如果没有出什么bug则无需再次登录</p>
-<p>注：pxder 仅会在计算机上储存 refreshAccessToken，而不会储存您的帐号密码</p>
-<p>如果要登出</p>
-<pre><code class="language-bash">pxder --logout
-</code></pre>
-<h3 id="设置">设置</h3>
-<p>进入 Pxder 的设置界面</p>
-<pre><code class="language-bash">pxder --setting
-</code></pre>
-<p>有五项设置，按下数字键选择一项进行设置，然后按照要求输入之后回车即可</p>
-<pre><code class="language-bash">[1] Download path     # 下载目录，必须设置
-[2] Download thread   # 下载线程数
-[3] Download timeout  # 下载超时
-[4] Auto rename       # 自动重命名（文件夹）
-[5] Proxy             # 使用代理
-</code></pre>
-<ul>
-<li>
-<p><strong>下载目录</strong><br>
-请注意相对路径与绝对路径的区别，不过不用担心，输入完路径后会显示绝对路径以方便你检查<br>
-目录无需手动建立，下载图片的时候会自动建立</p>
-</li>
-<li>
-<p><strong>下载线程数</strong><br>
-即同时下载的图片数，默认为<code>5</code>，最小为<code>1</code>，最大为<code>32</code><br>
-下载图片时最左侧的一列实际上就是线程编号</p>
-</li>
-<li>
-<p><strong>下载超时及重试</strong><br>
-如果这么多秒之后一张图还没被下载完则算作超时，超时后会自动重试，默认值为<code>30</code><br>
-下载图片时如果线程编号是黄色底的就代表此次是重试<br>
-重试超过<code>10</code>次则视作下载失败</p>
-</li>
-<li>
-<p><strong>自动重命名</strong><br>
-开启了以后，例如这个画师原来叫<code>abc</code>，今天你再次去下载（更新）他的画作，但是他改名叫<code>def</code>了，那么程序会自动帮你重命名画师文件夹</p>
-</li>
-<li>
-<p><strong>使用代理</strong><br>
-支持使用 HTTP 或 SOCKS 代理，即可以使用小飞机<br>
-输入格式为<code>&lt;协议&gt;://[用户名:密码@]&lt;IP&gt;:&lt;端口&gt;</code>，例如：</p>
-<ul>
-<li><code>http://user:passwd@127.0.0.1:1080</code></li>
-<li><code>socks://127.0.0.1:1080</code>（如果你使用小飞机则直接填这个，除非你改过本地端口）</li>
-</ul>
-<p>如果输入空行则关闭代理</p>
-</li>
-</ul>
-<p>注：配置文件存放路径可通过命令<code>pxder --conf-loca</code>查看</p>
-<h2 id="说明">说明</h2>
-<ul>
-<li>由于官方客户端 API 限制 offset 不能大于 5000，所以程序不会也无法得到画师列表、画作列表、收藏列表等 5000 页以后的数据，并且由该原因导致的程序崩溃问题已经在 v2.7.3 修复</li>
-<li>会将同一画师的作品下载在<code>(UID)画师名</code>格式的文件夹内，图片命名格式为<code>(PID)作品名</code><br>
-并且，画师名会自动删除名字中<code>@</code>（包含半角&amp;全角）符号及以后的文字（因为这些基本上都是画师的摊位信息之类的与名字无关的信息）</li>
-<li>文件（夹）名均会过滤掉所有 Windows 和 Linux 中不能或不推荐做文件名的符号</li>
-<li>动图下下来会是所有帧的压缩包，并且会标注 delay 信息
-<ul>
-<li>例如<code>xxx@30ms.zip</code>表示该动图的播放速度为 30ms 一帧</li>
-<li>由于获取动图信息需要额外调用API，因此如果动图较多将会使得解析时间较长</li>
-</ul>
-</li>
-<li>下载时会忽略掉已经下载完成的插画</li>
-<li>下载超时或网络错误会自动重试，重试上限为10次
-<ul>
-<li>如果当某一个线程达到重试上限并且此时有不止一个下载线程处于重试状态，程序将视为暂时出现了网络问题，暂停5分钟后会继续重试</li>
-<li>如果只有一个下载线程出现错误，程序将会放弃下载该p并继续运行（因为有出现过确实是因为P站自己的问题而无法下载的例子<code>48948784_p4</code>）</li>
-</ul>
-</li>
-<li>抗GFW连接重置攻击，解析时被连接重置会自动重试</li>
-</ul>
-<h2 id="正式使用">正式使用</h2>
-<p>如果需要终止程序，请在命令行中按下<code>Ctrl + C</code>或者直接关闭命令行窗口</p>
-<p>请不要吐槽为什么在 Windows 下<code>Ctrl + C</code>后提示的<code>终止批处理操作吗(Y/N)?</code>不管是 Y 还是 N 都依然会终止，因为 nodejs 捕捉到<code>Ctrl + C</code>就自己终止了，Windows 晚了一步（。</p>
-<h3 id="1-下载或更新某画师的所有插画作品">(1) 下载或更新某画师的所有插画作品</h3>
-<p>使用<code>-u</code>或<code>--uid</code>参数，后跟画师的 UID，可单个可多个，如果多个则用英文半角逗号隔开</p>
-<pre><code class="language-bash">pxder -u uid1,uid2,uid3,...
-</code></pre>
-<p>例如</p>
-<pre><code class="language-bash">pxder -u 5899479,724607,11597411
-</code></pre>
-<h3 id="2-下载或更新你关注的所有画师的所有插画作品">(2) 下载或更新你关注的所有画师的所有插画作品</h3>
-<p>该操作同时也会更新已下载的关注画师的作品，并且效率远高于 (3)，比较推荐使用</p>
-<p>会自动排除 pixiv事務局 (uid=<code>11</code>)</p>
-<p>由于收集关注信息需时较久，因此特地针对该功能做了信息缓存：如果你在下载中途退出，那么下次使用该功能时并不需要重新收集，而是利用上次的缓存立即继续下载。</p>
-<ul>
-<li>公开关注与私密关注的缓存是分开的，互不干扰</li>
-<li>如果你需要强制重新收集画师信息（忽略上次的缓存），请在运行命令时加入<code>--force</code>参数</li>
-</ul>
-<h4 id="公开关注的画师">公开关注的画师</h4>
-<pre><code class="language-bash">pxder -f
-# 或
-pxder --follow
-</code></pre>
-<h4 id="私密关注的画师">私密关注的画师</h4>
-<pre><code class="language-bash">pxder -F
-# 或
-pxder --follow--private
-</code></pre>
-<h3 id="3-更新已下载的画师的画作">(3) 更新已下载的画师的画作</h3>
-<p>会对下载目录中检测到的所有下载过的画师的插画进行增量更新下载</p>
-<p>与 (2) 的区别是可以更新你使用 (1) 下载了的但是未关注的画师的插画，但是效率远低于 (2)</p>
-<pre><code class="language-bash">pxder -U
-# 或
-pxder --update
-</code></pre>
-<h3 id="4-下载或更新你的收藏中的插画作品">(4) 下载或更新你的收藏中的插画作品</h3>
-<h4 id="公开收藏">公开收藏</h4>
-<p>插画会被下载至<code>[bookmark] Public</code>文件夹中</p>
-<pre><code class="language-bash">pxder -b
-# 或
-pxder --bookmark
-</code></pre>
-<h4 id="私密收藏">私密收藏</h4>
-<p>插画会被下载至<code>[bookmark] Private</code>文件夹中</p>
-<pre><code class="language-bash">pxder -B
-# 或
-pxder --bookmark--private
-</code></pre>
-<h3 id="5-根据指定-pid-下载插画">(5) 根据指定 PID 下载插画</h3>
-<p>插画会被下载至<code>PID</code>文件夹中</p>
-<pre><code class="language-bash">pxder -p pid1,pid2,pid3,...
-</code></pre>
-<p>例如</p>
-<pre><code class="language-bash">pxder -p 70593670,70594912,70595516
-</code></pre>
 ]]></content>
     </entry>
 </feed>
