@@ -2,165 +2,112 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>yzd-gridea</title>
+<title>用过的博客程序大总结加推荐 | yzd-gridea</title>
 <meta name="description" content="记录 :  思考 : 慎言" />
-<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578824649275">
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578829916183">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
 <link rel="stylesheet" href="https://g.yzddhr.me/styles/main.css">
 
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-125127562-1');
-</script>
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://g.yzddhr.me">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578824649275" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E6%9B%B4%E6%96%B0">更新</a></li>
-<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
-<li><a href="#wordpress">WordPress</a>
-<ul>
-<li><a href="#%E6%90%AD%E5%BB%BA">搭建</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98%E7%AB%99%E7%82%B9">主题站点</a>
-<ul>
-<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90">主题推荐</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9">优缺点</a></li>
-</ul>
-</li>
-<li><a href="#typecho">typecho</a>
-<ul>
-<li><a href="#%E6%90%AD%E5%BB%BA-2">搭建</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98">主题</a>
-<ul>
-<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-2">主题推荐</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-2">优缺点</a></li>
-</ul>
-</li>
-<li><a href="#hexohugo">hexo；hugo</a>
-<ul>
-<li><a href="#%E6%90%AD%E5%BB%BA-3">搭建</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98-2">主题</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-3">主题推荐</a></li>
-<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-3">优缺点</a></li>
-</ul>
-</li>
-<li><a href="#solo%E5%8D%9A%E5%AE%A2%E5%92%8Chalo%E5%8D%9A%E5%AE%A2">solo博客和halo博客</a>
-<ul>
-<li><a href="#%E6%90%AD%E5%BB%BA-4">搭建</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98-3">主题</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-4">主题推荐</a></li>
-<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-4">优缺点</a></li>
-</ul>
-</li>
-<li><a href="#gridea%E6%8E%A8%E8%8D%90"><strong>gridea</strong>（推荐）</a>
-<ul>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
-<li><a href="#%E4%B8%BB%E9%A2%98-4">主题</a></li>
-<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-5">优缺点</a></li>
-</ul>
-</li>
-<li><a href="#%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90">免费的博客资源</a></li>
-<li><a href="#%E9%99%84%E9%93%BE%E6%8E%A5">附链接</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://g.yzddhr.me">
+  <img class="avatar" src="https://g.yzddhr.me/images/avatar.png?v=1578829916183" alt="">
+  </a>
+  <h1 class="site-title">
+    yzd-gridea
+  </h1>
+  <p class="site-description">
+    记录 :  思考 : 慎言
+  </p>
+  <div class="menu-container">
     
       
-        <a href="/" class="menu" style="animation-delay: 0s">
+        <a href="/" class="menu">
           首页
         </a>
       
     
       
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+        <a href="/archives" class="menu">
           归档
         </a>
       
     
       
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+        <a href="/tags" class="menu">
           标签
         </a>
       
     
       
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+        <a href="/post/about" class="menu">
           关于
         </a>
       
     
       
-        <a href="/tag/9CTakvPYn/" class="menu" style="animation-delay: 0.8s">
+        <a href="/tag/9CTakvPYn/" class="menu">
           音乐
         </a>
       
     
       
-        <a href="https://g.yzddhr.me/post/friends/" class="menu" style="animation-delay: 1s">
+        <a href="https://g.yzddhr.me/post/friends/" class="menu">
           友链
         </a>
       
     
   </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
-    <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">用过的博客程序大总结加推荐</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-08-07 / 7 min read
-        </div>
-        
-        <div class="post-content yue">
-          <p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              用过的博客程序大总结加推荐
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-08-07
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+                <a href="https://g.yzddhr.me/tag/ymHPLYauhe" class="post-tag">
+                  # 网站搭建
+                </a>
+              
+                <a href="https://g.yzddhr.me/tag/pY9qwZ9J9H" class="post-tag">
+                  # blog
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
 <!-- more -->
 <h2 id="更新">更新</h2>
 <blockquote>
@@ -384,42 +331,79 @@ solo博客的话，其实书写体验还是不够好，建议在<strong>markdown
 <li><a href="https://www.moerats.com/archives/656/">Caddy环境下WordPress博客伪静态设置</a></li>
 </ul>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9B%B4%E6%96%B0">更新</a></li>
+<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
+<li><a href="#wordpress">WordPress</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA">搭建</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98%E7%AB%99%E7%82%B9">主题站点</a>
+<ul>
+<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90">主题推荐</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9">优缺点</a></li>
+</ul>
+</li>
+<li><a href="#typecho">typecho</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA-2">搭建</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98">主题</a>
+<ul>
+<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-2">主题推荐</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-2">优缺点</a></li>
+</ul>
+</li>
+<li><a href="#hexohugo">hexo；hugo</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA-3">搭建</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98-2">主题</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-3">主题推荐</a></li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-3">优缺点</a></li>
+</ul>
+</li>
+<li><a href="#solo%E5%8D%9A%E5%AE%A2%E5%92%8Chalo%E5%8D%9A%E5%AE%A2">solo博客和halo博客</a>
+<ul>
+<li><a href="#%E6%90%AD%E5%BB%BA-4">搭建</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98-3">主题</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90-4">主题推荐</a></li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-4">优缺点</a></li>
+</ul>
+</li>
+<li><a href="#gridea%E6%8E%A8%E8%8D%90"><strong>gridea</strong>（推荐）</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98-4">主题</a></li>
+<li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9-5">优缺点</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%BA%90">免费的博客资源</a></li>
+<li><a href="#%E9%99%84%E9%93%BE%E6%8E%A5">附链接</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/ymHPLYauhe">
-            <span class="flex-auto">网站搭建</span>
-          </a>
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl">
+              <h3 class="post-title">
+                solo博客搭建配置SSl
+              </h3>
+            </a>
+          </div>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://g.yzddhr.me/tag/pY9qwZ9J9H">
-            <span class="flex-auto">blog</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  内网穿透加shadowsocks实现全局穿透（伪）
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://g.yzddhr.me/post/solo-bo-ke-da-jian-pei-zhi-ssl">
-                <h3 class="post-title">
-                  solo博客搭建配置SSl
-                  <i class="remixicon-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
-        </div>
 
         
           
@@ -449,107 +433,54 @@ solo博客的话，其实书写体验还是不够好，建议在<strong>markdown
           
         
 
-      </div>
-    </div>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a> | 
+  <a class="rss" href="https://g.yzddhr.me/atom.xml" target="_blank">RSS</a>
+</div>
 
-    <script src="/media/prism.js"></script>  
 <script>
+  hljs.initHighlightingOnLoad()
 
-Prism.highlightAll()
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      console.log('section.offsetHeight', section.offsetHeight);
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
         } else {
-          link.classList.remove("current");    
+          link.classList.add("current");
         }
       } else {
-        link.classList.add("current");
+        link.classList.remove("current");
       }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
     });
+  });
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
+
+      </div>
+    </div>
   </body>
 </html>
