@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>yzd-gridea</title>
 <meta name="description" content="记录 :  思考 : 慎言" />
-<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578830085181">
+<link rel="shortcut icon" href="https://g.yzddhr.me/favicon.ico?v=1578921189051">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -32,7 +32,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://g.yzddhr.me">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578830085181" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://g.yzddhr.me/images/avatar.png?v=1578921189051" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-gridea</h1>
       </div>
@@ -49,6 +49,20 @@
 <li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
 <li><a href="#%E8%AE%BE%E7%BD%AE%E4%BC%AA%E9%9D%99%E6%80%81">设置伪静态</a></li>
 <li><a href="#%E7%AE%A1%E7%90%86%E5%92%8C%E5%8D%B8%E8%BD%BD">管理和卸载</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a>
+<ul>
+<li><a href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">解决办法</a><br>
+*
+<ul>
+<li><a href="#3-update-the-required-packages">3. Update the required packages</a></li>
+<li><a href="#4-restart-the-web-server">4. Restart the Web Server</a></li>
+<li><a href="#5-update-php">5. Update PHP</a></li>
+<li><a href="#6-search-all-the-available-packages-containing-mysql">6. Search all the available packages containing MySQL</a></li>
+<li><a href="#7-restart-apache">7. Restart Apache</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -111,7 +125,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">利用小内存主机安装typecho,wordpress,云盘等</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-06 / 2 min read
+          2020-01-06 / 4 min read
         </div>
         
         <div class="post-content yue">
@@ -207,6 +221,42 @@ Caddy配置文件位置：/etc/dylanbai8
 
 网站目录：/www
 </code></pre>
+<h2 id="其他">其他</h2>
+<p>在安装typecho可能会报错，因为安装最新版本的wordpress的问题<br>
+没有php-mysql插件</p>
+<h3 id="解决办法">解决办法</h3>
+<h5 id="3-update-the-required-packages">3. Update the required packages</h5>
+<p>If your are running an <a href="https://www.rosehosting.com/ubuntu-hosting.html">Ubuntu VPS</a> and <code>PHP 7</code>, then run the following commands:</p>
+<pre><code>apt-get update
+apt-get install php7.0-mysql
+</code></pre>
+<h5 id="4-restart-the-web-server">4. Restart the Web Server</h5>
+<p>Then restart your Apache service for the changes to take effect, or if you are using Nginx + PHP-FPM, then restart the PHP-FPM service.</p>
+<h5 id="5-update-php">5. Update PHP</h5>
+<p>In case you are running <code>PHP 5</code>, run the following commands:</p>
+<pre><code>apt-get update
+apt-get install php-mysql
+</code></pre>
+<p>Restart the appropriate service for the changes to take effect.</p>
+<h5 id="6-search-all-the-available-packages-containing-mysql">6. Search all the available packages containing MySQL</h5>
+<p>To search all the available packages containing <code>mysql</code>, you can use this command:</p>
+<pre><code>apt-cache search mysql
+</code></pre>
+<p>On the other hand, if you are running a <a href="https://www.rosehosting.com/centos-hosting.html">CentOS VPS</a> and you have <code>PHP 7</code> installed on the server, then run the following commands to fix the problem:</p>
+<pre><code>yum update
+yum install php70w-mysql
+</code></pre>
+<h5 id="7-restart-apache">7. Restart Apache</h5>
+<p>Restart Apache or the PHP-FPM service in case you are using Nginx + PHP-FPM as a web server.</p>
+<p>If you have <code>PHP 5</code> installed on your CentOS server, run the following commands:</p>
+<pre><code>yum update
+yum install php-mysql
+</code></pre>
+<p>Restart the appropriate service for the changes to take effect.</p>
+<p>To search all the available packages containing <code>mysql</code>, you can use the following command:</p>
+<pre><code>yum search mysql
+</code></pre>
+<p>Once you install the MySQL extension for PHP, you can return back to your WordPress setup. If the installation went OK, the message about the missing MySQL extension should not be presented to you. You can now continue with your WordPress setup.</p>
 
         </div>
 
