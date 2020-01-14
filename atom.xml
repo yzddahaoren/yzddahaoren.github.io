@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://g.yzddhr.me</id>
     <title>yzd-gridea</title>
-    <updated>2020-01-14T03:09:01.629Z</updated>
+    <updated>2020-01-14T03:34:02.229Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://g.yzddhr.me"/>
     <link rel="self" href="https://g.yzddhr.me/atom.xml"/>
@@ -48,7 +48,7 @@
         <link href="https://g.yzddhr.me/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
         </link>
         <updated>2020-01-12T10:23:42.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/file/2020/01/3e0da953774b64a26a64149757a893b1-7754a996.jpg" alt="3e0da953774b64a26a64149757a893b1.jpg"></figure>
+        <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/file/2020/01/3e0da953774b64a26a64149757a893b1-7754a996.jpg" alt="3e0da953774b64a26a64149757a893b1.jpg"></p>
 <p>特色图片随便选了一个库里面的了，抱歉了哈 :13:</p>
 <h2 id="使用工具">使用工具</h2>
 <blockquote>
@@ -65,28 +65,28 @@
 <ul>
 <li>解压压缩包，打开软件</li>
 </ul>
-<figure data-type="image" tabindex="2"><img src="https://img.hacpai.com/file/2020/01/image-5d10ee19.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-5d10ee19.png" alt="image.png"></p>
 <ul>
 <li>打开就出错，不过忽略就行了</li>
 </ul>
-<figure data-type="image" tabindex="3"><img src="https://img.hacpai.com/file/2020/01/image-09c37f48.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-09c37f48.png" alt="image.png"></p>
 <ul>
 <li>然后“文件 --&gt; 打开”</li>
 </ul>
-<figure data-type="image" tabindex="4"><img src="https://img.hacpai.com/file/2020/01/image-0b4e8c2b.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-0b4e8c2b.png" alt="image.png"></p>
 <ul>
 <li>选择下载方式：“右建 --&gt; 选择第二种方式下载”</li>
 </ul>
-<figure data-type="image" tabindex="5"><img src="https://img.hacpai.com/file/2020/01/image-fa299262.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-fa299262.png" alt="image.png"></p>
 <p><strong>不知道为什么，第一种方式下载我这里不行，安徽电信</strong></p>
 <ul>
 <li>设定下载位置：默认：当前用户的“下载”文件夹</li>
 </ul>
-<figure data-type="image" tabindex="6"><img src="https://img.hacpai.com/file/2020/01/image-8def0ef1.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-8def0ef1.png" alt="image.png"></p>
 <ul>
 <li>速度测试</li>
 </ul>
-<figure data-type="image" tabindex="7"><img src="https://img.hacpai.com/file/2020/01/image-f1969ff2.png" alt="image.png"></figure>
+<p><img src="https://img.hacpai.com/file/2020/01/image-f1969ff2.png" alt="image.png"></p>
 <blockquote>
 <p>本人网速慢。差不多可以慢速。</p>
 </blockquote>
@@ -538,7 +538,7 @@ server {
         <link href="https://g.yzddhr.me/post/fa-qia-xi-tong-da-jian">
         </link>
         <updated>2019-08-19T12:59:21.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></figure>
+        <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
 <p>使用项目搭建自己的发卡系统</p>
 <blockquote>
 <p>项目地址:<br>
