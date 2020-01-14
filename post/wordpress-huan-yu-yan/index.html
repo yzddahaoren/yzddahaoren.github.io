@@ -39,37 +39,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            记录 :  思考 : 慎言
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="http://github.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://instagram.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-instagram-line"></i>
-                </a>
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -126,44 +98,85 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-line"></i> 内网穿透
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">wordpress换语言</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-01-14 / 1 min read
+        </div>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://g.yzddhr.me/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">安装使用serveo （内网穿透）</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
+        <div class="post-content yue">
+          <p><img src="https://g.yzddhr.me/post-images/1578971320019.jpg" alt=""><br>
+默认的最新的wordpress的官方的语言一直是中文下面换语言</p>
+<ol>
+<li>在安装目录下的<code>wp-config.php</code>中添加一行</li>
+</ol>
+<pre><code>define('WPLANG', 'zh_CN');
+</code></pre>
+<p>这时候的控制台会显示有更新，没有的化，重启web服务即可</p>
+<ol start="2">
+<li>
+<p>在设置文件目录权限</p>
+<ul>
+<li>有www用户的 <code>chown -R www /wordpress</code></li>
+<li>没有www用户<code>chmod -R 777 /wordpress</code>，建议之后还是改回来比较好</li>
+</ul>
+</li>
+<li>
+<p>这时候仍然显示需要<code>ftp</code>信息连接。<br>
+在<code>wp-config。php</code>中再加一行</p>
+</li>
+</ol>
+<pre><code>define('FS_METHOD', &quot;direct&quot;);
+</code></pre>
+<p>即可。</p>
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-08-14 / 3 min read</div>
-    </div>
-  </section>
+        </div>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://g.yzddhr.me/post/nei-wang-chuan-tou-jia-shadowsocks-shi-xian-quan-ju-chuan-tou-wei">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">内网穿透加shadowsocks实现全局穿透（伪）</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        <h2 id="实现功能">实现功能</h2>
-<p>本地内网主机ip，192.168.0.103上有服务80端口的网站一个，利用同局域网的ip，192.168.0.104主机一台内网穿透到一台有公网ip的服务器，实现非局域网主机的任何一台机子可以访问服务。</p>
+        
 
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-08-07 / 4 min read</div>
-    </div>
-  </section>
 
-        <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://g.yzddhr.me/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
+                <h3 class="post-title">
+                  2020可用的百度云下载器
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
 
       </div>
     </div>
