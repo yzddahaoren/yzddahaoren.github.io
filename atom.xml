@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yzddahaoren.github.io</id>
     <title>yzd-gridea</title>
-    <updated>2020-06-16T13:35:47.075Z</updated>
+    <updated>2020-06-16T13:43:49.899Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yzddahaoren.github.io"/>
     <link rel="self" href="https://yzddahaoren.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://yzddahaoren.github.io/images/avatar.png</logo>
     <icon>https://yzddahaoren.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yzd-gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[测试文章]]></title>
+        <id>https://yzddahaoren.github.io/post/ce-shi-wen-zhang</id>
+        <link href="https://yzddahaoren.github.io/post/ce-shi-wen-zhang">
+        </link>
+        <updated>2020-06-16T13:33:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>主要看看如何使用以下==一下这个所谓的gridea博客</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>主要看看如何使用以下==一下这个所谓的gridea博客</p>
+<!-- more -->
+<h2 id="环境">环境</h2>
+<ul>
+<li>GitHub</li>
+<li>netlify</li>
+<li>webhook (IFTTT)</li>
+<li>telegram</li>
+</ul>
+<h2 id="目的">目的</h2>
+<p>使用telegram实现自动部署</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[wordpress换语言]]></title>
         <id>https://yzddahaoren.github.io/post/wordpress-huan-yu-yan</id>
@@ -829,22 +850,6 @@ https://www.iplaysoft.com/focusky-zhu-ce-ma.html<br>
 2、升级后，打开Focusky软件，登录已升级的账号，就能获得特别版的使用权限。这里需要注意，若升级前正使用账号登录Focusky，升级后，软件上依然显示免费版，那么请先退出账号，重新登录即可。</p>
 <p>邮箱可以使用临时邮箱<br>
 <a href="aws.yzddhr.me:3000">aws.yzddhr.me:3000</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[太喜欢这个欢乐沙雕漂亮的小改改了！]]></title>
-        <id>https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao</id>
-        <link href="https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
-        </link>
-        <updated>2019-08-14T10:49:09.000Z</updated>
-        <summary type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
-<!-- more -->
-<p>特别是这个视频：<br>
-<a href="https://img.hacpai.com/file/2019/08/690089543912468451260041678916118869249833n-c5e28855.mp4">690089543912468451260041678916118869249833n.mp4</a><br>
-还能说什么呢？<br>
-生活或许很美好？</p>
 ]]></content>
     </entry>
 </feed>

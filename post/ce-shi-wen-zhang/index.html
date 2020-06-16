@@ -42,7 +42,15 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -99,36 +107,23 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">wordpress换语言</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">测试文章</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-01-14 / 1 min read
+          2020-06-16 / 1 min read
         </div>
         
         <div class="post-content yue">
-          <p><img src="https://yzddahaoren.github.io/post-images/1578971320019.jpg" alt=""><br>
-默认的最新的wordpress的官方的语言一直是中文下面换语言</p>
-<ol>
-<li>在安装目录下的<code>wp-config.php</code>中添加一行</li>
-</ol>
-<pre><code>define('WPLANG', 'zh_CN');
-</code></pre>
-<p>这时候的控制台会显示有更新，没有的化，重启web服务即可</p>
-<ol start="2">
-<li>
-<p>在设置文件目录权限</p>
+          <p>主要看看如何使用以下==一下这个所谓的gridea博客</p>
+<!-- more -->
+<h2 id="环境">环境</h2>
 <ul>
-<li>有www用户的 <code>chown -R www /wordpress</code></li>
-<li>没有www用户<code>chmod -R 777 /wordpress</code>，建议之后还是改回来比较好</li>
+<li>GitHub</li>
+<li>netlify</li>
+<li>webhook (IFTTT)</li>
+<li>telegram</li>
 </ul>
-</li>
-<li>
-<p>这时候仍然显示需要<code>ftp</code>信息连接。<br>
-在<code>wp-config。php</code>中再加一行</p>
-</li>
-</ol>
-<pre><code>define('FS_METHOD', &quot;direct&quot;);
-</code></pre>
-<p>即可。</p>
+<h2 id="目的">目的</h2>
+<p>使用telegram实现自动部署</p>
 
         </div>
 
@@ -137,21 +132,12 @@
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://yzddahaoren.github.io/post/ce-shi-wen-zhang">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  测试文章
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://yzddahaoren.github.io/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
+              <a href="https://yzddahaoren.github.io/post/wordpress-huan-yu-yan">
                 <h3 class="post-title">
-                  2020可用的百度云下载器
+                  wordpress换语言
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
