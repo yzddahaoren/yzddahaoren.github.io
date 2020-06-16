@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://g.yzddhr.ltd</id>
+    <id>https://yzddahaoren.github.io</id>
     <title>yzd-gridea</title>
-    <updated>2020-04-11T03:12:23.684Z</updated>
+    <updated>2020-06-16T08:08:57.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://g.yzddhr.ltd"/>
-    <link rel="self" href="https://g.yzddhr.ltd/atom.xml"/>
+    <link rel="alternate" href="https://yzddahaoren.github.io"/>
+    <link rel="self" href="https://yzddahaoren.github.io/atom.xml"/>
     <subtitle>记录 :  思考 : 慎言</subtitle>
-    <logo>https://g.yzddhr.ltd/images/avatar.png</logo>
-    <icon>https://g.yzddhr.ltd/favicon.ico</icon>
+    <logo>https://yzddahaoren.github.io/images/avatar.png</logo>
+    <icon>https://yzddahaoren.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yzd-gridea</rights>
     <entry>
         <title type="html"><![CDATA[wordpress换语言]]></title>
-        <id>https://g.yzddhr.ltd/post/wordpress-huan-yu-yan</id>
-        <link href="https://g.yzddhr.ltd/post/wordpress-huan-yu-yan">
+        <id>https://yzddahaoren.github.io/post/wordpress-huan-yu-yan</id>
+        <link href="https://yzddahaoren.github.io/post/wordpress-huan-yu-yan">
         </link>
         <updated>2020-01-14T03:00:52.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://g.yzddhr.ltd/post-images/1578971320019.jpg" alt=""><br>
+        <content type="html"><![CDATA[<p><img src="https://yzddahaoren.github.io/post-images/1578971320019.jpg" alt=""><br>
 默认的最新的wordpress的官方的语言一直是中文下面换语言</p>
 <ol>
 <li>在安装目录下的<code>wp-config.php</code>中添加一行</li>
@@ -44,8 +44,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2020可用的百度云下载器]]></title>
-        <id>https://g.yzddhr.ltd/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi</id>
-        <link href="https://g.yzddhr.ltd/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
+        <id>https://yzddahaoren.github.io/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi</id>
+        <link href="https://yzddahaoren.github.io/post/2020-ke-yong-de-bai-du-yun-xia-zai-qi">
         </link>
         <updated>2020-01-12T10:23:42.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/file/2020/01/3e0da953774b64a26a64149757a893b1-7754a996.jpg" alt="3e0da953774b64a26a64149757a893b1.jpg"></p>
@@ -103,8 +103,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[利用小内存主机安装typecho,wordpress,云盘等]]></title>
-        <id>https://g.yzddhr.ltd/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng</id>
-        <link href="https://g.yzddhr.ltd/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng">
+        <id>https://yzddahaoren.github.io/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng</id>
+        <link href="https://yzddahaoren.github.io/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng">
         </link>
         <updated>2020-01-06T10:42:07.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -239,8 +239,8 @@ yum install php-mysql
     </entry>
     <entry>
         <title type="html"><![CDATA[更新后的gridea的使用体验]]></title>
-        <id>https://g.yzddhr.ltd/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan</id>
-        <link href="https://g.yzddhr.ltd/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan">
+        <id>https://yzddahaoren.github.io/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan</id>
+        <link href="https://yzddahaoren.github.io/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan">
         </link>
         <updated>2020-01-06T09:59:10.000Z</updated>
         <content type="html"><![CDATA[<p>今天更新了gridea的最新版本，从第一个版本也有挺久没用gridea的了，果然不出所料，速度卡的要死</p>
@@ -261,8 +261,8 @@ yum install php-mysql
     </entry>
     <entry>
         <title type="html"><![CDATA[安装pleroma(基于docker)]]></title>
-        <id>https://g.yzddhr.ltd/post/an-zhuang-pleromaji-yu-docker</id>
-        <link href="https://g.yzddhr.ltd/post/an-zhuang-pleromaji-yu-docker">
+        <id>https://yzddahaoren.github.io/post/an-zhuang-pleromaji-yu-docker</id>
+        <link href="https://yzddahaoren.github.io/post/an-zhuang-pleromaji-yu-docker">
         </link>
         <updated>2019-08-24T08:03:50.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -534,8 +534,8 @@ server {
     </entry>
     <entry>
         <title type="html"><![CDATA[发卡系统搭建]]></title>
-        <id>https://g.yzddhr.ltd/post/fa-qia-xi-tong-da-jian</id>
-        <link href="https://g.yzddhr.ltd/post/fa-qia-xi-tong-da-jian">
+        <id>https://yzddahaoren.github.io/post/fa-qia-xi-tong-da-jian</id>
+        <link href="https://yzddahaoren.github.io/post/fa-qia-xi-tong-da-jian">
         </link>
         <updated>2019-08-19T12:59:21.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt=""></p>
@@ -683,39 +683,39 @@ main
     </entry>
     <entry>
         <title type="html"><![CDATA[亚历山大大帝是否真实存在]]></title>
-        <id>https://g.yzddhr.ltd/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai</id>
-        <link href="https://g.yzddhr.ltd/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai">
+        <id>https://yzddahaoren.github.io/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai</id>
+        <link href="https://yzddahaoren.github.io/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai">
         </link>
         <updated>2019-08-15T11:45:28.000Z</updated>
         <content type="html"><![CDATA[<p><strong>个人观点: 亚历山大不存在</strong><br>
 亚历山大被誉为西方的战神，他是亚历山大帝国的建立者，也是波斯帝国的掘墓人。直到现在关于亚历山大东征的故事，在中西方流传很广。</p>
 <p>但是就是这样一个伟大的战神，却遭到很多历史爱好者的质疑。很多人说亚历山大是虚拟的，也根本不存在什么亚历山大帝国。他们为什么得出这个结论，小编在此给大家分析下：<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869711930.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869711930.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗?</p>
 <p>一、被亚历山大征服的地方，没有任何信史记载</p>
 <p>亚历山大一生征服过许多地方，古代埃及、两河流域地区、古代波斯和古代印度地区。应该说这么大规模的征服行动，古希腊和被征服的地方应该有信史记载。</p>
 <p>但是不管是希腊还是埃及、印度、波斯和巴比伦，都没有原始的信史记载被亚历山大征服。唯一可以证明的就是文艺复兴时期翻译的所谓的阿拉巴史料，但是阿拉伯史料原本据说丢了。<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869721728.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869721728.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>二、波斯帝国不是亚历山大所灭</p>
 <p>根据伊朗历史的记载，波斯帝国真正灭亡的原因是：公元前337年阿塔薛西斯三世之子阿勒西斯全家被杀，大流士三世被拥立为王，很多人并不认可大流士三世的统治。</p>
 <p>波斯统治的地区各自拥兵自重，中央与地方矛盾日益尖锐。此时埃及人、马其顿人、巴比伦人、亚述人纷纷起来反叛，在内忧外患下波斯王朝最终解体。<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869767013.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869767013.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>三、波斯地区希腊化是一个谎言</p>
 <p>波斯在中国古代被称为大食，很早就与中国有贸易往来，战国时期的赵国就有商人到波斯做玉石生意，但是从未记载过大食被谁征服的事情。</p>
 <p>如果亚历山大真的征服了波斯，对于喜欢修史的中国人，一定会提及这段历史。由于现代的伊朗没有话语权，他们的历史被淹没在西方人编造的故事里，波斯文明被强行希腊化。<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869788329.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869788329.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>四、亚历山大东征，就是一群流寇造反的故事</p>
 <p>大流士三世的统治的时候，埃及人、马其顿人、巴比伦人、亚述人都起来造反，难免会出现几个比较牛逼的头目，他们带领着反叛武装，一路趁机烧杀抢掠。亚历山大东征，就是一群流寇造反的故事。</p>
 <p>如果亚历山大东征是真实的，那么从希腊半岛到印度，几千公里他的补给是怎么解决的？1812年拿破仑入侵沙俄，30万人掉队病号减员95000人，战斗损失14万多人，而亚历山大要比拿破仑早2000多年。<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869798681.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869798681.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>五、亚历山大征服了所有的古文明，为何放过中国</p>
 <p>亚历山大一生征服了埃及、巴比伦、印度、波斯，如果再加上希腊，除了中国几乎所有的古文明都被征服，他为何单独放过了中国？而上述几个被征服的地区，有一个共同点就是都没有完整的信史保留。</p>
 <p>而中国有着世界上最完整的信史记载，如果亚历山大东征是文艺复兴时期杜撰的，杜撰者就无法杜撰亚历山大征服中国的故事。因为我们的信史不但记载我们历史的辉煌，也记载我们被入侵的历史。<br>
-<img src="https://g.yzddhr.ltd/post-images/1565869842187.jpg" alt=""><br>
+<img src="https://yzddahaoren.github.io/post-images/1565869842187.jpg" alt=""><br>
 亚历山大为什么遭到质疑，他建立的庞大帝国真的存在吗</p>
 <p>更让人不可思议的是亚历山大死后，他建立的庞大的亚历山大帝国在同一年就消亡。就好像这个国家的存在，就是为了证明亚历山大的伟大，其他没有任何意义。</p>
 <p>如果亚历山大这个人真是虚拟的，那么所谓的亚历山大帝国就根本不存在。在信息化如此透明的今天，在西方白头盔公然造假都能获得奥斯卡奖。那么在信息封闭的古代，就没有什么不可杜撰的了.</p>
@@ -723,8 +723,8 @@ main
     </entry>
     <entry>
         <title type="html"><![CDATA[git配置多账号]]></title>
-        <id>https://g.yzddhr.ltd/post/git-pei-zhi-duo-zhang-hao</id>
-        <link href="https://g.yzddhr.ltd/post/git-pei-zhi-duo-zhang-hao">
+        <id>https://yzddahaoren.github.io/post/git-pei-zhi-duo-zhang-hao</id>
+        <link href="https://yzddahaoren.github.io/post/git-pei-zhi-duo-zhang-hao">
         </link>
         <updated>2019-08-15T11:17:40.000Z</updated>
         <content type="html"><![CDATA[<p>最近搞了一个edu结尾的域名，撸了一个无限前缀的edu邮箱，自然是去申请github包，没想到现在的github学生包已经不支持简单的edu邮箱了，我2018年申请的时候还是直接通过，根本不需要证明啥的，唉，既然学生包不能申请，就当普通的github账号用吧，顺便搭建一个博客的备份。所以就需要配置多用户本地使用。</p>
@@ -806,8 +806,8 @@ git config user.email &quot;username@email.com&quot;
     </entry>
     <entry>
         <title type="html"><![CDATA[免费一年的focusky的激活码]]></title>
-        <id>https://g.yzddhr.ltd/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma</id>
-        <link href="https://g.yzddhr.ltd/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma">
+        <id>https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma</id>
+        <link href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma">
         </link>
         <updated>2019-08-14T10:50:51.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -832,8 +832,8 @@ https://www.iplaysoft.com/focusky-zhu-ce-ma.html<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[太喜欢这个欢乐沙雕漂亮的小改改了！]]></title>
-        <id>https://g.yzddhr.ltd/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao</id>
-        <link href="https://g.yzddhr.ltd/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
+        <id>https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao</id>
+        <link href="https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao">
         </link>
         <updated>2019-08-14T10:49:09.000Z</updated>
         <summary type="html"><![CDATA[<p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
