@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>yzd-blog</title>
+<link rel="shortcut icon" href="https://yzddahaoren.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="yzd-blog - Atom Feed" href="https://yzddahaoren.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="记录 :  思考 : 慎言" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+    <a href="https://yzddahaoren.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
+        <i class="ri-hashtag"></i>
+        blog
+      </h1>
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          利用小内存主机安装typecho,wordpress,云盘等
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-01-06</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+支持安装的程序有Typecho/WordPress/Zblog/Kodexplorer
+支持的功能有备份和还原
+
+环境安装
+
+项目地址:https://github.com/dylanbai8/Onekey_Caddy_PHP7_Sqli...
+      </div>
+      <a href="https://yzddahaoren.github.io/post/li-yong-xiao-nei-cun-zhu-ji-an-zhuang-typechowordpressyun-pan-deng/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          更新后的gridea的使用体验
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-01-06</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        今天更新了gridea的最新版本，从第一个版本也有挺久没用gridea的了，果然不出所料，速度卡的要死
+缺点
+
+容易卡死（本人用的缩略图比较大）
+反应速度太慢
+设置选项太少
+
+使用体验根本就是不甚理想
+于是又下载回了老版本
+嗯，就是这样
+还...
+      </div>
+      <a href="https://yzddahaoren.github.io/post/geng-xin-hou-de-gridea-de-shi-yong-ti-yan/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          用过的博客程序大总结加推荐
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-07</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>用过的博客程序很不少了，比如一开始的WordPress到typecho到hexo到hugo到ghost到zblog，到halo到solo到gridea，虽然知道搞各种花里胡哨的博客没有什么用，重要的是博客的内容，但是一个用着不顺心的博客又怎么可能能坚持下去呢，所以我认为一个好的博客程序和好的主题还是很有必要的。</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/yong-guo-de-bo-ke-cheng-xu-da-zong-jie-jia-tui-jian/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/github-pages-kai-qi-sslcdn/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          github pages开启ssl+CDN
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>用github能做很多事，</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/github-pages-kai-qi-sslcdn/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/guan-yu-github-de-ssl-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          关于github的ssl配置
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-01</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>github的相关的SSL配置以及一些错误</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/guan-yu-github-de-ssl-pei-zhi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/halo-da-jian/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          halo搭建
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-07-31</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>使用Java的方法搭建的halo博客,后续可能更新docker-compose版本的.</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/halo-da-jian/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yzddahaoren.github.io/media/scripts/main.js"></script>
+</body>
+</html>

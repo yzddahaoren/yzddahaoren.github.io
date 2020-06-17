@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>yzd-blog</title>
+<link rel="shortcut icon" href="https://yzddahaoren.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="yzd-blog - Atom Feed" href="https://yzddahaoren.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="记录 :  思考 : 慎言" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+    <a href="https://yzddahaoren.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          亚历山大大帝是否真实存在
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-15</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        个人观点: 亚历山大不存在
+亚历山大被誉为西方的战神，他是亚历山大帝国的建立者，也是波斯帝国的掘墓人。直到现在关于亚历山大东征的故事，在中西方流传很广。
+但是就是这样一个伟大的战神，却遭到很多历史爱好者的质疑。很多人说亚历山大是虚拟的，也根...
+      </div>
+      <a href="https://yzddahaoren.github.io/post/ya-li-shan-da-da-di-shi-fou-zhen-shi-cun-zai/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/git-pei-zhi-duo-zhang-hao/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          git配置多账号
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-15</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        最近搞了一个edu结尾的域名，撸了一个无限前缀的edu邮箱，自然是去申请github包，没想到现在的github学生包已经不支持简单的edu邮箱了，我2018年申请的时候还是直接通过，根本不需要证明啥的，唉，既然学生包不能申请，就当普通的g...
+      </div>
+      <a href="https://yzddahaoren.github.io/post/git-pei-zhi-duo-zhang-hao/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          免费一年的focusky的激活码
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <blockquote>
+<p>关于focusky的介绍就不要了吧,非常好用的PPT软件,素材很多</p>
+</blockquote>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          太喜欢这个欢乐沙雕漂亮的小改改了！
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p><a href="https://www.instagram.com/celinefarach">https://instagram.com/celinefarach</a></p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/tai-xi-huan-zhe-ge-huan-le-sha-diao-piao-liang-de-xiao-gai-gai-liao/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/axel-corn-xia-zai-fu-wu-qi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          axel-corn下载服务器
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <blockquote>
+<p>axel-corn 无意间发现的下载器,基于的是axel的下载工具,这个都知道多线程下载器嘛,好用就完事了,这个项目主要是方便自己的网页短操作.就是这样.</p>
+</blockquote>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/axel-corn-xia-zai-fu-wu-qi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/se-tu-pixiv-xia-zai-qi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          色图pixiv下载器
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/se-tu-pixiv-xia-zai-qi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yzddahaoren.github.io/post/heroku-da-jian-rsshub/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          heroku搭建RSSHUB
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h2 id="目的">目的</h2>
+<p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
+
+      </div>
+      <a href="https://yzddahaoren.github.io/post/heroku-da-jian-rsshub/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+      <a href="https://yzddahaoren.github.io/" class="btn btn-white">
+        <i class="ri-arrow-left-line mr-4"></i>
+        上一页
+      </a>
+    
+    
+      <a href="https://yzddahaoren.github.io/page/3/" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yzddahaoren.github.io/media/scripts/main.js"></script>
+</body>
+
+</html>

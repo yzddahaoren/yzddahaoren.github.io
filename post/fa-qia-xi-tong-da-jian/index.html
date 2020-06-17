@@ -1,0 +1,481 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>发卡系统搭建 - yzd-blog</title>
+<link rel="shortcut icon" href="https://yzddahaoren.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yzddahaoren.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="发卡系统搭建 - yzd-blog - Atom Feed" href="https://yzddahaoren.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="
+使用项目搭建自己的发卡系统
+
+项目地址:
+https://github.com/zlkbdotnet/zfaka
+
+本文使用的是基于docker搭建
+环境
+
+docker安装
+
+curl -sSL https://get.docker.c..." />
+  <meta property="og:title" content="发卡系统搭建 - yzd-blog">
+  <meta property="og:description" content="
+使用项目搭建自己的发卡系统
+
+项目地址:
+https://github.com/zlkbdotnet/zfaka
+
+本文使用的是基于docker搭建
+环境
+
+docker安装
+
+curl -sSL https://get.docker.c..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yzddahaoren.github.io/post/fa-qia-xi-tong-da-jian/" />
+  <meta property="og:image" content="https://yzddahaoren.github.io/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="发卡系统搭建 - yzd-blog">
+  <meta name="twitter:description" content="
+使用项目搭建自己的发卡系统
+
+项目地址:
+https://github.com/zlkbdotnet/zfaka
+
+本文使用的是基于docker搭建
+环境
+
+docker安装
+
+curl -sSL https://get.docker.c...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yzddahaoren.github.io/post/fa-qia-xi-tong-da-jian/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://yzddahaoren.github.io/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yzddahaoren.github.io" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      yzd-blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          发卡系统搭建
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2019-08-19 · 4 min read</div>
+          
+            <a href="https://yzddahaoren.github.io/tag/ymHPLYauhe/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              网站搭建
+            </a>
+          
+            <a href="https://yzddahaoren.github.io/tag/Cy04ipSbL/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              技术
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <figure data-type="image" tabindex="1"><img src="https://img.hacpai.com/bing/20190220.jpg?imageView2/1/w/960/h/540/interlace/1/q/100" alt="" loading="lazy"></figure>
+<p>使用项目搭建自己的发卡系统</p>
+<blockquote>
+<p>项目地址:<br>
+<a href="https://github.com/zlkbdotnet/zfaka">https://github.com/zlkbdotnet/zfaka</a></p>
+</blockquote>
+<p>本文使用的是基于docker搭建</p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>docker安装</li>
+</ul>
+<pre><code class="language-sh">curl -sSL https://get.docker.com/ | sh
+service docker start
+</code></pre>
+<ul>
+<li>安装docker-compose</li>
+</ul>
+<pre><code class="language-sh">curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<p>打印信息</p>
+<pre><code class="language-sh">docker --help
+</code></pre>
+<p>有输出表示安安装成功.</p>
+<h2 id="安装">安装</h2>
+<blockquote>
+<p>注意不能用内存呢太小的vps,内存不够建议设置虚拟内存,可以使用以下脚本设置虚拟swap分区</p>
+</blockquote>
+<p><strong>脚本不支持OpenVZ架构，安装会自动退出。</strong></p>
+<pre><code class="language-sh">#!/usr/bin/env bash
+#Blog:https://www.moerats.com/
+
+Green=&quot;\033[32m&quot;
+Font=&quot;\033[0m&quot;
+Red=&quot;\033[31m&quot; 
+
+#root权限
+root_need(){
+    if [[ $EUID -ne 0 ]]; then
+        echo -e &quot;${Red}Error:This script must be run as root!${Font}&quot;
+        exit 1
+    fi
+}
+
+#检测ovz
+ovz_no(){
+    if [[ -d &quot;/proc/vz&quot; ]]; then
+        echo -e &quot;${Red}Your VPS is based on OpenVZ，not supported!${Font}&quot;
+        exit 1
+    fi
+}
+
+add_swap(){
+echo -e &quot;${Green}请输入需要添加的swap，建议为内存的2倍！${Font}&quot;
+read -p &quot;请输入swap数值:&quot; swapsize
+
+#检查是否存在swapfile
+grep -q &quot;swapfile&quot; /etc/fstab
+
+#如果不存在将为其创建swap
+if [ $? -ne 0 ]; then
+	echo -e &quot;${Green}swapfile未发现，正在为其创建swapfile${Font}&quot;
+	fallocate -l ${swapsize}M /swapfile
+	chmod 600 /swapfile
+	mkswap /swapfile
+	swapon /swapfile
+	echo '/swapfile none swap defaults 0 0' &gt;&gt; /etc/fstab
+         echo -e &quot;${Green}swap创建成功，并查看信息：${Font}&quot;
+         cat /proc/swaps
+         cat /proc/meminfo | grep Swap
+else
+	echo -e &quot;${Red}swapfile已存在，swap设置失败，请先运行脚本删除swap后重新设置！${Font}&quot;
+fi
+}
+
+del_swap(){
+#检查是否存在swapfile
+grep -q &quot;swapfile&quot; /etc/fstab
+
+#如果存在就将其移除
+if [ $? -eq 0 ]; then
+	echo -e &quot;${Green}swapfile已发现，正在将其移除...${Font}&quot;
+	sed -i '/swapfile/d' /etc/fstab
+	echo &quot;3&quot; &gt; /proc/sys/vm/drop_caches
+	swapoff -a
+	rm -f /swapfile
+    echo -e &quot;${Green}swap已删除！${Font}&quot;
+else
+	echo -e &quot;${Red}swapfile未发现，swap删除失败！${Font}&quot;
+fi
+}
+
+#开始菜单
+main(){
+root_need
+ovz_no
+clear
+echo -e &quot;———————————————————————————————————————&quot;
+echo -e &quot;${Green}Linux VPS一键添加/删除swap脚本${Font}&quot;
+echo -e &quot;${Green}1、添加swap${Font}&quot;
+echo -e &quot;${Green}2、删除swap${Font}&quot;
+echo -e &quot;———————————————————————————————————————&quot;
+read -p &quot;请输入数字 [1-2]:&quot; num
+case &quot;$num&quot; in
+    1)
+    add_swap
+    ;;
+    2)
+    del_swap
+    ;;
+    *)
+    clear
+    echo -e &quot;${Green}请输入正确数字 [1-2]${Font}&quot;
+    sleep 2s
+    main
+    ;;
+    esac
+}
+main
+</code></pre>
+<p><strong>保存并命名为swap.sh</strong><br>
+<code>bash swap.sh</code>即可.<br>
+<code>free -m</code>查看内存.</p>
+<h2 id="命令">命令</h2>
+<p>docker各种镜像关系如图:<br>
+<img src="https://img.hacpai.com/file/2019/08/p-2f6fd591.png" alt="p.png" loading="lazy"></p>
+<ul>
+<li>利用<code>docker-compose</code>部署</li>
+</ul>
+<pre><code class="language-sh">wget https://raw.githubusercontent.com/Baiyuetribe/zfaka/docker/docker-compose.yml
+</code></pre>
+<pre><code>docker-compose up -d
+</code></pre>
+<p><strong>端口说明</strong></p>
+<ul>
+<li>ZFAKA主程序入口为：http://域名:3002 打开后填入数据库密码即可完成安装步骤。</li>
+<li>phpadmin入口：http://域名:8080 用来修改数据库</li>
+<li>kodexplore入口：http://域名:999 用来管理源码或替换图片等等。<br>
+<strong>可能问题</strong><br>
+<img src="https://img.hacpai.com/file/2019/08/68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67-985c198b.png" alt="68747470733a2f2f696d672e6261697975652e6f6e652f75706c6f61642f323031392f30372f356431633839363037373530322e706e67.png" loading="lazy"></li>
+</ul>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4">命令</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yzddahaoren.github.io/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://yzddahaoren.github.io/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="application/javascript">
+
+  var gitalk = new Gitalk({
+    clientID: '54dc0370b7c1bea2e1a8',
+    clientSecret: '88000ea51dfa6cdd0a09617c30e0cdbd7397a981',
+    repo: 'yzddahaoren.github.io',
+    owner: 'yzddahaoren',
+    admin: ['yzddahaoren'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+    
+  
+</body>
+
+</html>
