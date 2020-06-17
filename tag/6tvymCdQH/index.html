@@ -1,222 +1,329 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>yzd-blog</title>
-<link rel="shortcut icon" href="https://yzddahaoren.github.io/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://yzddahaoren.github.io/media/css/tailwind.css">
+<meta name="description" content="记录 :  思考 : 慎言" />
+<link rel="shortcut icon" href="https://yzddahaoren.github.io/favicon.ico?v=1592387569419">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://yzddahaoren.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="yzd-blog - Atom Feed" href="https://yzddahaoren.github.io/atom.xml">
 
-    
 
-  <meta name="description" content="记录 :  思考 : 慎言" />
-</head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125127562-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+  gtag('config', 'UA-125127562-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://yzddahaoren.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://yzddahaoren.github.io/images/avatar.png?v=1592387569419" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">yzd-blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            记录 :  思考 : 慎言
+          </p>
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="http://github.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="remixicon-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <a href="https://instagram.com/yzddahaoren" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="remixicon-instagram-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      
     </div>
   </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-    <a href="https://yzddahaoren.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
 </div>
 
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
-        <i class="ri-hashtag"></i>
-        网络资源
-      </h1>
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          免费一年的focusky的激活码
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
         </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a></div>
+    <a class="rss" href="https://yzddahaoren.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="remixicon-bookmark-line"></i> 网络资源
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">免费一年的focusky的激活码</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <blockquote>
 <p>关于focusky的介绍就不要了吧,非常好用的PPT软件,素材很多</p>
 </blockquote>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/mian-fei-yi-nian-de-focusky-de-ji-huo-ma/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-14 / 1 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/se-tu-pixiv-xia-zai-qi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          色图pixiv下载器
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/se-tu-pixiv-xia-zai-qi/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">色图pixiv下载器</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <p>pixiv,知名色图网站,另一解释的P小将.主要就是没事下载个色图康康,毕竟搞黄色是人类去世的阶梯,当然是高尔基说的,不关我事,</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/se-tu-pixiv-xia-zai-qi/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-14 / 8 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/heroku-da-jian-rsshub/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          heroku搭建RSSHUB
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/heroku-da-jian-rsshub/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">heroku搭建RSSHUB</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <h2 id="目的">目的</h2>
 <p>利用免费的heroku空间搭建自己的RSSHUB。关于rsshub的话用法很多，前面已经说过用rsshub实现某些网站的视频自动下载等功能，当然最重要的还是RSS功能</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/heroku-da-jian-rsshub/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-14 / 2 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          安装使用serveo （内网穿透）
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">安装使用serveo （内网穿透）</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <p><strong>说明：</strong><code>Serveo</code>是一个<code>SSH</code>服务器，仅用于远程端口转发，可以快速将本地端口暴露在外网。官方声称其为<code>Ngrok</code>的绝佳替代品</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/an-zhuang-shi-yong-serveo-nei-wang-chuan-tou/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-14 / 3 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${4 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          ubuntu口袋系统搭建之桌面版（TLS）
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-14</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">ubuntu口袋系统搭建之桌面版（TLS）</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <h2 id="前言">前言</h2>
 <p>搭建口袋系统，即插即用，最近刚好需要用Linux，为了方便安装一个随身系统，即插即用，方便的使用node和docker等，本文使用Vm workstation搭建</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/ubuntu-kou-dai-xi-tong-da-jian-zhi-zhuo-mian-ban-tls/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-14 / 4 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${5 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/mian-fei-de-mian-bei-an-de-cdn/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          免费的免备案的CDN
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-13</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/mian-fei-de-mian-bei-an-de-cdn/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">免费的免备案的CDN</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <p>今天要介绍的是一家免费的CDN，</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/mian-fei-de-mian-bei-an-de-cdn/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-13 / 1 min read</div>
     </div>
-    
-  </div>
+  </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${6 * 0.2}s` }">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://yzddahaoren.github.io/post/zi-dong-xia-zai-bilibili-de-shi-pin/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          自动下载bilibili的视频（RSSHUB）
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2019-08-07</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
+    <div class="content">
+      <a href="https://yzddahaoren.github.io/post/zi-dong-xia-zai-bilibili-de-shi-pin/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">自动下载bilibili的视频（RSSHUB）</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         <h2 id="实现功能">实现功能</h2>
 <p>vps自动下载手机上b站投币或者收藏的视频。后续可以搭配设置自动同步到onedriver或者google硬盘等。</p>
 
       </div>
-      <a href="https://yzddahaoren.github.io/post/zi-dong-xia-zai-bilibili-de-shi-pin/" class="btn">
-        Read more
-      </a>
+      <div class="text-gray-400 text-sm font-light">2019-08-07 / 2 min read</div>
     </div>
-    
-  </div>
+  </section>
+
+        <div class="pagination-container animated fadeIn">
   
+  
+    <a href="https://yzddahaoren.github.io/tag/6tvymCdQH/page/2" class="page-btn">下一页 <i class="remixicon-arrow-right-line"></i></a>
+  
+</div>
+
       </div>
-
-      
-  <div class="my-4 flex justify-between px-4 md:px-0">
-    
-    
-      <a href="https://yzddahaoren.github.io/tag/6tvymCdQH/page/2" class="btn btn-white">
-        下一页
-        <i class="ri-arrow-right-line ml-4"></i>
-      </a>
-    
-  </div>
-
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by <a href="https://github.com/yzddahaoren" target="_blank">yzddhr@2019</a>
-</footer>
-
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://yzddahaoren.github.io/media/scripts/main.js"></script>
-</body>
+
+    <script src="/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
 </html>
